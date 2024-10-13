@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="800dp"
+    android:orientation="vertical"
+    android:layout_gravity="center"
+    android:background="#00000000"
+    android:id="@+id/tc_standard">
+
+    <RelativeLayout
+        android:id="@+id/popup_container"
+        android:layout_width="400dp"
+        android:layout_height="800dp"
+        android:background="@drawable/bg_knight_black"
+        android:layout_gravity="center"
+        android:paddingTop="14dp"
+        android:layout_centerInParent="true"
+        android:layout_centerHorizontal="true">
+
+        <ImageView
+            android:id="@+id/app_logo"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/app_logo" />
+
+        <TextView
+            android:id="@+id/room_no"
+            android:layout_width="600dp"
+            android:layout_height="800dp"
+            android:layout_centerHorizontal="true"
+            android:textAlignment="center"
+            android:layout_below="@id/app_logo"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/bg_black_sun2"
+            android:textColor="#fff4f0"
+            android:fontFamily="@font/quicksand_bold"
+            android:textSize="18sp"
+            android:gravity="center"
+            android:text="" />
+
+        <TextView
+            android:id="@+id/about_us_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/app_logo"
+            android:fontFamily="@font/quicksand_bold"
+            android:textColor="#fff4f0"
+            android:textSize="20sp"
+            android:text="TERMS AND CONDITIONS" />
+
+        <TextView
+            android:id="@+id/tc1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/about_us_text"
+            android:layout_marginTop="14dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginEnd="40dp"
+            android:textColor="#fff4f0"
+            android:textSize="14sp"
+            android:fontFamily="@font/quicksand_medium"
+            android:text="1. Lorem ipsum odor amet, consectetuer adipiscing elit. Urna aliquam mollis auctor rhoncus hac dapibus quisque. Eleifend hendrerit fringilla sem amet volutpat."
+            android:padding="16dp"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:lineSpacingExtra="2dp"
+            android:justificationMode="inter_word" />
+
+        <TextView
+            android:id="@+id/tc2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/tc1"
+            android:layout_marginStart="40dp"
+            android:layout_marginEnd="40dp"
+            android:textColor="#fff4f0"
+            android:textSize="14sp"
+            android:fontFamily="@font/quicksand_medium"
+            android:text="2. Lorem ipsum odor amet, consectetuer adipiscing elit. Urna aliquam mollis auctor rhoncus hac dapibus quisque. Eleifend hendrerit fringilla sem amet volutpat."
+            android:padding="16dp"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:lineSpacingExtra="2dp"
+            android:justificationMode="inter_word" />
+
+        <TextView
+            android:id="@+id/tc3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/tc2"
+            android:layout_marginStart="40dp"
+            android:layout_marginEnd="40dp"
+            android:textColor="#fff4f0"
+            android:textSize="14sp"
+            android:fontFamily="@font/quicksand_medium"
+            android:text="3. Lorem ipsum odor amet, consectetuer adipiscing elit. Urna aliquam mollis auctor rhoncus hac dapibus quisque. Eleifend hendrerit fringilla sem amet volutpat."
+            android:padding="16dp"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:lineSpacingExtra="2dp"
+            android:justificationMode="inter_word" />
+
+        <TextView
+            android:id="@+id/tc4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/tc3"
+            android:layout_marginStart="40dp"
+            android:layout_marginEnd="40dp"
+            android:textColor="#fff4f0"
+            android:textSize="14sp"
+            android:fontFamily="@font/quicksand_medium"
+            android:text="4. Lorem ipsum odor amet, consectetuer adipiscing elit. Urna aliquam mollis auctor rhoncus hac dapibus quisque. Eleifend hendrerit fringilla sem amet volutpat."
+            android:padding="16dp"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:lineSpacingExtra="2dp"
+            android:justificationMode="inter_word" />
+
+        <!-- CHECKBOX -->
+        <CheckBox
+            android:id="@+id/checkBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tc4"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="26dp"
+            android:text="I AGREE"
+            android:textSize="16sp"
+            android:fontFamily="@font/quicksand_bold"
+            android:textColor="#fff4f0"
+            android:buttonTint="#fff4f0" />
+
+        <!-- PROCEED BUTTON -->
+        <Button
+            android:id="@+id/proceed_button"
+            android:layout_width="154dp"
+            android:layout_height="48dp"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/button_background"
+            android:textColor="#fff4f0"
+            android:fontFamily="@font/quicksand_bold"
+            android:textSize="16sp"
+            android:layout_below="@id/checkBox"
+            android:text="PROCEED"
+            android:layout_marginTop="20dp" />
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

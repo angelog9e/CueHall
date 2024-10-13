@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/standard_tables_page"
+    tools:context=".StandardTablesForm">
+
+    <!-- Main Content Layout -->
+    <RelativeLayout
+        android:id="@+id/bookings"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#151515">
+
+    <!-- TEXT TITLE -->
+    <TextView
+        android:id="@+id/text_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="@font/quicksand_bold"
+        android:text="CUEHALL"
+        android:letterSpacing="0.1"
+        android:layout_marginTop="40dp"
+        android:textColor="@color/white"
+        android:textSize="34sp" />
+
+    <TextView
+        android:id="@+id/standard_table"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/text_title"
+        android:layout_marginTop="160dp"
+        android:text="STANDARD TABLE"
+        android:fontFamily="@font/quicksand_bold"
+        android:textSize="26sp"
+        android:textColor="#fff4f0"
+        android:layout_centerHorizontal="true" />
+
+        <!-- BACK BUTTON -->
+        <Button
+            android:id="@+id/back_button"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="45dp"
+            android:layout_marginStart="15dp"
+            android:background="@android:color/transparent"
+            android:backgroundTint="@android:color/transparent"
+            android:drawableTop="@drawable/back_button" />
+
+        <!-- TABLE # TEXT -->
+        <TextView
+            android:id="@+id/table_no"
+            android:layout_width="260dp"
+            android:layout_height="50dp"
+            android:layout_centerHorizontal="true"
+            android:textAlignment="center"
+            android:layout_below="@id/standard_table"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/bg_black_sun2"
+            android:textColor="#fff4f0"
+            android:fontFamily="@font/quicksand_bold"
+            android:textSize="20sp"
+            android:gravity="center"
+            android:text="TABLE # " />
+
+        <!-- TIME BUTTON -->
+        <Button
+            android:id="@+id/time_btn"
+            android:layout_width="260dp"
+            android:layout_height="50dp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/table_no"
+            android:background="@drawable/bg_black_sun2"
+            android:textColor="#fff4f0"
+            android:fontFamily="@font/quicksand_bold"
+            android:textSize="20sp"
+            android:text="TIME"
+            android:layout_marginTop="22dp" />
+
+        <!-- DATE BUTTON -->
+        <Button
+            android:id="@+id/date_button"
+            android:layout_width="260dp"
+            android:layout_height="50dp"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/bg_black_sun2"
+            android:textColor="#fff4f0"
+            android:fontFamily="@font/quicksand_bold"
+            android:textSize="20sp"
+            android:layout_below="@id/time_btn"
+            android:text="DATE"
+            android:layout_marginTop="22dp" />
+
+        <!-- PROCEED BUTTON -->
+        <Button
+            android:id="@+id/proceed_button"
+            android:layout_width="154dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/button_background"
+            android:textColor="#fff4f0"
+            android:fontFamily="@font/quicksand_bold"
+            android:textSize="16sp"
+            android:layout_below="@id/date_button"
+            android:text="PROCEED"
+            android:layout_marginTop="40dp" />
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

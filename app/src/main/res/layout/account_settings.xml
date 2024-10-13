@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/account_settings"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LogIn">
+
+    <RelativeLayout
+        android:id="@id/account_settings"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#151515">
+
+        <!-- TITLE TEXT -->
+        <TextView
+            android:id="@+id/text_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_alignParentTop="true"
+            android:fontFamily="@font/quicksand_bold"
+            android:text="CUEHALL"
+            android:letterSpacing="0.1"
+            android:layout_marginTop="40dp"
+            android:textColor="@color/white"
+            android:textSize="34sp" />
+
+        <!-- BACK BUTTON -->
+        <Button
+            android:id="@+id/back_button"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="45dp"
+            android:layout_marginStart="15dp"
+            android:background="@android:color/transparent"
+            android:backgroundTint="@android:color/transparent"
+            android:drawableTop="@drawable/back_button" />
+
+        <ImageView
+            android:id="@+id/account_ic"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_below="@id/text_title"
+            android:background="@drawable/acc_button"
+            android:layout_marginTop="80dp"
+            android:layout_centerHorizontal="true" />
+
+        <!-- ACCOUNT SETTINGS TEXT-->
+        <TextView
+            android:id="@+id/acc_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:fontFamily="@font/quicksand_bold"
+            android:text="ACCOUNT SETTINGS"
+            android:layout_marginTop="260dp"
+            android:layout_below="@id/text_title"
+            android:textColor="#fff4f0"
+            android:textSize="20sp" />
+
+        <!-- BUTTONS -->
+        <Button
+            android:id="@+id/edit_profile_button"
+            android:textSize="20sp"
+            android:textColor="#fff4f0"
+            android:background="@drawable/bg_black_sun2"
+            android:fontFamily="@font/quicksand_bold"
+            android:layout_width="360dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="20dp"
+            android:layout_below="@+id/acc_text"
+            android:text="EDIT PROFILE" />
+
+        <Button
+            android:id="@+id/about_us_button"
+            android:textSize="20sp"
+            android:textColor="#fff4f0"
+            android:background="@drawable/bg_black_sun2"
+            android:fontFamily="@font/quicksand_bold"
+            android:layout_width="360dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="20dp"
+            android:layout_below="@id/edit_profile_button"
+            android:text="ABOUT US" />
+
+        <Button
+            android:id="@+id/contact_us_button"
+            android:textSize="20sp"
+            android:textColor="#fff4f0"
+            android:background="@drawable/bg_black_sun2"
+            android:fontFamily="@font/quicksand_bold"
+            android:layout_width="360dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="30dp"
+            android:layout_below="@id/about_us_button"
+            android:text="CONTACT US" />
+
+        <!-- LOGOUT BUTTON -->
+        <Button
+            android:id="@+id/logout_button"
+            android:layout_width="158dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/contact_us_button"
+            android:text="LOGOUT"
+            android:textSize="16sp"
+            android:textColor="#fff4f0"
+            android:fontFamily="@font/quicksand_bold"
+            android:background="@drawable/button_background"
+            android:drawableLeft="@drawable/ic_logout"
+            android:drawablePadding="8dp"
+            android:paddingStart="22dp"
+            android:paddingEnd="24dp" />
+
+        <!-- CREDITS -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_alignParentBottom="true"
+            android:text="© 2024 CUEHALL. All rights reserved."
+            android:layout_marginBottom="30dp"
+            android:textColor="@color/white"
+            android:textSize="10sp" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

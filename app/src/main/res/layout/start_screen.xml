@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/start_screen"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:fitsSystemWindows="true"
+    tools:context=".StartScreen">
+
+    <!-- VIDEO BACKGROUND -->
+    <VideoView
+        android:id="@+id/videobackground"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:scaleType="centerCrop" />
+
+    <!-- TINT -->
+    <View
+        android:id="@+id/tintView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#80000000" />
+
+    <!-- RESERVE NOW BUTTON -->
+    <Button
+        android:background="#00000000"
+        android:id="@+id/reserve_now"
+        android:textSize="18sp"
+        android:textColor="#fff4f0"
+        android:fontFamily="@font/quicksand_bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="100dp"
+        android:text="RESERVE NOW" />
+
+    <!-- LOGO -->
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="320dp"
+        android:layout_height="320dp"
+        android:layout_marginTop="140dp"
+        android:layout_centerInParent="true"
+        android:layout_alignParentTop="true"
+        app:srcCompat="@drawable/app_logo_test" />
+
+    <!-- CREDITS -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_alignParentBottom="true"
+        android:text="© 2024 CUEHALL. All rights reserved."
+        android:layout_marginBottom="30dp"
+        android:textColor="@color/white"
+        android:textSize="10sp" />
+
+</RelativeLayout>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ripple xmlns:android="http://schemas.android.com/apk/res/android"
+    android:color="#9024242C"> <!-- Semi-transparent ripple color -->
+
+    <item android:id="@android:id/mask">
+        <shape android:shape="rectangle">
+            <corners android:radius="18dp" /> <!-- Set the corner radius here -->
+            <solid android:color="#9024242C" />
+        </shape>
+    </item>
+
+</ripple>

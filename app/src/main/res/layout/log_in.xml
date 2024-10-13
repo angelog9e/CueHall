@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/log_in"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LogIn"
+    android:background="#151515">
+
+    <!-- TITLE TEXT -->
+    <TextView
+        android:id="@+id/title_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        android:fontFamily="@font/quicksand_bold"
+        android:text="CUEHALL"
+        android:letterSpacing="0.1"
+        android:textColor="@color/white"
+        android:textSize="34sp" />
+
+    <!-- BACK BUTTON -->
+    <Button
+        android:id="@+id/back_button"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="45dp"
+        android:layout_marginStart="15dp"
+        android:background="@android:color/transparent"
+        android:backgroundTint="@android:color/transparent"
+        android:drawableTop="@drawable/back_button" />
+
+    <!-- LOGIN TEXT -->
+    <TextView
+        android:id="@+id/loginText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="300dp"
+        android:fontFamily="@font/quicksand_bold"
+        android:text="LOGIN"
+        android:textColor="#fff4f0"
+        android:textSize="22sp" />
+
+    <!-- USERNAME LABEL -->
+    <TextView
+        android:id="@+id/username_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/loginText"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="64dp"
+        android:fontFamily="@font/quicksand_bold"
+        android:text="USERNAME"
+        android:textColor="#01ab7a"
+        android:textSize="12sp" />
+
+    <!-- USERNAME FIELD -->
+    <EditText
+        android:id="@+id/username_input1"
+        android:layout_width="360dp"
+        android:layout_height="48dp"
+        android:textColor="#151515"
+        android:background="@drawable/input_background"
+        android:layout_below="@id/loginText"
+        android:layout_marginTop="32dp"
+        android:layout_marginBottom="50dp"
+        android:layout_centerHorizontal="true"
+        android:textAlignment="center"
+        android:ems="10"
+        android:inputType="textEmailAddress" />
+
+    <!-- PASSWORD LABEL -->
+    <TextView
+        android:id="@+id/password_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/password_input"
+        android:layout_marginBottom="5dp"
+        android:layout_marginStart="67dp"
+        android:fontFamily="@font/quicksand_bold"
+        android:text="PASSWORD"
+        android:textColor="#01ab7a"
+        android:textSize="12sp" />
+
+    <!-- PASSWORD FIELD -->
+    <EditText
+        android:id="@+id/password_input"
+        android:layout_width="360dp"
+        android:layout_height="48dp"
+        android:textColor="#151515"
+        android:background="@drawable/input_background"
+        android:layout_below="@id/username_input1"
+        android:layout_centerHorizontal="true"
+        android:textAlignment="center"
+        android:ems="10"
+        android:inputType="textPassword" />
+
+    <!-- LOGIN BUTTON -->
+    <Button
+        android:id="@+id/login_button"
+        android:layout_width="154dp"
+        android:layout_height="40dp"
+        android:layout_below="@id/password_input"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="32dp"
+        android:text="LOGIN"
+        android:textColor="#fff4f0"
+        android:textSize="14sp"
+        android:fontFamily="@font/quicksand_bold"
+        android:background="@drawable/button_background" />
+
+    <!-- FORGOT PASSWORD TEXT -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/login_button"
+        android:layout_marginTop="25dp"
+        android:layout_marginStart="174dp"
+        android:fontFamily="@font/quicksand_bold"
+        android:text="Forgot"
+        android:textColor="#fff4f0"
+        android:textSize="12sp" />
+
+    <!-- FORGOT PASSWORD BUTTON -->
+    <Button
+        android:id="@+id/forgot_pass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/login_button"
+        android:layout_marginTop="10.2dp"
+        android:layout_marginStart="204dp"
+        android:text="Password?"
+        android:textAllCaps="false"
+        android:textColor="#01AB7A"
+        android:textSize="12sp"
+        android:background="@android:color/transparent"
+        android:backgroundTint="@android:color/transparent"
+        android:fontFamily="@font/quicksand_bold" />
+
+    <!-- SIGN UP TEXT -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="136dp"
+        android:fontFamily="@font/quicksand_bold"
+        android:text="DON'T HAVE AN ACCOUNT?"
+        android:textColor="#fff4f0"
+        android:textSize="11sp"
+        android:layout_marginBottom="21.5dp" />
+
+    <!-- SIGN UP BUTTON -->
+    <Button
+        android:id="@+id/sign_up"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="98dp"
+        android:layout_marginBottom="5.9dp"
+        android:text="SIGN UP"
+        android:textColor="#01AB7A"
+        android:textSize="11sp"
+        android:background="@android:color/transparent"
+        android:backgroundTint="@android:color/transparent"
+        android:fontFamily="@font/quicksand_bold" />
+
+</RelativeLayout>
