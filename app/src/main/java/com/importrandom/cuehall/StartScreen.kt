@@ -50,7 +50,7 @@ class StartScreen : AppCompatActivity() {
 
         // VIDEO BG
         videoView = findViewById(R.id.videobackground)
-        val uri = Uri.parse("android.resource://${packageName}/${R.raw.videobackground}")
+        val uri = Uri.parse("android.resource://${packageName}/${R.raw.startscreenbg}")
         videoView.setVideoURI(uri)
         videoView.setOnPreparedListener { mp -> mp.isLooping = true }
         videoView.start()
