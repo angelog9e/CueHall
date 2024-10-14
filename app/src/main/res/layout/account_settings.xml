@@ -39,15 +39,6 @@
             android:backgroundTint="@android:color/transparent"
             android:drawableTop="@drawable/back_button" />
 
-        <ImageView
-            android:id="@+id/account_ic"
-            android:layout_width="200dp"
-            android:layout_height="200dp"
-            android:layout_below="@id/text_title"
-            android:background="@drawable/acc_button"
-            android:layout_marginTop="80dp"
-            android:layout_centerHorizontal="true" />
-
         <!-- ACCOUNT SETTINGS TEXT-->
         <TextView
             android:id="@+id/acc_text"
@@ -55,26 +46,61 @@
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
             android:fontFamily="@font/quicksand_bold"
-            android:text="ACCOUNT SETTINGS"
-            android:layout_marginTop="260dp"
+            android:text="MY PROFILE"
+            android:layout_marginTop="180dp"
             android:layout_below="@id/text_title"
             android:textColor="#fff4f0"
             android:textSize="20sp" />
 
         <!-- BUTTONS -->
         <Button
-            android:id="@+id/edit_profile_button"
+            android:id="@+id/account_button"
             android:textSize="20sp"
             android:textColor="#fff4f0"
             android:background="@drawable/bg_black_sun2"
             android:fontFamily="@font/quicksand_bold"
-            android:layout_width="360dp"
+            android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="40dp"
             android:layout_marginBottom="20dp"
             android:layout_below="@+id/acc_text"
-            android:text="EDIT PROFILE" />
+            android:text="ACCOUNT"
+            android:drawableStart="@drawable/ic_user"
+            android:paddingStart="38dp"
+            android:paddingEnd="40dp"/>
+
+        <Button
+            android:id="@+id/notification_button"
+            android:textSize="20sp"
+            android:textColor="#fff4f0"
+            android:background="@drawable/bg_black_sun2"
+            android:fontFamily="@font/quicksand_bold"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="20dp"
+            android:layout_below="@+id/account_button"
+            android:text="NOTIFICATIONS"
+            android:drawableStart="@drawable/ic_bell"
+            android:paddingStart="38dp"
+            android:paddingEnd="40dp"/>
+
+        <Button
+            android:id="@+id/help_button"
+            android:textSize="20sp"
+            android:textColor="#fff4f0"
+            android:background="@drawable/bg_black_sun2"
+            android:fontFamily="@font/quicksand_bold"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="20dp"
+            android:layout_below="@id/notification_button"
+            android:text="HELP &amp; SUPPORT"
+            android:drawableStart="@drawable/ic_headphones"
+            android:paddingStart="38dp"
+            android:paddingEnd="40dp"/>
 
         <Button
             android:id="@+id/about_us_button"
@@ -82,25 +108,15 @@
             android:textColor="#fff4f0"
             android:background="@drawable/bg_black_sun2"
             android:fontFamily="@font/quicksand_bold"
-            android:layout_width="360dp"
+            android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
-            android:layout_marginBottom="20dp"
-            android:layout_below="@id/edit_profile_button"
-            android:text="ABOUT US" />
-
-        <Button
-            android:id="@+id/contact_us_button"
-            android:textSize="20sp"
-            android:textColor="#fff4f0"
-            android:background="@drawable/bg_black_sun2"
-            android:fontFamily="@font/quicksand_bold"
-            android:layout_width="360dp"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:layout_marginBottom="30dp"
-            android:layout_below="@id/about_us_button"
-            android:text="CONTACT US" />
+            android:layout_marginBottom="40dp"
+            android:layout_below="@id/help_button"
+            android:text="ABOUT"
+            android:drawableStart="@drawable/ic_about"
+            android:paddingStart="38dp"
+            android:paddingEnd="40dp"/>
 
         <!-- LOGOUT BUTTON -->
         <Button
@@ -108,7 +124,7 @@
             android:layout_width="158dp"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
-            android:layout_below="@id/contact_us_button"
+            android:layout_below="@id/about_us_button"
             android:text="LOGOUT"
             android:textSize="16sp"
             android:textColor="#fff4f0"

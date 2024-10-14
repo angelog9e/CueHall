@@ -45,49 +45,20 @@
             android:layout_centerHorizontal="true"
             android:layout_marginTop="240dp"
             android:fontFamily="@font/quicksand_bold"
-            android:text="EDIT PROFILE"
+            android:text="ACCOUNT SETTINGS"
             android:textColor="#fff4f0"
             android:textSize="22sp" />
-
-        <!-- EDIT USERNAME-->
-        <TextView
-            android:id="@+id/username_text"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/edit_profText"
-            android:layout_marginTop="20dp"
-            android:layout_marginStart="65dp"
-            android:fontFamily="@font/quicksand_bold"
-            android:text="USERNAME"
-            android:textColor="#01ab7a"
-            android:textSize="12sp" />
-
-        <!-- EDIT USERNAME INPUT-->
-        <EditText
-            android:id="@+id/edit_username_input"
-            android:layout_width="360dp"
-            android:layout_height="48dp"
-            android:textColor="#151515"
-            android:background="@drawable/input_background"
-            android:layout_below="@id/username_text"
-            android:layout_marginTop="6dp"
-            android:paddingStart="80dp"
-            android:paddingEnd="80dp"
-            android:layout_centerHorizontal="true"
-            android:textAlignment="center"
-            android:ems="10"
-            android:inputType="textEmailAddress" />
 
         <!-- EMAIL-->
         <TextView
             android:id="@+id/email_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/edit_username_input"
-            android:layout_marginTop="10dp"
-            android:layout_marginStart="68dp"
+            android:layout_below="@+id/edit_profText"
+            android:layout_marginTop="32dp"
+            android:layout_marginStart="66dp"
             android:fontFamily="@font/quicksand_bold"
-            android:text="EMAIL"
+            android:text="EMAIL ADDRESS"
             android:textColor="#01ab7a"
             android:textSize="12sp" />
 
@@ -113,8 +84,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/edit_emailadd_input"
-            android:layout_marginTop="10dp"
-            android:layout_marginStart="68dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="66dp"
             android:fontFamily="@font/quicksand_bold"
             android:text="CURRENT PASSWORD"
             android:textColor="#01ab7a"
@@ -159,8 +130,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/current_password"
-            android:layout_marginTop="10dp"
-            android:layout_marginStart="68dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="66dp"
             android:fontFamily="@font/quicksand_bold"
             android:text="NEW PASSWORD"
             android:textColor="#01ab7a"
@@ -209,12 +180,12 @@
             android:background="@drawable/button_background"
             android:fontFamily="@font/quicksand_bold"
             android:text="SAVE"
-            android:drawableStart="@drawable/ic_logout"
+            android:drawableStart="@drawable/ic_save"
             android:layout_below="@id/new_password"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="30dp"
-            android:paddingStart="20dp"
-            android:paddingEnd="24dp"/>
+            android:paddingStart="22dp"
+            android:paddingEnd="26dp"/>
 
         <!-- CREDITS -->
         <TextView

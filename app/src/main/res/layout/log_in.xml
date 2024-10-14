@@ -111,13 +111,14 @@
 
         <ImageButton
             android:id="@+id/show_password_button"
-            android:layout_width="42dp"
-            android:layout_height="42dp"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
             android:layout_alignParentEnd="true"
             android:layout_marginEnd="64dp"
-            android:layout_marginTop="6dp"
+            android:layout_marginTop="2dp"
             android:background="@android:color/transparent"
-            android:src="@drawable/ic_show_password" />
+            android:src="@drawable/ic_show_password"
+            android:visibility="gone"/>
     </RelativeLayout>
 
     <!-- LOGIN BUTTON -->

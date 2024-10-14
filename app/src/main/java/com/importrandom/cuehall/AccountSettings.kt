@@ -39,10 +39,10 @@ class AccountSettings : AppCompatActivity() {
        // BUTTONS
         val logOutButton = findViewById<Button>(R.id.logout_button)
         val backButton = findViewById<Button>(R.id.back_button)
-        val editProfileButton = findViewById<Button>(R.id.edit_profile_button)
+        val accountButton = findViewById<Button>(R.id.account_button)
 
         // EDIT PROFILE BUTTON
-        editProfileButton.setOnClickListener {
+        accountButton.setOnClickListener {
             val intent = Intent(this, EditProfile::class.java)
             startActivity(intent)
         }
@@ -56,8 +56,8 @@ class AccountSettings : AppCompatActivity() {
         }
 
         // CONTACT US BUTTON
-        val contactUsButton: Button = findViewById(R.id.contact_us_button)
-        contactUsButton.setOnClickListener {
+        val helpButton: Button = findViewById(R.id.help_button)
+        helpButton.setOnClickListener {
             val popup = Contact_us()
             popup.show(supportFragmentManager, "popup_tag")
         }

@@ -3,7 +3,9 @@ package com.importrandom.cuehall
 import android.content.Intent
 import android.os.Build
 import android.os.Bundle
+import android.text.Editable
 import android.text.InputType
+import android.text.TextWatcher
 import android.view.View
 import android.view.WindowInsets
 import android.view.WindowInsetsController
@@ -69,10 +71,14 @@ class LogIn : AppCompatActivity() {
             startActivity(intent)
         }
 
-        // SHOW PASSWORD BUTTON
+        // FIND VIEWS
         val passwordInput = findViewById<EditText>(R.id.login_password_input)
         val showPasswordButton = findViewById<ImageButton>(R.id.show_password_button)
 
+// Initially hide the showPasswordButton
+        showPasswordButton.visibility = View.GONE
+
+// TOGGLE PASSWORD VISIBILITY
         var isPasswordVisible = false
 
         showPasswordButton.setOnClickListener {
@@ -90,6 +96,22 @@ class LogIn : AppCompatActivity() {
 
             isPasswordVisible = !isPasswordVisible
         }
+
+            // TEXT WATCHER TO SHOW BUTTON WHEN PASSWORD IS TYPED
+        passwordInput.addTextChangedListener(object : TextWatcher {
+            override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {}
+
+            override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {}
+
+            override fun afterTextChanged(s: Editable?) {
+                if (s.isNullOrEmpty()) {
+                    showPasswordButton.visibility = View.GONE
+                } else {
+                    showPasswordButton.visibility = View.VISIBLE
+                }
+            }
+        })
+
         // EDGE TO EDGE DISPLAY PADDING
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.log_in)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
