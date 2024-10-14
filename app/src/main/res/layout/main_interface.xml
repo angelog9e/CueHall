@@ -162,6 +162,18 @@
                     android:padding="4dp"
                     android:orientation="horizontal">
 
+                    <TextView
+                        android:layout_width="70dp"
+                        android:layout_height="wrap_content"
+                        android:text="Perks"
+                        android:textColor="#fff4f0"
+                        android:fontFamily="@font/quicksand_bold"
+                        android:textSize="14sp"
+                        android:layout_marginTop="11dp"
+                        android:layout_marginStart="30dp"
+                        android:background="@drawable/standard_bg"
+                        android:textAlignment="center"/>
+
                     <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
@@ -182,7 +194,7 @@
                             android:text="WIFI"
                             android:textColor="#fff4f0"
                             android:fontFamily="@font/quicksand_bold"
-                            android:textSize="10sp"
+                            android:textSize="8sp"
                             android:layout_marginTop="2dp"
                             android:gravity="center_horizontal" />
 
@@ -208,7 +220,7 @@
                             android:text="BAR"
                             android:textColor="#fff4f0"
                             android:fontFamily="@font/quicksand_bold"
-                            android:textSize="10sp"
+                            android:textSize="8sp"
                             android:layout_marginTop="3dp"
                             android:gravity="center_horizontal" />
 
@@ -235,7 +247,7 @@
                             android:text="24/hrs"
                             android:textColor="#fff4f0"
                             android:fontFamily="@font/quicksand_bold"
-                            android:textSize="10sp"
+                            android:textSize="8sp"
                             android:layout_marginTop="2dp"
                             android:gravity="center_horizontal" />
 
@@ -255,7 +267,7 @@
                         android:id="@+id/table1_btn"
                         android:layout_width="168dp"
                         android:layout_height="144dp"
-                        android:background="@drawable/bg_black_sun"
+                        android:background="@drawable/table_button_bg"
                         android:layout_marginBottom="14dp"
                         android:layout_alignParentStart="true"
                         android:text="T1"
@@ -263,13 +275,13 @@
                         android:fontFamily="@font/quicksand_bold"
                         android:textSize="34sp"
                         android:paddingBottom="68dp"
-                        android:layout_marginStart="4dp" />
+                        android:layout_marginStart="4dp"/>
 
                     <Button
                         android:id="@+id/table2_btn"
                         android:layout_width="168dp"
                         android:layout_height="144dp"
-                        android:background="@drawable/bg_black_sun"
+                        android:background="@drawable/table_button_bg"
                         android:layout_marginBottom="14dp"
                         android:layout_alignParentStart="true"
                         android:layout_below="@+id/table1_btn"
@@ -284,7 +296,7 @@
                         android:id="@+id/table3_btn"
                         android:layout_width="168dp"
                         android:layout_height="144dp"
-                        android:background="@drawable/bg_black_sun"
+                        android:background="@drawable/table_button_bg"
                         android:layout_marginBottom="14dp"
                         android:layout_below="@+id/table2_btn"
                         android:text="T3"
@@ -298,7 +310,7 @@
                         android:id="@+id/table4_btn"
                         android:layout_width="168dp"
                         android:layout_height="144dp"
-                        android:background="@drawable/bg_black_sun"
+                        android:background="@drawable/table_button_bg"
                         android:layout_marginBottom="14dp"
                         android:layout_alignParentEnd="true"
                         android:text="T4"
@@ -312,7 +324,7 @@
                         android:id="@+id/table5_btn"
                         android:layout_width="168dp"
                         android:layout_height="144dp"
-                        android:background="@drawable/bg_black_sun"
+                        android:background="@drawable/table_button_bg"
                         android:layout_marginBottom="14dp"
                         android:layout_below="@+id/table4_btn"
                         android:layout_alignParentEnd="true"
@@ -327,7 +339,7 @@
                         android:id="@+id/table6_btn"
                         android:layout_width="168dp"
                         android:layout_height="144dp"
-                        android:background="@drawable/bg_black_sun"
+                        android:background="@drawable/table_button_bg"
                         android:layout_marginBottom="18dp"
                         android:layout_below="@+id/table5_btn"
                         android:layout_alignParentEnd="true"

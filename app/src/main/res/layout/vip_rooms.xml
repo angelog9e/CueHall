@@ -164,6 +164,18 @@
                 android:padding="4dp"
                 android:orientation="horizontal">
 
+                <TextView
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:text="Perks"
+                    android:textColor="#fff4f0"
+                    android:fontFamily="@font/quicksand_bold"
+                    android:textSize="14sp"
+                    android:layout_marginTop="11dp"
+                    android:layout_marginStart="18dp"
+                    android:background="@drawable/standard_bg"
+                    android:textAlignment="center"/>
+
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
@@ -184,7 +196,7 @@
                         android:text="WIFI"
                         android:textColor="#fff4f0"
                         android:fontFamily="@font/quicksand_bold"
-                        android:textSize="10sp"
+                        android:textSize="8sp"
                         android:layout_marginTop="2dp"
                         android:gravity="center_horizontal" />
 
@@ -211,7 +223,7 @@
                         android:text="AIRCONDITION"
                         android:textColor="#fff4f0"
                         android:fontFamily="@font/quicksand_bold"
-                        android:textSize="10sp"
+                        android:textSize="8sp"
                         android:layout_marginTop="3dp"
                         android:gravity="center_horizontal" />
 
@@ -238,7 +250,7 @@
                         android:text="BAR"
                         android:textColor="#fff4f0"
                         android:fontFamily="@font/quicksand_bold"
-                        android:textSize="10sp"
+                        android:textSize="8sp"
                         android:layout_marginTop="3dp"
                         android:gravity="center_horizontal" />
 
@@ -265,7 +277,7 @@
                         android:text="KTV"
                         android:textColor="#fff4f0"
                         android:fontFamily="@font/quicksand_bold"
-                        android:textSize="10sp"
+                        android:textSize="8sp"
                         android:layout_marginTop="3dp"
                         android:gravity="center_horizontal" />
 
@@ -292,7 +304,7 @@
                         android:text="24/hrs"
                         android:textColor="#fff4f0"
                         android:fontFamily="@font/quicksand_bold"
-                        android:textSize="10sp"
+                        android:textSize="8sp"
                         android:layout_marginTop="2dp"
                         android:gravity="center_horizontal" />
 
@@ -312,7 +324,7 @@
                     android:id="@+id/room1_btn"
                     android:layout_width="168dp"
                     android:layout_height="144dp"
-                    android:background="@drawable/bg_black_sun"
+                    android:background="@drawable/vip_button_bg"
                     android:layout_marginBottom="14dp"
                     android:layout_alignParentStart="true"
                     android:text="R1"
@@ -326,7 +338,7 @@
                     android:id="@+id/room2_btn"
                     android:layout_width="168dp"
                     android:layout_height="144dp"
-                    android:background="@drawable/bg_black_sun"
+                    android:background="@drawable/vip_button_bg"
                     android:layout_marginBottom="14dp"
                     android:layout_alignParentStart="true"
                     android:layout_below="@+id/room1_btn"
@@ -341,7 +353,7 @@
                     android:id="@+id/room3_btn"
                     android:layout_width="168dp"
                     android:layout_height="144dp"
-                    android:background="@drawable/bg_black_sun"
+                    android:background="@drawable/vip_button_bg"
                     android:layout_marginBottom="14dp"
                     android:layout_below="@+id/room2_btn"
                     android:text="R3"
@@ -355,7 +367,7 @@
                     android:id="@+id/room4_btn"
                     android:layout_width="168dp"
                     android:layout_height="144dp"
-                    android:background="@drawable/bg_black_sun"
+                    android:background="@drawable/vip_button_bg"
                     android:layout_marginBottom="14dp"
                     android:layout_alignParentEnd="true"
                     android:text="R4"
@@ -369,7 +381,7 @@
                     android:id="@+id/room5_btn"
                     android:layout_width="168dp"
                     android:layout_height="144dp"
-                    android:background="@drawable/bg_black_sun"
+                    android:background="@drawable/vip_button_bg"
                     android:layout_marginBottom="14dp"
                     android:layout_below="@+id/room4_btn"
                     android:layout_alignParentEnd="true"
@@ -384,7 +396,7 @@
                     android:id="@+id/room6_btn"
                     android:layout_width="168dp"
                     android:layout_height="144dp"
-                    android:background="@drawable/bg_black_sun"
+                    android:background="@drawable/vip_button_bg"
                     android:layout_marginBottom="18dp"
                     android:layout_below="@+id/room5_btn"
                     android:layout_alignParentEnd="true"
