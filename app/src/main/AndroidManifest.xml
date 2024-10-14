@@ -44,6 +44,9 @@
             android:name=".VIPRoomsForm"
             android:screenOrientation="portrait"/>
         <activity
+            android:name=".EditProfile"
+            android:screenOrientation="portrait"/>
+        <activity
             android:name=".MainInterface"
             android:exported="true"
             android:screenOrientation="portrait"/>
@@ -51,6 +54,7 @@
             android:name=".StartScreen"
             android:exported="true"
             android:screenOrientation="portrait">
+
 
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

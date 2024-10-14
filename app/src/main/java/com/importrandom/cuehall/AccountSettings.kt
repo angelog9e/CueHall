@@ -39,6 +39,13 @@ class AccountSettings : AppCompatActivity() {
        // BUTTONS
         val logOutButton = findViewById<Button>(R.id.logout_button)
         val backButton = findViewById<Button>(R.id.back_button)
+        val editProfileButton = findViewById<Button>(R.id.edit_profile_button)
+
+        // EDIT PROFILE BUTTON
+        editProfileButton.setOnClickListener {
+            val intent = Intent(this, EditProfile::class.java)
+            startActivity(intent)
+        }
 
         // ABOUT US BUTTON
         val aboutUsButton: Button = findViewById(R.id.about_us_button)
