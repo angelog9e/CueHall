@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/edit_profile_page"
+    tools:context=".EditProfile">
+
+    <RelativeLayout
+        android:id="@id/edit_profile_page"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#151515">
+
+        <!-- TITLE TEXT -->
+        <TextView
+            android:id="@+id/text_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_alignParentTop="true"
+            android:fontFamily="@font/quicksand_bold"
+            android:text="CUEHALL"
+            android:letterSpacing="0.1"
+            android:layout_marginTop="40dp"
+            android:textColor="@color/white"
+            android:textSize="34sp" />
+
+        <!-- BACK BUTTON -->
+        <Button
+            android:id="@+id/back_button"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="45dp"
+            android:layout_marginStart="15dp"
+            android:background="@android:color/transparent"
+            android:backgroundTint="@android:color/transparent"
+            android:drawableTop="@drawable/back_button" />
+
+        <TextView
+            android:id="@+id/edit_prof_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:fontFamily="@font/quicksand_bold"
+            android:text="EDIT PROFILE"
+            android:layout_marginTop="220dp"
+            android:textColor="#fff4f0"
+            android:textSize="22sp" />
+
+        <RelativeLayout
+            android:id="@+id/edit_profile_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="60dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginEnd="40dp"
+            android:layout_below="@id/edit_prof_text">
+
+            <TextView
+                android:id="@+id/user_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="USERNAME :"
+                android:textColor="#fff4f0"
+                android:fontFamily="@font/quicksand_bold"
+                android:textSize="16sp"/>
+
+            <TextView
+                android:id="@+id/email_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/user_text"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="40dp"
+                android:text="EMAIL :"
+                android:textColor="#fff4f0"
+                android:fontFamily="@font/quicksand_bold"
+                android:textSize="16sp"/>
+
+            <TextView
+                android:id="@+id/no_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/email_text"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="20dp"
+                android:text="NUMBER :"
+                android:textColor="#fff4f0"
+                android:fontFamily="@font/quicksand_bold"
+                android:textSize="16sp"/>
+
+            <TextView
+                android:id="@+id/pass_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/no_text"
+                android:layout_marginTop="20dp"
+                android:text="PASSWORD "
+                android:textColor="#fff4f0"
+                android:fontFamily="@font/quicksand_bold"
+                android:textSize="16sp"/>
+
+            <TextView
+                android:id="@+id/old_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/pass_text"
+                android:layout_marginStart="110dp"
+                android:text="OLD           :"
+                android:textColor="#fff4f0"
+                android:fontFamily="@font/quicksand_bold"
+                android:textSize="14sp"/>
+
+            <TextView
+                android:id="@+id/new_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/old_text"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="110dp"
+                android:text="NEW          :"
+                android:textColor="#fff4f0"
+                android:fontFamily="@font/quicksand_bold"
+                android:textSize="14sp"/>
+
+            <TextView
+                android:id="@+id/confirm_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/new_text"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="110dp"
+                android:text="CONFIRM  :"
+                android:textColor="#fff4f0"
+                android:fontFamily="@font/quicksand_bold"
+                android:textSize="14sp"/>
+
+            <!-- SAVE BUTTON -->
+            <Button
+                android:id="@+id/save_button"
+                android:layout_width="158dp"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/confirm_text"
+                android:layout_marginTop="80dp"
+                android:text="SAVE"
+                android:textSize="16sp"
+                android:textColor="#fff4f0"
+                android:fontFamily="@font/quicksand_bold"
+                android:background="@drawable/button_background"
+                android:drawableLeft="@drawable/ic_logout"
+                android:drawablePadding="8dp"
+                android:paddingStart="22dp"
+                android:paddingEnd="24dp" />
+
+        </RelativeLayout>
+
+        <!-- CREDITS -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_alignParentBottom="true"
+            android:text="© 2024 CUEHALL. All rights reserved."
+            android:layout_marginBottom="30dp"
+            android:textColor="@color/white"
+            android:textSize="10sp" />
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
