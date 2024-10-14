@@ -3,10 +3,13 @@ package com.importrandom.cuehall
 import android.content.Intent
 import android.os.Build
 import android.os.Bundle
+import android.text.InputType
 import android.view.View
 import android.view.WindowInsets
 import android.view.WindowInsetsController
 import android.widget.Button
+import android.widget.EditText
+import android.widget.ImageButton
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -64,6 +67,28 @@ class LogIn : AppCompatActivity() {
         backButton.setOnClickListener {
             val intent = Intent(this, StartScreen::class.java)
             startActivity(intent)
+        }
+
+        // SHOW PASSWORD BUTTON
+        val passwordInput = findViewById<EditText>(R.id.login_password_input)
+        val showPasswordButton = findViewById<ImageButton>(R.id.show_password_button)
+
+        var isPasswordVisible = false
+
+        showPasswordButton.setOnClickListener {
+            if (isPasswordVisible) {
+                // Hide password
+                passwordInput.inputType = InputType.TYPE_CLASS_TEXT or InputType.TYPE_TEXT_VARIATION_PASSWORD
+                showPasswordButton.setImageResource(R.drawable.ic_show_password)
+            } else {
+                // Show password
+                passwordInput.inputType = InputType.TYPE_CLASS_TEXT or InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD
+                showPasswordButton.setImageResource(R.drawable.ic_hide_password)
+            }
+            // Move cursor to the end of the text
+            passwordInput.setSelection(passwordInput.text.length)
+
+            isPasswordVisible = !isPasswordVisible
         }
         // EDGE TO EDGE DISPLAY PADDING
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.log_in)) { v, insets ->

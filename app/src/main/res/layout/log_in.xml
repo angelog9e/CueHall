@@ -68,6 +68,8 @@
         android:layout_below="@id/loginText"
         android:layout_marginTop="32dp"
         android:layout_marginBottom="50dp"
+        android:paddingStart="80dp"
+        android:paddingEnd="80dp"
         android:layout_centerHorizontal="true"
         android:textAlignment="center"
         android:ems="10"
@@ -79,7 +81,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_above="@id/password_input"
-        android:layout_marginBottom="5dp"
         android:layout_marginStart="67dp"
         android:fontFamily="@font/quicksand_bold"
         android:text="PASSWORD"
@@ -87,17 +88,37 @@
         android:textSize="12sp" />
 
     <!-- PASSWORD FIELD -->
-    <EditText
+    <RelativeLayout
         android:id="@+id/password_input"
-        android:layout_width="360dp"
-        android:layout_height="48dp"
-        android:textColor="#151515"
-        android:background="@drawable/input_background"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_below="@id/username_input1"
-        android:layout_centerHorizontal="true"
-        android:textAlignment="center"
-        android:ems="10"
-        android:inputType="textPassword" />
+        android:layout_centerHorizontal="true">
+
+        <EditText
+            android:id="@+id/login_password_input"
+            android:layout_width="360dp"
+            android:layout_height="48dp"
+            android:textColor="#151515"
+            android:background="@drawable/input_background"
+            android:layout_marginTop="2dp"
+            android:textAlignment="center"
+            android:ems="10"
+            android:layout_centerHorizontal="true"
+            android:inputType="textPassword"
+            android:paddingEnd="80dp"
+            android:paddingStart="80dp"/>
+
+        <ImageButton
+            android:id="@+id/show_password_button"
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="64dp"
+            android:layout_marginTop="6dp"
+            android:background="@android:color/transparent"
+            android:src="@drawable/ic_show_password" />
+    </RelativeLayout>
 
     <!-- LOGIN BUTTON -->
     <Button

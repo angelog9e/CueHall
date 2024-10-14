@@ -76,6 +76,8 @@
             android:background="@drawable/input_background"
             android:layout_centerInParent="true"
             android:layout_centerHorizontal="true"
+            android:paddingStart="40dp"
+            android:paddingEnd="40dp"
             android:textAlignment="center"
             android:ems="10"
             android:inputType="textEmailAddress" />

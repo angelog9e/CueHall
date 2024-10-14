@@ -71,6 +71,8 @@
             android:background="@drawable/input_background"
             android:layout_below="@id/username_text"
             android:layout_marginTop="6dp"
+            android:paddingStart="80dp"
+            android:paddingEnd="80dp"
             android:layout_centerHorizontal="true"
             android:textAlignment="center"
             android:ems="10"
@@ -98,6 +100,8 @@
             android:textColor="#151515"
             android:background="@drawable/input_background"
             android:layout_marginTop="6dp"
+            android:paddingStart="40dp"
+            android:paddingEnd="40dp"
             android:layout_centerHorizontal="true"
             android:textAlignment="center"
             android:ems="10"
@@ -122,8 +126,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/password_text"
-            android:layout_centerHorizontal="true"
-            >
+            android:layout_centerHorizontal="true">
 
             <EditText
                 android:id="@+id/current_password_input"
@@ -132,6 +135,8 @@
                 android:textColor="#151515"
                 android:background="@drawable/input_background"
                 android:layout_marginTop="6dp"
+                android:paddingStart="80dp"
+                android:paddingEnd="80dp"
                 android:textAlignment="center"
                 android:ems="10"
                 android:layout_centerHorizontal="true"
@@ -167,8 +172,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/new_password_text"
-            android:layout_centerHorizontal="true"
-            >
+            android:layout_centerHorizontal="true">
 
             <EditText
                 android:id="@+id/new_password_input"
@@ -177,6 +181,8 @@
                 android:textColor="#151515"
                 android:background="@drawable/input_background"
                 android:layout_marginTop="6dp"
+                android:paddingStart="80dp"
+                android:paddingEnd="80dp"
                 android:textAlignment="center"
                 android:ems="10"
                 android:layout_centerHorizontal="true"
