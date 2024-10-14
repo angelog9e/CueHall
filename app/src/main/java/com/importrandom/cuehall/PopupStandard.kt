@@ -10,7 +10,7 @@ import android.view.Window
 import android.widget.TextView
 import androidx.fragment.app.DialogFragment
 
-class Popup_standard : DialogFragment() {
+class PopupStandard : DialogFragment() {
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -22,9 +22,16 @@ class Popup_standard : DialogFragment() {
         val view = inflater.inflate(R.layout.popup_standard, container, false)
 
         val tableNumber = arguments?.getInt("table_number") ?: 0
+        val selectedDate = arguments?.getString("selected_date") ?: ""
+        val selectedTime = arguments?.getString("selected_time") ?: ""
 
         val tableNoTextView: TextView = view.findViewById(R.id.table_no)
+        val dateTextView: TextView = view.findViewById(R.id.date_view) // Assuming you have a TextView for date
+        val timeTextView: TextView = view.findViewById(R.id.time_view) // Assuming you have a TextView for time
+
         tableNoTextView.text = "TABLE # $tableNumber"
+        dateTextView.text = "$selectedDate"
+        timeTextView.text = "$selectedTime"
 
         return view
     }
@@ -36,10 +43,12 @@ class Popup_standard : DialogFragment() {
     }
 
     companion object {
-        fun newInstance(tableNumber: Int): Popup_standard {
+        fun newInstance(tableNumber: Int, selectedDate: String, selectedTime: String): PopupStandard {
             val args = Bundle()
             args.putInt("table_number", tableNumber)
-            val fragment = Popup_standard()
+            args.putString("selected_date", selectedDate)
+            args.putString("selected_time", selectedTime)
+            val fragment = PopupStandard()
             fragment.arguments = args
             return fragment
         }

@@ -14,7 +14,11 @@ import android.widget.CheckBox
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.DialogFragment
 
-class Popup_tc_standard : DialogFragment() {
+class PopupStandardTC: DialogFragment() {
+
+    private var tableNumber: Int = 0
+    private var selectedDate: String = ""
+    private var selectedTime: String = ""
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -26,6 +30,11 @@ class Popup_tc_standard : DialogFragment() {
             requestFeature(Window.FEATURE_NO_TITLE)
             setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
         }
+
+        // Retrieve the passed table number, date, and time from the arguments
+        tableNumber = arguments?.getInt("table_number") ?: 0
+        selectedDate = arguments?.getString("selected_date") ?: ""
+        selectedTime = arguments?.getString("selected_time") ?: ""
 
         val proceedButton = view.findViewById<Button>(R.id.proceed_button)
         proceedButton.background = ContextCompat.getDrawable(requireContext(), R.drawable.button_background_transition)
@@ -44,9 +53,10 @@ class Popup_tc_standard : DialogFragment() {
         }
 
         proceedButton.setOnClickListener {
-            val tableNumber = arguments?.getInt("table_number") ?: 0
-            val popup = Popup_standard.newInstance(tableNumber)
-            popup.show(parentFragmentManager, "popup_tag")
+            // Pass the table number, date, and time to the next popup (Popup_standard)
+            val popup = PopupStandard.newInstance(tableNumber, selectedDate, selectedTime)
+            popup.show(parentFragmentManager, "popup_standard")
+            dismiss()  // Close this dialog after showing the next popup
         }
 
         return view
@@ -59,10 +69,12 @@ class Popup_tc_standard : DialogFragment() {
     }
 
     companion object {
-        fun newInstance(tableNumber: Int): Popup_tc_standard {
+        fun newInstance(tableNumber: Int, selectedDate: String, selectedTime: String): PopupStandardTC {
             val args = Bundle()
             args.putInt("table_number", tableNumber)
-            val fragment = Popup_tc_standard()
+            args.putString("selected_date", selectedDate)
+            args.putString("selected_time", selectedTime)
+            val fragment = PopupStandardTC()
             fragment.arguments = args
             return fragment
         }

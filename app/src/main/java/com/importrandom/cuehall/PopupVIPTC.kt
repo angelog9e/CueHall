@@ -14,7 +14,11 @@ import android.widget.CheckBox
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.DialogFragment
 
-class Popup_tc_vip : DialogFragment() {
+class PopupVIPTC : DialogFragment() {
+
+    private var roomNumber: Int = 0
+    private var selectedDate: String = ""
+    private var selectedTime: String = ""
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -26,6 +30,11 @@ class Popup_tc_vip : DialogFragment() {
             requestFeature(Window.FEATURE_NO_TITLE)
             setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
         }
+
+        // Retrieve the passed room number, date, and time from the arguments
+        roomNumber = arguments?.getInt("room_number") ?: 0
+        selectedDate = arguments?.getString("selected_date") ?: ""
+        selectedTime = arguments?.getString("selected_time") ?: ""
 
         val proceedButton = view.findViewById<Button>(R.id.proceed_button)
         proceedButton.background = ContextCompat.getDrawable(requireContext(), R.drawable.button_background_transition)
@@ -44,9 +53,10 @@ class Popup_tc_vip : DialogFragment() {
         }
 
         proceedButton.setOnClickListener {
-            val roomNumber = arguments?.getInt("room_number") ?: 0
-            val popup = Popup_vip.newInstance(roomNumber)
-            popup.show(parentFragmentManager, "popup_tag")
+            // Pass the room number, date, and time to the next popup (Popup_vip)
+            val popup = PopupVIP.newInstance(roomNumber, selectedDate, selectedTime)
+            popup.show(parentFragmentManager, "popup_vip")
+            dismiss()  // Close this dialog after showing the next popup
         }
 
         return view
@@ -59,10 +69,12 @@ class Popup_tc_vip : DialogFragment() {
     }
 
     companion object {
-        fun newInstance(roomNumber: Int): Popup_tc_vip {
+        fun newInstance(roomNumber: Int, selectedDate: String, selectedTime: String): PopupVIPTC {
             val args = Bundle()
             args.putInt("room_number", roomNumber)
-            val fragment = Popup_tc_vip()
+            args.putString("selected_date", selectedDate)
+            args.putString("selected_time", selectedTime)
+            val fragment = PopupVIPTC()
             fragment.arguments = args
             return fragment
         }

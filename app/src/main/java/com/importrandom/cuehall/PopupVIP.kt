@@ -10,7 +10,7 @@ import android.view.Window
 import android.widget.TextView
 import androidx.fragment.app.DialogFragment
 
-class Popup_vip : DialogFragment() {
+class PopupVIP : DialogFragment() {
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -22,9 +22,16 @@ class Popup_vip : DialogFragment() {
         val view = inflater.inflate(R.layout.popup_vip, container, false)
 
         val roomNumber = arguments?.getInt("room_number") ?: 0
+        val selectedDate = arguments?.getString("selected_date") ?: ""
+        val selectedTime = arguments?.getString("selected_time") ?: ""
 
         val roomNoTextView: TextView = view.findViewById(R.id.room_no)
+        val dateTextView: TextView = view.findViewById(R.id.date_view) // Assuming you have a TextView for date
+        val timeTextView: TextView = view.findViewById(R.id.time_view) // Assuming you have a TextView for time
+
         roomNoTextView.text = "VIP ROOM # $roomNumber"
+        dateTextView.text = "$selectedDate"
+        timeTextView.text = "$selectedTime"
 
         return view
     }
@@ -36,10 +43,12 @@ class Popup_vip : DialogFragment() {
     }
 
     companion object {
-        fun newInstance(roomNumber: Int): Popup_vip {
+        fun newInstance(roomNumber: Int, selectedDate: String, selectedTime: String): PopupVIP {
             val args = Bundle()
             args.putInt("room_number", roomNumber)
-            val fragment = Popup_vip()
+            args.putString("selected_date", selectedDate) // Add the selectedDate argument
+            args.putString("selected_time", selectedTime) // Add the selectedTime argument
+            val fragment = PopupVIP()
             fragment.arguments = args
             return fragment
         }
