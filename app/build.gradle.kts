@@ -46,7 +46,9 @@ dependencies {
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
     implementation(libs.material.v1120)
-    implementation("androidx.activity:activity:1.7.2")
-    implementation("androidx.activity:activity-ktx:1.7.2")
+    implementation(libs.retrofit)
+    implementation(libs.converter.gson)
+    implementation(libs.androidx.activity.v172)
+    implementation(libs.androidx.activity.ktx)
 }
 
