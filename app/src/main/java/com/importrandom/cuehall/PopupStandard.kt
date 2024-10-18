@@ -39,7 +39,7 @@ class PopupStandard : DialogFragment() {
     override fun onStart() {
         super.onStart()
 
-        dialog?.window?.setLayout(400.dpToPx1(requireContext()), 550.dpToPx1(requireContext()))
+        dialog?.window?.setLayout(300.dpToPx1(requireContext()), 550.dpToPx1(requireContext()))
     }
 
     companion object {

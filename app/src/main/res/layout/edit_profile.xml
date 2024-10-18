@@ -14,25 +14,26 @@
 
         <!-- TITLE TEXT -->
         <TextView
-            android:id="@+id/title_text"
+            android:id="@+id/text_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="40dp"
+            android:layout_centerInParent="true"
+            android:layout_alignParentTop="true"
             android:fontFamily="@font/quicksand_bold"
             android:text="CUEHALL"
             android:letterSpacing="0.1"
+            android:layout_marginTop="60sp"
             android:textColor="@color/white"
             android:textSize="34sp" />
 
         <!-- BACK BUTTON -->
         <Button
             android:id="@+id/back_button"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
+            android:layout_width="60sp"
+            android:layout_height="60sp"
             android:layout_alignParentStart="true"
-            android:layout_marginTop="45dp"
-            android:layout_marginStart="15dp"
+            android:layout_marginTop="60sp"
+            android:layout_marginStart="15sp"
             android:background="@android:color/transparent"
             android:backgroundTint="@android:color/transparent"
             android:drawableTop="@drawable/back_button" />
@@ -43,7 +44,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="240dp"
+            android:layout_marginTop="300sp"
             android:fontFamily="@font/quicksand_bold"
             android:text="ACCOUNT SETTINGS"
             android:textColor="#fff4f0"
@@ -55,8 +56,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/edit_profText"
-            android:layout_marginTop="32dp"
-            android:layout_marginStart="66dp"
+            android:layout_marginTop="32sp"
+            android:layout_marginStart="50sp"
             android:fontFamily="@font/quicksand_bold"
             android:text="EMAIL ADDRESS"
             android:textColor="#01ab7a"
@@ -65,14 +66,14 @@
         <!-- EMAIL INPUT -->
         <EditText
             android:id="@+id/edit_emailadd_input"
-            android:layout_width="360dp"
-            android:layout_height="48dp"
+            android:layout_width="360sp"
+            android:layout_height="48sp"
             android:layout_below="@id/email_text"
             android:textColor="#151515"
             android:background="@drawable/input_background"
-            android:layout_marginTop="6dp"
-            android:paddingStart="40dp"
-            android:paddingEnd="40dp"
+            android:layout_marginTop="6sp"
+            android:paddingStart="40sp"
+            android:paddingEnd="40sp"
             android:layout_centerHorizontal="true"
             android:textAlignment="center"
             android:ems="10"
@@ -84,8 +85,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/edit_emailadd_input"
-            android:layout_marginTop="16dp"
-            android:layout_marginStart="66dp"
+            android:layout_marginTop="16sp"
+            android:layout_marginStart="50sp"
             android:fontFamily="@font/quicksand_bold"
             android:text="CURRENT PASSWORD"
             android:textColor="#01ab7a"
@@ -101,13 +102,13 @@
 
             <EditText
                 android:id="@+id/current_password_input"
-                android:layout_width="360dp"
-                android:layout_height="48.5dp"
+                android:layout_width="360sp"
+                android:layout_height="48.5sp"
                 android:textColor="#151515"
                 android:background="@drawable/input_background"
-                android:layout_marginTop="6dp"
-                android:paddingStart="80dp"
-                android:paddingEnd="80dp"
+                android:layout_marginTop="6sp"
+                android:paddingStart="80sp"
+                android:paddingEnd="80sp"
                 android:textAlignment="center"
                 android:ems="10"
                 android:layout_centerHorizontal="true"
@@ -115,11 +116,11 @@
 
             <ImageButton
                 android:id="@+id/show_password_button1"
-                android:layout_width="42dp"
-                android:layout_height="42dp"
+                android:layout_width="42sp"
+                android:layout_height="42sp"
                 android:layout_alignParentEnd="true"
-                android:layout_marginEnd="64dp"
-                android:layout_marginTop="10dp"
+                android:layout_marginEnd="64sp"
+                android:layout_marginTop="10sp"
                 android:background="@android:color/transparent"
                 android:src="@drawable/ic_show_password" />
         </RelativeLayout>
@@ -130,8 +131,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/current_password"
-            android:layout_marginTop="16dp"
-            android:layout_marginStart="66dp"
+            android:layout_marginTop="16sp"
+            android:layout_marginStart="50sp"
             android:fontFamily="@font/quicksand_bold"
             android:text="NEW PASSWORD"
             android:textColor="#01ab7a"
@@ -147,13 +148,13 @@
 
             <EditText
                 android:id="@+id/new_password_input"
-                android:layout_width="360dp"
-                android:layout_height="48.5dp"
+                android:layout_width="360sp"
+                android:layout_height="48.5sp"
                 android:textColor="#151515"
                 android:background="@drawable/input_background"
-                android:layout_marginTop="6dp"
-                android:paddingStart="80dp"
-                android:paddingEnd="80dp"
+                android:layout_marginTop="6sp"
+                android:paddingStart="80sp"
+                android:paddingEnd="80sp"
                 android:textAlignment="center"
                 android:ems="10"
                 android:layout_centerHorizontal="true"
@@ -161,11 +162,11 @@
 
             <ImageButton
                 android:id="@+id/show_password_button2"
-                android:layout_width="42dp"
-                android:layout_height="42dp"
+                android:layout_width="42sp"
+                android:layout_height="42sp"
                 android:layout_alignParentEnd="true"
-                android:layout_marginEnd="64dp"
-                android:layout_marginTop="10dp"
+                android:layout_marginEnd="64sp"
+                android:layout_marginTop="10sp"
                 android:background="@android:color/transparent"
                 android:src="@drawable/ic_show_password" />
         </RelativeLayout>
@@ -173,8 +174,8 @@
         <!-- SAVE BUTTON -->
         <Button
             android:id="@+id/save_btn"
-            android:layout_width="154dp"
-            android:layout_height="wrap_content"
+            android:layout_width="154sp"
+            android:layout_height="38sp"
             android:textSize="16sp"
             android:textColor="#fff4f0"
             android:background="@drawable/button_background"
@@ -183,9 +184,9 @@
             android:drawableStart="@drawable/ic_save"
             android:layout_below="@id/new_password"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="30dp"
-            android:paddingStart="22dp"
-            android:paddingEnd="26dp"/>
+            android:layout_marginTop="30sp"
+            android:paddingStart="22sp"
+            android:paddingEnd="26sp"/>
 
         <!-- CREDITS -->
         <TextView

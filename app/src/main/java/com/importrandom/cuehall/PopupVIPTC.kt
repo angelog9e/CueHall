@@ -9,6 +9,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.view.Window
+import android.webkit.WebView
+import android.webkit.WebViewClient
 import android.widget.Button
 import android.widget.CheckBox
 import androidx.core.content.ContextCompat
@@ -59,13 +61,52 @@ class PopupVIPTC : DialogFragment() {
             dismiss()  // Close this dialog after showing the next popup
         }
 
+        val webView: WebView = view.findViewById(com.importrandom.cuehall.R.id.justified_text)
+        webView.setBackgroundColor(android.graphics.Color.TRANSPARENT)
+        webView.webViewClient = WebViewClient()
+
+        // HTML CONTENT
+        val text = """
+    <html>
+    <head>
+        <style>
+            body {
+                text-align: justify;
+                color: #fff4f0;
+                font-family: 'quicksand_medium';
+                font-size: 16;
+                background-color: transparent;
+                margin: 10;
+                padding: 18;
+            }
+        </style>
+    </head>
+    <body>
+        <p>1.&nbsp;General: These terms apply to all customers reserving the VIP Billiard Table. By reserving, customers confirm they understand and accept these terms. Customers must be at least 21 years old to make a reservation for the VIP Billiard Table.</p>
+        <p>2.&nbsp;Reservations: Reservations can be made online, by phone, or in person with a required down payment via GCash. Reservations are subject to availability and may be modified or cancelled by management without notice. Customers are encouraged to book in advance, especially during peak hours and weekends to ensure availability.</p>
+        <p>3.&nbsp;Customer Responsibility: Customers are liable for any damage to the VIP Billiard Table and associated equipment during their reservation period. A security deposit may be required at the time of reservation, which will be refunded after the reservation if no damage occurs.</p>
+        <p>4.&nbsp;Conduct: Respectful behavior is required at all times. Profanity, loud noise, and disruptive actions are prohibited. Management reserves the right to refuse service and remove violators without a refund. Any form of harassment or inappropriate behavior will not be tolerated.</p>
+        <p>5.&nbsp;Liability: Management is not responsible for personal injuries or property damage occurring on-site. Customers are accountable for their belongings. Customers are encouraged to report any unsafe conditions or incidents to management immediately.</p>
+        <p>6.&nbsp;Payment: Payment is due at the time of reservation or upon bill presentation. Accepted payment methods include GCash or cash. All payments are non-refundable.</p>
+        <p>7.&nbsp;Food and Beverage Policy: No Outside Food and Drinks Allowed: Outside food and drinks are strictly prohibited within the premises. Special VIP menu items may be available, and customers are encouraged to inquire about exclusive offerings.</p>
+        <p>8.&nbsp;Changes to Terms and Conditions: These terms and conditions may change without notice. Customers should review them regularly to stay informed. Management reserves the right to update these terms to improve customer experience and safety.</p>
+        <p>9.&nbsp;Special Promotions and Events: Customers may be eligible for special promotions or events exclusive to VIP reservations. Details will be communicated through our app and social media channels. Reservations for special events may have different terms and conditions, which will be clearly stated at the time of booking.</p>
+        <p>10.&nbsp;Contact Information: For any inquiries or assistance, customers can contact our support team via the app or at the provided contact number.</p>
+        <p>11.&nbsp;Exclusive Access: VIP customers are entitled to exclusive access to the VIP lounge and priority service during their reservation.</p>
+    </body>
+    </html>
+""".trimIndent()
+
+
+        webView.loadDataWithBaseURL(null, text, "text/html", "utf-8", null)
+
         return view
     }
 
     override fun onStart() {
         super.onStart()
 
-        dialog?.window?.setLayout(400.dpToPx6(requireContext()), 800.dpToPx6(requireContext()))
+        dialog?.window?.setLayout(300.dpToPx5(requireContext()), 600.dpToPx5(requireContext()))
     }
 
     companion object {

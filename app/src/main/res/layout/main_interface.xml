@@ -24,26 +24,26 @@
             android:fontFamily="@font/quicksand_bold"
             android:text="CUEHALL"
             android:letterSpacing="0.1"
-            android:layout_marginTop="40dp"
+            android:layout_marginTop="50sp"
             android:textColor="@color/white"
             android:textSize="34sp" />
 
         <!-- ACCOUNT BUTTON -->
         <Button
             android:id="@+id/account_button"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
+            android:layout_width="50sp"
+            android:layout_height="50sp"
             android:layout_alignParentEnd="true"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="38dp"
-            android:layout_marginEnd="22dp"
+            android:layout_marginTop="50sp"
+            android:layout_marginEnd="22sp"
             android:background="@drawable/acc_button" />
 
         <!-- FOOTER-->
         <RelativeLayout
             android:id="@+id/footer"
             android:layout_width="match_parent"
-            android:layout_height="80dp"
+            android:layout_height="80sp"
             android:layout_alignParentBottom="true"
             android:background="@drawable/footer_bg">
 
@@ -68,53 +68,53 @@
             <!-- FOOTER BUTTONS -->
             <Button
                 android:id="@+id/footer_tables_button"
-                android:layout_width="120dp"
-                android:layout_height="80dp"
+                android:layout_width="120sp"
+                android:layout_height="80sp"
                 android:text="TABLES"
                 android:layout_alignParentStart="true"
-                android:layout_marginStart="60dp"
+                android:layout_marginStart="60sp"
                 android:fontFamily="@font/quicksand_bold"
                 android:gravity="center"
                 android:textSize="12sp"
                 android:textColor="#fff4f0"
                 android:background="@drawable/rounded_button_bg"
                 android:drawableTop="@drawable/ic_table"
-                android:paddingTop="8dp"
-                android:paddingBottom="2dp" />
+                android:paddingTop="8sp"
+                android:paddingBottom="2sp" />
 
             <Button
                 android:id="@+id/footer_bookings_button"
-                android:layout_width="120dp"
-                android:layout_height="80dp"
+                android:layout_width="120sp"
+                android:layout_height="80sp"
                 android:text="BOOKINGS"
                 android:layout_alignParentBottom="true"
                 android:layout_alignParentEnd="true"
-                android:layout_marginEnd="60dp"
+                android:layout_marginEnd="60sp"
                 android:fontFamily="@font/quicksand_bold"
                 android:gravity="center"
                 android:textSize="12sp"
                 android:textColor="#fff4f0"
                 android:background="@drawable/rounded_button_bg"
                 android:drawableTop="@drawable/ic_bookings"
-                android:paddingTop="8dp"
-                android:paddingBottom="2dp" />
+                android:paddingTop="8sp"
+                android:paddingBottom="2sp" />
 
         </RelativeLayout>
 
         <!-- Image Preview -->
             <LinearLayout
                 android:id="@+id/image_preview1"
-                android:layout_width="404dp"
+                android:layout_width="404sp"
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
                 android:layout_below="@+id/text_title"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="10sp"
                 android:orientation="vertical">
 
                 <ImageView
                     android:id="@+id/imageView2"
                     android:layout_width="match_parent"
-                    android:layout_height="160dp"
+                    android:layout_height="160sp"
                     android:background="@drawable/standard"
                     android:scaleType="centerCrop" />
 
@@ -122,19 +122,19 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@drawable/rounded_bg"
-                    android:padding="8dp"
+                    android:padding="8sp"
                     android:orientation="horizontal">
 
                     <TextView
                         android:id="@+id/titleText"
-                        android:layout_width="0dp"
+                        android:layout_width="0sp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:text="Standard Billiard Tables"
                         android:textColor="#fff4f0"
                         android:fontFamily="@font/quicksand_bold"
                         android:textSize="14sp"
-                        android:layout_marginStart="8dp"
+                        android:layout_marginStart="8sp"
                         android:gravity="start|center_vertical" />
 
                     <TextView
@@ -145,7 +145,7 @@
                         android:textColor="#fff4f0"
                         android:fontFamily="@font/quicksand_bold"
                         android:textSize="14sp"
-                        android:layout_marginEnd="8dp"
+                        android:layout_marginEnd="8sp"
                         android:gravity="end|center_vertical" />
 
                 </LinearLayout>
@@ -153,24 +153,24 @@
                 <!-- ICONS -->
                 <LinearLayout
                     android:id="@+id/icons_preview1"
-                    android:layout_width="404dp"
+                    android:layout_width="404sp"
                     android:layout_height="wrap_content"
                     android:background="@drawable/bg_black_sun2"
                     android:layout_below="@id/image_preview1"
-                    android:layout_marginTop="13dp"
+                    android:layout_marginTop="8sp"
                     android:layout_centerHorizontal="true"
-                    android:padding="4dp"
+                    android:padding="4sp"
                     android:orientation="horizontal">
 
                     <TextView
-                        android:layout_width="70dp"
+                        android:layout_width="70sp"
                         android:layout_height="wrap_content"
                         android:text="Perks"
                         android:textColor="#fff4f0"
                         android:fontFamily="@font/quicksand_bold"
                         android:textSize="14sp"
-                        android:layout_marginTop="11dp"
-                        android:layout_marginStart="30dp"
+                        android:layout_marginTop="11sp"
+                        android:layout_marginStart="30sp"
                         android:background="@drawable/standard_bg"
                         android:textAlignment="center"/>
 
@@ -182,8 +182,8 @@
 
                         <ImageView
                             android:id="@+id/icon_wifi"
-                            android:layout_width="30dp"
-                            android:layout_height="30dp"
+                            android:layout_width="30sp"
+                            android:layout_height="30sp"
                             android:src="@drawable/ic_wifi"
                             android:layout_gravity="center_horizontal" />
 
@@ -195,7 +195,7 @@
                             android:textColor="#fff4f0"
                             android:fontFamily="@font/quicksand_bold"
                             android:textSize="8sp"
-                            android:layout_marginTop="2dp"
+                            android:layout_marginTop="2sp"
                             android:gravity="center_horizontal" />
 
                     </LinearLayout>
@@ -207,10 +207,10 @@
 
                         <ImageView
                             android:id="@+id/icon_bar"
-                            android:layout_width="30dp"
-                            android:layout_height="30dp"
+                            android:layout_width="30sp"
+                            android:layout_height="30sp"
                             android:src="@drawable/ic_bar"
-                            android:paddingTop="2dp"
+                            android:paddingTop="2sp"
                             android:layout_gravity="center_horizontal" />
 
                         <TextView
@@ -221,7 +221,7 @@
                             android:textColor="#fff4f0"
                             android:fontFamily="@font/quicksand_bold"
                             android:textSize="8sp"
-                            android:layout_marginTop="3dp"
+                            android:layout_marginTop="3sp"
                             android:gravity="center_horizontal" />
 
                     </LinearLayout>
@@ -234,8 +234,8 @@
 
                         <ImageView
                             android:id="@+id/icon_hours"
-                            android:layout_width="30dp"
-                            android:layout_height="30dp"
+                            android:layout_width="30sp"
+                            android:layout_height="30sp"
                             android:src="@drawable/ic_24hrs"
 
                             android:layout_gravity="center_horizontal" />
@@ -248,7 +248,7 @@
                             android:textColor="#fff4f0"
                             android:fontFamily="@font/quicksand_bold"
                             android:textSize="8sp"
-                            android:layout_marginTop="2dp"
+                            android:layout_marginTop="2sp"
                             android:gravity="center_horizontal" />
 
                     </LinearLayout>
@@ -260,95 +260,95 @@
                     android:id="@+id/table_buttons"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="54dp"
-                    android:paddingTop="12dp">
+                    android:layout_marginTop="42sp"
+                    android:paddingTop="12sp">
 
                     <Button
                         android:id="@+id/table1_btn"
-                        android:layout_width="168dp"
-                        android:layout_height="144dp"
+                        android:layout_width="168sp"
+                        android:layout_height="144sp"
                         android:background="@drawable/table_button_bg"
-                        android:layout_marginBottom="14dp"
+                        android:layout_marginBottom="10sp"
                         android:layout_alignParentStart="true"
                         android:text="T1"
                         android:textColor="#60fff4f0"
                         android:fontFamily="@font/quicksand_bold"
                         android:textSize="34sp"
-                        android:paddingBottom="68dp"
-                        android:layout_marginStart="4dp"/>
+                        android:paddingBottom="68sp"
+                        android:layout_marginStart="4sp"/>
 
                     <Button
                         android:id="@+id/table2_btn"
-                        android:layout_width="168dp"
-                        android:layout_height="144dp"
+                        android:layout_width="168sp"
+                        android:layout_height="144sp"
                         android:background="@drawable/table_button_bg"
-                        android:layout_marginBottom="14dp"
+                        android:layout_marginBottom="10sp"
                         android:layout_alignParentStart="true"
                         android:layout_below="@+id/table1_btn"
                         android:text="T2"
                         android:textColor="#60fff4f0"
                         android:fontFamily="@font/quicksand_bold"
                         android:textSize="34sp"
-                        android:paddingBottom="68dp"
-                        android:layout_marginStart="4dp" />
+                        android:paddingBottom="68sp"
+                        android:layout_marginStart="4sp" />
 
                     <Button
                         android:id="@+id/table3_btn"
-                        android:layout_width="168dp"
-                        android:layout_height="144dp"
+                        android:layout_width="168sp"
+                        android:layout_height="144sp"
                         android:background="@drawable/table_button_bg"
-                        android:layout_marginBottom="14dp"
+                        android:layout_marginBottom="10sp"
                         android:layout_below="@+id/table2_btn"
                         android:text="T3"
                         android:textColor="#60fff4f0"
                         android:fontFamily="@font/quicksand_bold"
                         android:textSize="34sp"
-                        android:paddingBottom="68dp"
-                        android:layout_marginStart="4dp" />
+                        android:paddingBottom="68sp"
+                        android:layout_marginStart="4sp" />
 
                     <Button
                         android:id="@+id/table4_btn"
-                        android:layout_width="168dp"
-                        android:layout_height="144dp"
+                        android:layout_width="168sp"
+                        android:layout_height="144sp"
                         android:background="@drawable/table_button_bg"
-                        android:layout_marginBottom="14dp"
+                        android:layout_marginBottom="10sp"
                         android:layout_alignParentEnd="true"
                         android:text="T4"
                         android:textColor="#60fff4f0"
                         android:fontFamily="@font/quicksand_bold"
                         android:textSize="34sp"
-                        android:paddingBottom="68dp"
-                        android:layout_marginEnd="4dp" />
+                        android:paddingBottom="68sp"
+                        android:layout_marginEnd="4sp" />
 
                     <Button
                         android:id="@+id/table5_btn"
-                        android:layout_width="168dp"
-                        android:layout_height="144dp"
+                        android:layout_width="168sp"
+                        android:layout_height="144sp"
                         android:background="@drawable/table_button_bg"
-                        android:layout_marginBottom="14dp"
+                        android:layout_marginBottom="10sp"
                         android:layout_below="@+id/table4_btn"
                         android:layout_alignParentEnd="true"
                         android:text="T5"
                         android:textColor="#60fff4f0"
                         android:fontFamily="@font/quicksand_bold"
                         android:textSize="34sp"
-                        android:paddingBottom="68dp"
-                        android:layout_marginEnd="4dp" />
+                        android:paddingBottom="68sp"
+                        android:layout_marginEnd="4sp" />
 
                     <Button
                         android:id="@+id/table6_btn"
-                        android:layout_width="168dp"
-                        android:layout_height="144dp"
+                        android:layout_width="168sp"
+                        android:layout_height="144sp"
                         android:background="@drawable/table_button_bg"
-                        android:layout_marginBottom="18dp"
+                        android:layout_marginBottom="10sp"
                         android:layout_below="@+id/table5_btn"
                         android:layout_alignParentEnd="true"
                         android:text="T6"
                         android:textColor="#60fff4f0"
                         android:fontFamily="@font/quicksand_bold"
                         android:textSize="34sp"
-                        android:paddingBottom="68dp"
-                        android:layout_marginEnd="4dp" />
+                        android:paddingBottom="68sp"
+                        android:layout_marginEnd="4sp" />
 
                 </RelativeLayout>
 
@@ -357,34 +357,34 @@
         <!-- MIDDLE BUTTONS -->
         <RelativeLayout
             android:id="@+id/buttons"
-            android:layout_width="404dp"
+            android:layout_width="404sp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="390dp"
+            android:layout_marginTop="376sp"
             android:layout_centerHorizontal="true">
 
             <Button
                 android:id="@+id/vip_btn"
-                android:layout_width="168dp"
-                android:layout_height="40dp"
+                android:layout_width="168sp"
+                android:layout_height="40sp"
                 android:layout_alignParentEnd="true"
                 android:text="VIP ROOMS"
                 android:textColor="#fff4f0"
                 android:textSize="14sp"
                 android:fontFamily="@font/quicksand_bold"
                 android:background="@drawable/button_background"
-                android:layout_marginEnd="4dp" />
+                android:layout_marginEnd="4sp" />
 
             <Button
                 android:id="@+id/standard_table_btn"
-                android:layout_width="170dp"
-                android:layout_height="40dp"
+                android:layout_width="170sp"
+                android:layout_height="40sp"
                 android:layout_alignParentStart="true"
                 android:text="STANDARD TABLES"
                 android:textColor="#fff4f0"
                 android:textSize="14sp"
                 android:fontFamily="@font/quicksand_bold"
                 android:background="@drawable/button_background"
-                android:layout_marginStart="4dp" />
+                android:layout_marginStart="4sp" />
 
         </RelativeLayout>
 

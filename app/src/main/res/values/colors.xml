@@ -3,5 +3,9 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="disabled_button_color">#151515</color>
-    <color name="enabled_button_color">#01ab7a</color><!-- Change to the color you want when enabled -->
+    <color name="enabled_button_color">#01ab7a</color>
+    <color name="june">#01ab7a</color>
+    <color name="knight_black">#151515</color>
+    <color name="black_sun">#24242c</color>
+    <color name="Moonlight_white">#fff4f0</color><!-- Change to the color you want when enabled -->
 </resources>

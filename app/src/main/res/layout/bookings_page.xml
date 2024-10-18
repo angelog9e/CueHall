@@ -13,18 +13,17 @@
         android:layout_height="match_parent"
         android:background="#151515">
 
-        <!-- TEXT TITLE -->
+        <!-- TITLE TEXT -->
         <TextView
             android:id="@+id/text_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
             android:layout_alignParentTop="true"
-            android:layout_centerHorizontal="true"
             android:fontFamily="@font/quicksand_bold"
             android:text="CUEHALL"
             android:letterSpacing="0.1"
-            android:layout_marginTop="40dp"
+            android:layout_marginTop="60sp"
             android:textColor="@color/white"
             android:textSize="34sp" />
 
@@ -32,7 +31,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/text_title"
-            android:layout_marginTop="32dp"
+            android:layout_marginTop="32sp"
             android:text="BOOKINGS"
             android:fontFamily="@font/quicksand_bold"
             android:textSize="22sp"
@@ -42,53 +41,53 @@
         <!-- ACCOUNT BUTTON -->
         <Button
             android:id="@+id/account_button"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
+            android:layout_width="50sp"
+            android:layout_height="50sp"
             android:layout_alignParentEnd="true"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="38dp"
-            android:layout_marginEnd="22dp"
+            android:layout_marginTop="60sp"
+            android:layout_marginEnd="22sp"
             android:background="@drawable/acc_button" />
 
         <!-- BOOKINGS -->
         <RelativeLayout
             android:id="@+id/bookings_container"
-            android:layout_width="400dp"
-            android:layout_height="728dp"
+            android:layout_width="380sp"
+            android:layout_height="728sp"
             android:layout_centerHorizontal="true"
             android:layout_below="@id/text_title"
-            android:layout_marginTop="80dp"
+            android:layout_marginTop="80sp"
             android:background="@drawable/bg_black_sun">
 
             <TextView
                 android:id="@+id/bookings_container1"
-                android:layout_width="360dp"
-                android:layout_height="200dp"
+                android:layout_width="340sp"
+                android:layout_height="200sp"
                 android:layout_centerHorizontal="true"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="20sp"
                 android:background="@drawable/standard_bg"
                 android:fontFamily="@font/quicksand_medium"
                 android:textSize="14sp" />
 
             <TextView
                 android:id="@+id/bookings_container2"
-                android:layout_width="360dp"
-                android:layout_height="200dp"
+                android:layout_width="340sp"
+                android:layout_height="200sp"
                 android:layout_centerHorizontal="true"
                 android:layout_below="@id/bookings_container1"
-                android:layout_marginTop="44dp"
+                android:layout_marginTop="20sp"
                 android:background="@drawable/standard_bg"
                 android:fontFamily="@font/quicksand_medium"
                 android:textSize="14sp" />
 
             <TextView
                 android:id="@+id/bookings_container3"
-                android:layout_width="360dp"
-                android:layout_height="200dp"
+                android:layout_width="340sp"
+                android:layout_height="200sp"
                 android:layout_centerHorizontal="true"
                 android:layout_below="@id/bookings_container2"
-                android:layout_marginTop="44dp"
-                android:layout_marginBottom="20dp"
+                android:layout_marginTop="20sp"
+                android:layout_marginBottom="20sp"
                 android:background="@drawable/standard_bg"
                 android:fontFamily="@font/quicksand_medium"
                 android:textSize="14sp" />
@@ -99,43 +98,43 @@
         <RelativeLayout
             android:id="@+id/footer"
             android:layout_width="match_parent"
-            android:layout_height="80dp"
+            android:layout_height="80sp"
             android:layout_alignParentBottom="true"
             android:background="@drawable/footer_bg">
 
             <!-- BUTTONS -->
             <Button
                 android:id="@+id/tables_button"
-                android:layout_width="120dp"
-                android:layout_height="80dp"
+                android:layout_width="120sp"
+                android:layout_height="80sp"
                 android:text="TABLES"
                 android:layout_alignParentStart="true"
-                android:layout_marginStart="60dp"
+                android:layout_marginStart="60sp"
                 android:fontFamily="@font/quicksand_bold"
                 android:gravity="center"
                 android:textSize="12sp"
                 android:textColor="#fff4f0"
                 android:background="@drawable/rounded_button_bg"
                 android:drawableTop="@drawable/ic_table"
-                android:paddingTop="8dp"
-                android:paddingBottom="2dp" />
+                android:paddingTop="8sp"
+                android:paddingBottom="2sp" />
 
             <Button
                 android:id="@+id/bookings_button"
-                android:layout_width="120dp"
-                android:layout_height="80dp"
+                android:layout_width="120sp"
+                android:layout_height="80sp"
                 android:text="BOOKINGS"
                 android:layout_alignParentBottom="true"
                 android:layout_alignParentEnd="true"
-                android:layout_marginEnd="60dp"
+                android:layout_marginEnd="60sp"
                 android:fontFamily="@font/quicksand_bold"
                 android:gravity="center"
                 android:textSize="12sp"
                 android:textColor="#fff4f0"
                 android:background="@drawable/rounded_button_bg"
                 android:drawableTop="@drawable/ic_bookings"
-                android:paddingTop="8dp"
-                android:paddingBottom="2dp" />
+                android:paddingTop="8sp"
+                android:paddingBottom="2sp" />
 
         </RelativeLayout>
 

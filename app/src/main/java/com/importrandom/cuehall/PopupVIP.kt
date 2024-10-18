@@ -39,7 +39,7 @@ class PopupVIP : DialogFragment() {
     override fun onStart() {
         super.onStart()
 
-        dialog?.window?.setLayout(400.dpToPx2(requireContext()), 550.dpToPx2(requireContext()))
+        dialog?.window?.setLayout(300.dpToPx2(requireContext()), 550.dpToPx2(requireContext()))
     }
 
     companion object {

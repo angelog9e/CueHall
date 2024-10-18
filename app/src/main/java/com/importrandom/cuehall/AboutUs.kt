@@ -32,7 +32,7 @@ class About_us : DialogFragment() {
     <head>
         <style>
             body {
-                text-align: justify;
+                text-align: center;
                 color: #fff4f0;
                 font-family: 'quicksand_medium';
                 font-size: 16;
@@ -43,7 +43,7 @@ class About_us : DialogFragment() {
         </style>
     </head>
     <body>
-        <p>&nbsp;&nbsp;&nbsp;CueHall is a mobile application that will change the traditional approach of booking and playing billiards in billiard halls. Due to the growing popularity of billiards as a form of entertainment, it is becoming increasingly difficult to identify the availability of tables for use, particularly for billiard hall owners. Conversely, clients frequently experience inconvenience and frustration as a result of unpredictable circumstances and extended waiting times. Import Random addresses these problems by offering an application that allows customers to browse available tables, join wait lists, receive notifications about their reservations, and choose their playing time and duration.</p>
+        <p>CueHall is a mobile application that will change the traditional approach of booking and playing billiards in billiard halls. Due to the growing popularity of billiards as a form of entertainment, it is becoming increasingly difficult to identify the availability of tables for use, particularly for billiard hall owners. Conversely, clients frequently experience inconvenience and frustration as a result of unpredictable circumstances and extended waiting times. Import Random addresses these problems by offering an application that allows customers to browse available tables, join wait lists, receive notifications about their reservations, and choose their playing time and duration.</p>
     </body>
     </html>
 """.trimIndent()
@@ -57,7 +57,7 @@ class About_us : DialogFragment() {
     override fun onStart() {
         super.onStart()
 
-        dialog?.window?.setLayout(400.dpToPx3(requireContext()), 600.dpToPx3(requireContext()))
+        dialog?.window?.setLayout(300.dpToPx3(requireContext()), 480.dpToPx3(requireContext()))
     }
 }
 

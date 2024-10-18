@@ -1,35 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="wrap_content"
-    android:layout_height="550dp"
+    android:layout_height="550sp"
     android:orientation="vertical"
     android:layout_gravity="center"
     android:background="#00000000">
 
     <RelativeLayout
         android:id="@+id/popup_container"
-        android:layout_width="400dp"
-        android:layout_height="550dp"
+        android:layout_width="400sp"
+        android:layout_height="550sp"
         android:background="@drawable/bg_knight_black"
         android:layout_gravity="center"
-        android:paddingTop="14dp"
-        android:paddingBottom="14dp"
+        android:paddingTop="14sp"
+        android:paddingBottom="14sp"
         android:layout_centerInParent="true"
         android:layout_centerHorizontal="true">
 
         <ImageView
             android:id="@+id/app_logo"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
+            android:layout_width="100sp"
+            android:layout_height="100sp"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="10sp"
             android:background="@drawable/app_logo"/>
 
         <TextView
             android:id="@+id/vip_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="20sp"
             android:layout_centerHorizontal="true"
             android:layout_below="@id/app_logo"
             android:fontFamily="@font/quicksand_bold"
@@ -40,12 +40,12 @@
         <!-- VIP ROOM # TEXT -->
         <TextView
             android:id="@+id/room_no"
-            android:layout_width="240dp"
-            android:layout_height="50dp"
+            android:layout_width="240sp"
+            android:layout_height="50sp"
             android:layout_centerHorizontal="true"
             android:textAlignment="center"
             android:layout_below="@id/vip_text"
-            android:layout_marginTop="40dp"
+            android:layout_marginTop="40sp"
             android:background="@drawable/bg_black_sun2"
             android:textColor="#fff4f0"
             android:fontFamily="@font/quicksand_bold"
@@ -56,12 +56,12 @@
         <!-- TIME VIEW -->
         <TextView
             android:id="@+id/time_view"
-            android:layout_width="240dp"
-            android:layout_height="50dp"
+            android:layout_width="240sp"
+            android:layout_height="50sp"
             android:layout_centerHorizontal="true"
             android:textAlignment="center"
             android:layout_below="@id/room_no"
-            android:layout_marginTop="18dp"
+            android:layout_marginTop="18sp"
             android:background="@drawable/bg_black_sun2"
             android:textColor="#fff4f0"
             android:fontFamily="@font/quicksand_bold"
@@ -72,12 +72,12 @@
         <!-- DATE VIEW -->
         <TextView
             android:id="@+id/date_view"
-            android:layout_width="240dp"
-            android:layout_height="50dp"
+            android:layout_width="240sp"
+            android:layout_height="50sp"
             android:layout_centerHorizontal="true"
             android:textAlignment="center"
             android:layout_below="@id/time_view"
-            android:layout_marginTop="18dp"
+            android:layout_marginTop="18sp"
             android:background="@drawable/bg_black_sun2"
             android:textColor="#fff4f0"
             android:fontFamily="@font/quicksand_bold"
@@ -88,7 +88,7 @@
         <!-- PROCEED BUTTON -->
         <Button
             android:id="@+id/proceed2_button"
-            android:layout_width="154dp"
+            android:layout_width="154sp"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
             android:background="@drawable/button_background"
@@ -97,7 +97,7 @@
             android:textSize="16sp"
             android:layout_below="@id/date_view"
             android:text="PROCEED"
-            android:layout_marginTop="40dp" />
+            android:layout_marginTop="40sp" />
 
     </RelativeLayout>
 

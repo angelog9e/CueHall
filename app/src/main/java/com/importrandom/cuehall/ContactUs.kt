@@ -26,7 +26,7 @@ class Contact_us : DialogFragment() {
     override fun onStart() {
         super.onStart()
 
-        dialog?.window?.setLayout(400.dpToPx4(requireContext()), 600.dpToPx4(requireContext()))
+        dialog?.window?.setLayout(300.dpToPx4(requireContext()), 460.dpToPx4(requireContext()))
     }
 }
 
