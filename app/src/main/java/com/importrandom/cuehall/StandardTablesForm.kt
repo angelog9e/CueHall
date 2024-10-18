@@ -20,7 +20,6 @@ class StandardTablesForm : AppCompatActivity() {
     private lateinit var dateButton: Button
     private var selectedDate: String = ""
     private var selectedTime: String = ""
-    private val REQUEST_CODE_TIME_PAGE = 1 // Request code for VIPTimeTable
 
     override fun onCreate(savedInstanceState: Bundle?) {
         enableEdgeToEdge()
@@ -128,14 +127,6 @@ class StandardTablesForm : AppCompatActivity() {
             }, currentHour, currentMinute, false).show()  // End TimePickerDialog (false for 12-hour format)
 
         }, currentHour, currentMinute, false).show()  // Start TimePickerDialog (false for 12-hour format)
-    }
-
-    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
-        super.onActivityResult(requestCode, resultCode, data)
-        if (requestCode == REQUEST_CODE_TIME_PAGE && resultCode == RESULT_OK) {
-            val tableNumber = data?.getIntExtra("TABLE_NUMBER", -1) ?: -1
-            displayTableNumber(tableNumber)
-        }
     }
 
     private fun displayTableNumber(tableNumber: Int) {

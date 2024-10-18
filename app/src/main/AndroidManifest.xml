@@ -32,12 +32,6 @@
             android:name=".VIPRooms"
             android:screenOrientation="portrait"/>
         <activity
-            android:name=".StandardTimeTable"
-            android:screenOrientation="portrait"/>
-        <activity
-            android:name=".VIPTimeTable"
-            android:screenOrientation="portrait"/>
-        <activity
             android:name=".StandardTablesForm"
             android:screenOrientation="portrait"/>
         <activity

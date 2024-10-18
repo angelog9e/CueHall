@@ -44,9 +44,9 @@
     <!-- LOGO -->
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="320dp"
-        android:layout_height="320dp"
-        android:layout_marginTop="140dp"
+        android:layout_width="320sp"
+        android:layout_height="320sp"
+        android:layout_marginTop="140sp"
         android:layout_centerInParent="true"
         android:layout_alignParentTop="true"
         app:srcCompat="@drawable/start_screen_logo" />
@@ -58,7 +58,7 @@
         android:layout_centerInParent="true"
         android:layout_alignParentBottom="true"
         android:text="© 2024 CUEHALL. All rights reserved."
-        android:layout_marginBottom="30dp"
+        android:layout_marginBottom="30sp"
         android:textColor="@color/white"
         android:textSize="10sp" />
 
