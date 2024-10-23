@@ -39,7 +39,7 @@ class ContactUs : DialogFragment() {
 
         // Set the click listener for the Instagram link
         instagramTextView.setOnClickListener {
-            val url = "https://www.instagram.com/itzangeloaquino/"
+            val url = "https://www.instagram.com/cuehall_?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
             val intent = Intent(Intent.ACTION_VIEW)
             intent.data = Uri.parse(url)
             startActivity(intent)
