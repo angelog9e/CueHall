@@ -49,38 +49,38 @@
             android:textSize="20sp"
             android:text="CONTACT US" />
 
-        <!-- INSTAGRAM -->
-        <TextView
-            android:id="@+id/instagram_text"
-            android:layout_width="228sp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="40sp"
-            android:layout_centerHorizontal="true"
-            android:layout_below="@id/contact_us_text"
-            android:text="FACEBOOK"
-            android:textSize="18sp"
-            android:textColor="#fff4f0"
-            android:fontFamily="@font/quicksand_bold"
-            android:textAlignment="center"
-            android:drawablePadding="8sp"
-            android:paddingStart="22sp"
-            android:paddingEnd="24sp"
-            app:drawableStartCompat="@drawable/ic_facebook" />
-
         <!-- FACEBOOK -->
         <TextView
             android:id="@+id/facebook_text"
             android:layout_width="228sp"
             android:layout_height="wrap_content"
+            android:layout_marginTop="40sp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/contact_us_text"
+            android:focusable="true"
+            android:text="FACEBOOK"
+            android:textSize="18sp"
+            android:textColor="#fff4f0"
+            android:fontFamily="@font/quicksand_bold"
+            android:textAlignment="center"
+            android:paddingStart="22sp"
+            android:paddingEnd="24sp"
+            app:drawableStartCompat="@drawable/ic_facebook"
+            android:clickable="true"/>
+
+        <!-- INSTAGRAM -->
+        <TextView
+            android:id="@+id/instagram_text"
+            android:layout_width="228sp"
+            android:layout_height="wrap_content"
             android:layout_marginTop="20sp"
             android:layout_centerHorizontal="true"
-            android:layout_below="@id/instagram_text"
+            android:layout_below="@id/facebook_text"
             android:text="INSTAGRAM"
             android:textSize="18sp"
             android:textColor="#fff4f0"
             android:fontFamily="@font/quicksand_bold"
             android:textAlignment="center"
-            android:drawablePadding="8sp"
             android:paddingStart="22sp"
             android:paddingEnd="24sp"
             app:drawableStartCompat="@drawable/ic_instagram" />
@@ -92,13 +92,12 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="20sp"
             android:layout_centerHorizontal="true"
-            android:layout_below="@id/facebook_text"
+            android:layout_below="@id/instagram_text"
             android:text="09563629014"
             android:textSize="18sp"
             android:textColor="#fff4f0"
             android:fontFamily="@font/quicksand_bold"
             android:textAlignment="center"
-            android:drawablePadding="8sp"
             android:paddingStart="22sp"
             android:paddingEnd="24sp"
             app:drawableStartCompat="@drawable/ic_phone" />
@@ -116,7 +115,6 @@
             android:textColor="#fff4f0"
             android:fontFamily="@font/quicksand_bold"
             android:textAlignment="center"
-            android:drawablePadding="8sp"
             android:paddingStart="22sp"
             android:paddingEnd="24sp"
             app:drawableStartCompat="@drawable/ic_telegram" />
@@ -134,7 +132,6 @@
             android:textColor="#fff4f0"
             android:fontFamily="@font/quicksand_bold"
             android:textAlignment="center"
-            android:drawablePadding="8sp"
             android:paddingStart="22sp"
             android:paddingEnd="24sp"
             app:drawableStartCompat="@drawable/ic_tiktok" />

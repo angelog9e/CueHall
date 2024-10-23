@@ -11,18 +11,18 @@ import android.webkit.WebView
 import android.webkit.WebViewClient
 import androidx.fragment.app.DialogFragment
 
-class About_us : DialogFragment() {
+class AboutUs : DialogFragment() {
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val view = inflater.inflate(com.importrandom.cuehall.R.layout.about_us, container, false)
+        val view = inflater.inflate(R.layout.about_us, container, false)
 
         dialog?.window?.requestFeature(Window.FEATURE_NO_TITLE)
         dialog?.window?.setBackgroundDrawable(ColorDrawable(android.graphics.Color.TRANSPARENT))
 
-        val webView: WebView = view.findViewById(com.importrandom.cuehall.R.id.justified_text)
+        val webView: WebView = view.findViewById(R.id.justified_text)
         webView.setBackgroundColor(android.graphics.Color.TRANSPARENT)
         webView.webViewClient = WebViewClient()
 
@@ -43,7 +43,12 @@ class About_us : DialogFragment() {
         </style>
     </head>
     <body>
-        <p>CueHall is a mobile application that will change the traditional approach of booking and playing billiards in billiard halls. Due to the growing popularity of billiards as a form of entertainment, it is becoming increasingly difficult to identify the availability of tables for use, particularly for billiard hall owners. Conversely, clients frequently experience inconvenience and frustration as a result of unpredictable circumstances and extended waiting times. Import Random addresses these problems by offering an application that allows customers to browse available tables, join wait lists, receive notifications about their reservations, and choose their playing time and duration.</p>
+    <p>
+    Welcome to CueHall, your ultimate app for billiards and bar reservations! We are dedicated to connecting billiards enthusiasts and bar lovers through a seamless and enjoyable experience. 
+    At CueHall, we understand the excitement of sinking that perfect shot and the joy of sharing good times with friends. Our app is designed to make it easier than ever to find and reserve your favorite billiards spots, whether you're planning a casual night out or a special event.
+    We created CueHall to support aspiring billiard players and those eager to learn the game, offering resources and a community for growth. Our platform aims to attract both amateurs and seasoned professionals, fostering an environment that promotes skill development, friendly competition, and a shared passion for billiards. We believe billiards is a pleasant game that brings people together, and by connecting players of all levels, we strive to enhance the billiards community and contribute to the growth of the industry as a whole. We offer respectful behavior, which is required at all times. Profanity, loud noise, and disruptive actions are prohibited. 
+    Join us at CueHall, where every shot counts and every gathering is a celebration. Let's make your next event unforgettable! 
+    </p>
     </body>
     </html>
 """.trimIndent()

@@ -51,22 +51,6 @@
             android:textSize="20sp"
             android:text="ABOUT US" />
 
-        <!--TextView
-            android:layout_width="340dp"
-            android:layout_height="490dp"
-            android:layout_centerHorizontal="true"
-            android:layout_below="@id/about_us_text"
-            android:layout_marginTop="14dp"
-            android:textColor="#fff4f0"
-            android:textSize="16dp"
-            android:fontFamily="@font/quicksand_medium"
-            android:text="CueHall is a mobile application that will change the traditional approach of booking and playing billiards in billiard halls. Due to the growing popularity of billiards as a form of entertainment, it is becoming increasingly difficult to identify the availability of tables for use, particularly for billiard hall owners. Conversely, clients frequently experience inconvenience and frustration as a result of unpredictable circumstances and extended waiting times. Import Random addresses these problems by offering an application that allows customers to browse available tables, join wait lists, receive notifications about their reservations, and choose their playing time and duration."
-            android:padding="16dp"
-            android:paddingStart="10dp"
-            android:paddingEnd="10dp"
-            android:textAlignment="center"
-            android:lineSpacingExtra="2dp"-->
-
         <!-- CONTEXT -->
         <WebView
             android:id="@+id/justified_text"

@@ -51,14 +51,14 @@ class AccountSettings : AppCompatActivity() {
         val aboutUsButton: Button = findViewById(R.id.about_us_button)
         aboutUsButton.setOnClickListener {
             val popup =
-                com.importrandom.cuehall.About_us() // Assuming AboutUs is a Fragment or a DialogFragment
+                com.importrandom.cuehall.AboutUs() // Assuming AboutUs is a Fragment or a DialogFragment
             popup.show(supportFragmentManager, "popup_tag")
         }
 
         // CONTACT US BUTTON
         val helpButton: Button = findViewById(R.id.help_button)
         helpButton.setOnClickListener {
-            val popup = Contact_us()
+            val popup = ContactUs()
             popup.show(supportFragmentManager, "popup_tag")
         }
 
