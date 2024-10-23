@@ -61,8 +61,8 @@ class PopupStandardTC: DialogFragment() {
             dismiss()  // Close this dialog after showing the next popup
         }
 
-        val webView: WebView = view.findViewById(com.importrandom.cuehall.R.id.justified_text)
-        webView.setBackgroundColor(android.graphics.Color.TRANSPARENT)
+        val webView: WebView = view.findViewById(R.id.justified_text)
+        webView.setBackgroundColor(Color.TRANSPARENT)
         webView.webViewClient = WebViewClient()
 
         // HTML CONTENT

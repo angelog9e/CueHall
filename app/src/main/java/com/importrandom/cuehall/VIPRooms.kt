@@ -12,9 +12,11 @@ import android.graphics.Color
 import android.graphics.drawable.GradientDrawable
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.res.ResourcesCompat
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 
+@Suppress("DEPRECATION")
 class VIPRooms : AppCompatActivity() {
 
     private lateinit var footer: View
@@ -32,13 +34,6 @@ class VIPRooms : AppCompatActivity() {
                 hide(WindowInsets.Type.statusBars() or WindowInsets.Type.navigationBars())
                 systemBarsBehavior = WindowInsetsController.BEHAVIOR_SHOW_TRANSIENT_BARS_BY_SWIPE
             }
-        } else {
-            window.decorView.systemUiVisibility =
-                View.SYSTEM_UI_FLAG_LAYOUT_STABLE or
-                        View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN or
-                        View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION or
-                        View.SYSTEM_UI_FLAG_HIDE_NAVIGATION or
-                        View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY
         }
 
         // BUTTONS
@@ -134,7 +129,7 @@ class VIPRooms : AppCompatActivity() {
 
         footerTablesButton.text = "ROOMS"
 
-        val roomsIcon = resources.getDrawable(R.drawable.ic_rooms, null)
+        val roomsIcon = ResourcesCompat.getDrawable(resources, R.drawable.ic_rooms, null)
         footerTablesButton.setCompoundDrawablesWithIntrinsicBounds(null, roomsIcon, null, null)
 
         footerTablesButton.setOnClickListener {

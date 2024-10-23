@@ -1,6 +1,5 @@
 package com.importrandom.cuehall
 
-import android.content.Context
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
 import android.graphics.drawable.TransitionDrawable
@@ -61,8 +60,8 @@ class PopupVIPTC : DialogFragment() {
             dismiss()  // Close this dialog after showing the next popup
         }
 
-        val webView: WebView = view.findViewById(com.importrandom.cuehall.R.id.justified_text)
-        webView.setBackgroundColor(android.graphics.Color.TRANSPARENT)
+        val webView: WebView = view.findViewById(R.id.justified_text)
+        webView.setBackgroundColor(Color.TRANSPARENT)
         webView.webViewClient = WebViewClient()
 
         // HTML CONTENT
@@ -122,7 +121,6 @@ class PopupVIPTC : DialogFragment() {
     }
 }
 
-fun Int.dpToPx6(context: Context): Int {
-    return (this * context.resources.displayMetrics.density + 0.5f).toInt()
-}
+
+
 
