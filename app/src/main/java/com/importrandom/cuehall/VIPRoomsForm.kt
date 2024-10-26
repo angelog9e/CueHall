@@ -1,5 +1,6 @@
 package com.importrandom.cuehall
 
+import android.app.AlertDialog
 import android.app.DatePickerDialog
 import android.app.TimePickerDialog
 import android.content.Intent
@@ -11,124 +12,120 @@ import android.widget.Button
 import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.ContextCompat
 import java.util.Calendar
+import android.graphics.drawable.TransitionDrawable
 
 class VIPRoomsForm : AppCompatActivity() {
 
     private lateinit var timeButton: Button
     private lateinit var dateButton: Button
-    private var selectedDate: String = ""
-    private var selectedTime: String = ""
-
+    private lateinit var proceedButton: Button
+    private var selectedDate = ""
+    private var selectedTime = ""
 
     override fun onCreate(savedInstanceState: Bundle?) {
         enableEdgeToEdge()
         super.onCreate(savedInstanceState)
         setContentView(R.layout.vip_rooms_page)
 
-        // EDGE TO EDGE DISPLAY
+        setupEdgeToEdgeDisplay()
+        initializeButtons()
+        displayRoomNumber(intent.getIntExtra("ROOM_NUMBER", -1))
+        updateProceedButtonState()
+    }
+
+    private fun setupEdgeToEdgeDisplay() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
             window.setDecorFitsSystemWindows(false)
-            val insetsController = window.insetsController
-            insetsController?.apply {
+            window.insetsController?.apply {
                 hide(WindowInsets.Type.statusBars() or WindowInsets.Type.navigationBars())
                 systemBarsBehavior = WindowInsetsController.BEHAVIOR_SHOW_TRANSIENT_BARS_BY_SWIPE
             }
         }
+    }
 
-        // Initialize buttons
-        timeButton = findViewById(R.id.time_btn) // Button to pick time
-        dateButton = findViewById(R.id.date_button) // Button to pick date
+    private fun initializeButtons() {
+        timeButton = findViewById(R.id.time_btn)
+        dateButton = findViewById(R.id.date_button)
+        proceedButton = findViewById(R.id.proceed_button)
 
-        // BACK BUTTON
-        val backButton = findViewById<Button>(R.id.back_button)
-        backButton.setOnClickListener {
-            val intent = Intent(this, VIPRooms::class.java)
-            startActivity(intent)
+        proceedButton.background = ContextCompat.getDrawable(this, R.drawable.button_background_transition2)
+        proceedButton.isEnabled = false
+        (proceedButton.background as TransitionDrawable).reverseTransition(0) // Start in disabled state
+
+
+        findViewById<Button>(R.id.back_button).setOnClickListener {
+            startActivity(Intent(this, VIPRooms::class.java))
         }
 
-        // TIME BUTTON
-        timeButton.setOnClickListener {
-            openTimeRangePicker()
-        }
-
-        // DATE BUTTON
-        dateButton.setOnClickListener {
-            openDatePicker()
-        }
-
-        // PROCEED BUTTON
-        val proceedButton: Button = findViewById(R.id.proceed_button)
+        timeButton.setOnClickListener { openTimeRangePicker() }
+        dateButton.setOnClickListener { openDatePicker() }
         proceedButton.setOnClickListener {
-            val roomNumber = getRoomNumber()
-            val popupVIPTC = PopupVIPTC.newInstance(roomNumber, selectedDate, selectedTime)  // Pass the selected date and time to Popup_tc_vip
-            popupVIPTC.show(supportFragmentManager, "popup_tc_vip")
+            if (selectedDate.isNotEmpty() && selectedTime.isNotEmpty()) {
+                PopupVIPTC.newInstance(getRoomNumber(), selectedDate, selectedTime)
+                    .show(supportFragmentManager, "popup_tc_vip")
+            } else {
+                showSelectionPrompt()
+            }
         }
-
-        val roomNumber = intent.getIntExtra("ROOM_NUMBER", -1)
-        displayRoomNumber(roomNumber)
     }
 
     private fun openDatePicker() {
         val calendar = Calendar.getInstance()
-        val year = calendar.get(Calendar.YEAR)
-        val month = calendar.get(Calendar.MONTH)
-        val day = calendar.get(Calendar.DAY_OF_MONTH)
-
-        // Use correct order for year, month, day in the DatePickerDialog
-        DatePickerDialog(this, R.style.DialogTheme, { _, selectedYear, selectedMonth, selectedDay ->
-            // Update the date button with the selected date
-            selectedDate = "${selectedMonth + 1}/$selectedDay/$selectedYear"  // Store selected date
+        DatePickerDialog(this, R.style.DialogTheme, { _, year, month, day ->
+            selectedDate = "${month + 1}/$day/$year"
             dateButton.text = selectedDate
-        }, year, month, day).show()
+            updateProceedButtonState()
+        }, calendar[Calendar.YEAR], calendar[Calendar.MONTH], calendar[Calendar.DAY_OF_MONTH]).apply {
+            datePicker.minDate = calendar.timeInMillis
+        }.show()
     }
 
     private fun openTimeRangePicker() {
-        // Get the current time
         val calendar = Calendar.getInstance()
-        val currentHour = calendar.get(Calendar.HOUR_OF_DAY)
-        val currentMinute = calendar.get(Calendar.MINUTE)
-
-        // Show the first TimePickerDialog for the "start time"
         TimePickerDialog(this, R.style.DialogTheme, { _, startHour, startMinute ->
-            // Convert start time to 12-hour format
-            val startAmPm = if (startHour >= 12) "PM" else "AM"
-            val startHourIn12Format = when {
-                startHour == 0 -> 12 // Midnight case
-                startHour == 12 -> 12 // Noon case
-                startHour > 12 -> startHour - 12
-                else -> startHour
-            }
-            val formattedStartMinute = String.format("%02d", startMinute) // Ensures 2 digits for minute
-
-            // Now, show the second TimePickerDialog for the "end time"
+            val startFormatted = formatTime(startHour, startMinute)
             TimePickerDialog(this, R.style.DialogTheme, { _, endHour, endMinute ->
-                // Convert end time to 12-hour format
-                val endAmPm = if (endHour >= 12) "PM" else "AM"
-                val endHourIn12Format = when {
-                    endHour == 0 -> 12 // Midnight case
-                    endHour == 12 -> 12 // Noon case
-                    endHour > 12 -> endHour - 12
-                    else -> endHour
-                }
-                val formattedEndMinute = String.format("%02d", endMinute) // Ensures 2 digits for minute
-
-                selectedTime = "$startHourIn12Format:$formattedStartMinute $startAmPm - $endHourIn12Format:$formattedEndMinute $endAmPm"  // Store selected time
+                val endFormatted = formatTime(endHour, endMinute)
+                selectedTime = "$startFormatted - $endFormatted"
                 timeButton.text = selectedTime
-
-            }, currentHour, currentMinute, false).show()  // End TimePickerDialog (false for 12-hour format)
-
-        }, currentHour, currentMinute, false).show()  // Start TimePickerDialog (false for 12-hour format)
+                updateProceedButtonState()
+            }, calendar[Calendar.HOUR_OF_DAY], calendar[Calendar.MINUTE], false).show()
+        }, calendar[Calendar.HOUR_OF_DAY], calendar[Calendar.MINUTE], false).show()
     }
 
-    private fun displayRoomNumber(roomNumber: Int) {
-        val roomTextView = findViewById<TextView>(R.id.room_no)
-        if (roomNumber != -1) {
-            roomTextView.text = "VIP ROOM# $roomNumber"
+    private fun formatTime(hour: Int, minute: Int): String {
+        val period = if (hour >= 12) "PM" else "AM"
+        val hourIn12 = if (hour == 0 || hour == 12) 12 else hour % 12
+        return String.format("%d:%02d %s", hourIn12, minute, period)
+    }
+
+    private fun showSelectionPrompt() {
+        AlertDialog.Builder(this)
+            .setTitle("Selection Required")
+            .setMessage("Please select a time and date.")
+            .setPositiveButton("OK") { dialog, _ -> dialog.dismiss() }
+            .show()
+    }
+
+    private fun updateProceedButtonState() {
+        val isEnabled = selectedDate.isNotEmpty() && selectedTime.isNotEmpty()
+
+        val transitionDrawable = proceedButton.background as TransitionDrawable
+        if (isEnabled) {
+            proceedButton.isEnabled = true
+            transitionDrawable.startTransition(200) // Transition only when both date and time are selected
+        } else {
+            proceedButton.isEnabled = false
+            transitionDrawable.resetTransition() // Ensure it stays in the disabled state
         }
     }
 
-    private fun getRoomNumber(): Int {
-        return intent.getIntExtra("ROOM_NUMBER", -1)
+
+    private fun displayRoomNumber(roomNumber: Int) {
+        findViewById<TextView>(R.id.room_no)?.text = if (roomNumber != -1) "VIP ROOM# $roomNumber" else ""
     }
+
+    private fun getRoomNumber(): Int = intent.getIntExtra("ROOM_NUMBER", -1)
 }

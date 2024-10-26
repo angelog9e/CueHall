@@ -17,16 +17,19 @@
         <item name="android:textColor">@color/Moonlight_white</item>
 
         <!-- TimePicker specific colors -->
-        <item name="android:numbersTextColor">@color/Moonlight_white</item>
+        <item name="android:numbersTextColor">@color/june</item>
         <item name="android:timePickerStyle">@style/CustomTimePicker</item>
+
     </style>
 
     <!-- Define CustomTimePicker style -->
     <style name="CustomTimePicker" parent="Widget.MaterialComponents.TimePicker">
         <!-- Removed android:headerTextColor since it's private -->
-        <item name="android:numbersBackgroundColor">@color/knight_black</item>
+        <item name="android:numbersBackgroundColor">@color/black_sun</item>
+        <item name="android:textColorPrimary">@color/june</item>
+        <item name="android:background">@color/knight_black</item>
 
-        <item name="android:timePickerMode">clock</item> <!-- You can change this to 'clock' if needed -->
+        <item name="android:timePickerMode">spinner</item> <!-- You can change this to 'clock' if needed -->
     </style>
 
 </resources>
