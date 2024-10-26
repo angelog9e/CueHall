@@ -44,10 +44,10 @@ class AboutUs : DialogFragment() {
     </head>
     <body>
     <p>
-    Welcome to CueHall, your ultimate app for billiards and bar reservations! We are dedicated to connecting billiards enthusiasts and bar lovers through a seamless and enjoyable experience. 
-    At CueHall, we understand the excitement of sinking that perfect shot and the joy of sharing good times with friends. Our app is designed to make it easier than ever to find and reserve your favorite billiards spots, whether you're planning a casual night out or a special event.
-    We created CueHall to support aspiring billiard players and those eager to learn the game, offering resources and a community for growth. Our platform aims to attract both amateurs and seasoned professionals, fostering an environment that promotes skill development, friendly competition, and a shared passion for billiards. We believe billiards is a pleasant game that brings people together, and by connecting players of all levels, we strive to enhance the billiards community and contribute to the growth of the industry as a whole. We offer respectful behavior, which is required at all times. Profanity, loud noise, and disruptive actions are prohibited. 
-    Join us at CueHall, where every shot counts and every gathering is a celebration. Let's make your next event unforgettable! 
+    Welcome to CueHall, your go-to app for billiards and bar reservations! We connect billiards enthusiasts and bar lovers for an enjoyable experience. Whether you're planning a casual night out or a special event, our app simplifies finding and reserving your favorite spots.
+CueHall supports aspiring players with resources and a community for growth, promoting skill development and friendly competition. We value respectful behavior—profanity, loud noise, and disruptive actions are prohibited.
+Join us at CueHall, where every shot counts and every gathering is a celebration!
+ 
     </p>
     </body>
     </html>
