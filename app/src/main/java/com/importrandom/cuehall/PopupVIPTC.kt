@@ -81,17 +81,13 @@ class PopupVIPTC : DialogFragment() {
         </style>
     </head>
     <body>
-        <p>1.&nbsp;General: These terms apply to all customers reserving the VIP Billiard Table. By reserving, customers confirm they understand and accept these terms. Customers must be at least 21 years old to make a reservation for the VIP Billiard Table.</p>
-        <p>2.&nbsp;Reservations: Reservations can be made online, by phone, or in person with a required down payment via GCash. Reservations are subject to availability and may be modified or cancelled by management without notice. Customers are encouraged to book in advance, especially during peak hours and weekends to ensure availability.</p>
-        <p>3.&nbsp;Customer Responsibility: Customers are liable for any damage to the VIP Billiard Table and associated equipment during their reservation period. A security deposit may be required at the time of reservation, which will be refunded after the reservation if no damage occurs.</p>
-        <p>4.&nbsp;Conduct: Respectful behavior is required at all times. Profanity, loud noise, and disruptive actions are prohibited. Management reserves the right to refuse service and remove violators without a refund. Any form of harassment or inappropriate behavior will not be tolerated.</p>
-        <p>5.&nbsp;Liability: Management is not responsible for personal injuries or property damage occurring on-site. Customers are accountable for their belongings. Customers are encouraged to report any unsafe conditions or incidents to management immediately.</p>
-        <p>6.&nbsp;Payment: Payment is due at the time of reservation or upon bill presentation. Accepted payment methods include GCash or cash. All payments are non-refundable.</p>
-        <p>7.&nbsp;Food and Beverage Policy: No Outside Food and Drinks Allowed: Outside food and drinks are strictly prohibited within the premises. Special VIP menu items may be available, and customers are encouraged to inquire about exclusive offerings.</p>
-        <p>8.&nbsp;Changes to Terms and Conditions: These terms and conditions may change without notice. Customers should review them regularly to stay informed. Management reserves the right to update these terms to improve customer experience and safety.</p>
-        <p>9.&nbsp;Special Promotions and Events: Customers may be eligible for special promotions or events exclusive to VIP reservations. Details will be communicated through our app and social media channels. Reservations for special events may have different terms and conditions, which will be clearly stated at the time of booking.</p>
-        <p>10.&nbsp;Contact Information: For any inquiries or assistance, customers can contact our support team via the app or at the provided contact number.</p>
-        <p>11.&nbsp;Exclusive Access: VIP customers are entitled to exclusive access to the VIP lounge and priority service during their reservation.</p>
+        <p>General: To reserve the VIP Room, customers must be at least 21 years old and confirm their acceptance of the terms upon reservation. A valid ID may be required for verification.</p>
+        <p>Reservations: Reservations for the VIP Room can be made online, by phone, or in person with a downpayment. They are subject to availability, may be modified or canceled by management, and advance booking is recommended, especially during peak hours. A confirmation will be provided upon reservation.</p>
+        <p>Special Promotions and Events: Customers may qualify for exclusive promotions or events with VIP reservations, communicated via our app and social media. Special events may have different terms, which will be clearly outlined at booking.</p>
+        <p>Customer Responsibility: Customers are responsible for any damage to the VIP Room and equipment during their reservation. A security deposit may be required, refundable after the reservation if no damage occurs.</p>
+        <p>Payment: Payment is due at the time of reservation or upon bill presentation. Accepted payment methods include GCash or cash. All payments are non-refundable.</p>
+        <p>Food and Beverage Policy: No outside food or drinks are allowed on the premises. Customers are encouraged to inquire about special VIP menu items and exclusive offerings.</p>
+        <p>Changes to Terms and Conditions: Terms and conditions may change without notice. Customers should review them regularly, as management reserves the right to update them for improved safety and experience.</p>
     </body>
     </html>
 """.trimIndent()

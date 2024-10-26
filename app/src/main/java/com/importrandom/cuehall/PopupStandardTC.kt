@@ -82,16 +82,15 @@ class PopupStandardTC: DialogFragment() {
         </style>
     </head>
     <body>
-        <p>1.&nbsp;General: These terms apply to all customers reserving a standard billiard table. By reserving, customers confirm they have read, understood, and accepted these terms. Customers must be at least 18 years old to make a reservation.</p>
-        <p>2.&nbsp;Reservations: Reservations can be made online, by phone, or in person with a required down payment via GCash. Reservations are subject to availability and may be modified or cancelled by management without notice. Customers are encouraged to book in advance, especially during peak hours and weekends.</p>
-        <p>3.&nbsp;Billiard Tables: Standard billiard tables are available on a first-come, first-served basis. Customers are liable for any damage to tables, chairs, or equipment during their reservation period. A maximum of 6 players is allowed per table to ensure a comfortable experience.</p>
-        <p>4.&nbsp;Conduct: Respectful behavior is required at all times. Profanity, loud noise, and disruptive actions are prohibited. Management reserves the right to refuse service to violators and may ask disruptive customers to leave the premises without a refund. Any form of harassment or inappropriate behavior will not be tolerated.</p>
-        <p>5.&nbsp;Liability: Management is not responsible for personal injuries or property damage occurring on-site. Customers are responsible for their belongings. Customers are encouraged to report any unsafe conditions or incidents to management immediately.</p>
-        <p>6.&nbsp;Payment: Payment is due at the time of reservation or upon bill presentation. Accepted methods include GCash or cash. All payments are non-refundable. In the event of a cancellation or no-show, customers will not be entitled to a refund.</p>
-        <p>7.&nbsp;Food and Beverage Policy: No Outside Food and Drinks Allowed: Outside food and drinks are strictly prohibited within the premises. Customers must purchase food and beverages from our menu. A minimum food and beverage purchase may be required for table reservations, especially during peak hours.</p>
-        <p>8.&nbsp;Changes to Terms and Conditions: These terms may change without notice. Customers should review the latest version prior to making a reservation. Management reserves the right to update these terms to improve customer experience and safety.</p>
-        <p>9.&nbsp;Special Promotions and Events: Customers may be eligible for special promotions or events. Details will be communicated through our app and social media channels. Reservations for special events may have different terms and conditions, which will be clearly stated at the time of booking.</p>
-        <p>10.&nbsp;Contact Information: For any inquiries or assistance, customers can contact our support team via the app or at the provided contact number.</p>
+        <p>General: To reserve the Standard Room, customers must be at least 21 years old and confirm their acceptance of the terms upon reservation. A valid ID may be required for verification.</p>
+        <p>Reservations: Reservations for the Standard Table can be made online, by phone, or in person with a downpayment. They are subject to availability, may be modified or canceled by management, and advance booking is recommended, especially during peak hours. A confirmation will be provided upon reservation.</p>
+        <p>Billiard Tables: Standard billiard tables are available on a first-come, first-served basis. Customers are liable for any damage to tables, chairs, or equipment during their reservation period. A maximum of 6 players is allowed per table to ensure a comfortable experience.</p>
+        <p>Conduct: Respectful behavior is required at all times. Profanity, loud noise, and disruptive actions are prohibited. Management may refuse service and remove violators without a refund. Harassment or inappropriate behavior will not be tolerated.</p>
+        <p>Liability: Customers are liable for any damage to the Standard Billiard Table and equipment during their reservation. A refundable security deposit may be required at booking, provided no damage occurs.</p>
+        <p>Payment/s: Payment is due at the time of reservation or upon bill presentation. Accepted payment methods include GCash or cash. All payments are non-refundable.</p>
+        <p>Food and Beverage Policy: No outside food or drinks are allowed on the premises. Customers are encouraged to inquire about menu items and exclusive offerings.</p>
+        <p>Changes to Terms and Conditions: Terms and conditions may change without notice. Customers should review them regularly, as management reserves the right to update them for improved safety and experience.</p>
+        
     </body>
     </html>
 """.trimIndent()
