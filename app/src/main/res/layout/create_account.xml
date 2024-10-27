@@ -152,53 +152,6 @@
                 android:layout_marginTop="10sp"
                 android:background="@android:color/transparent"
                 android:src="@drawable/ic_show_password" />
-        </RelativeLayout>
-
-        <!-- CONFIRM PASSWORD -->
-        <TextView
-            android:id="@+id/new_password_text"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/input_password"
-            android:layout_marginTop="10sp"
-            android:layout_marginStart="50sp"
-            android:fontFamily="@font/quicksand_bold"
-            android:text="CONFIRM PASSWORD"
-            android:textColor="#01ab7a"
-            android:textSize="12sp" />
-
-        <!-- CONFIRM PASS INPUT -->
-        <RelativeLayout
-            android:id="@+id/confirm_password"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/new_password_text"
-            android:layout_centerHorizontal="true">
-
-            <EditText
-                android:id="@+id/confirm_password_input"
-                android:layout_width="360sp"
-                android:layout_height="48.5sp"
-                android:textColor="#151515"
-                android:background="@drawable/input_background"
-                android:layout_marginTop="6sp"
-                android:paddingStart="80sp"
-                android:paddingEnd="80sp"
-                android:textAlignment="center"
-                android:ems="10"
-                android:layout_centerHorizontal="true"
-                android:inputType="textPassword" />
-
-            <ImageButton
-                android:id="@+id/show_password_button2"
-                android:layout_width="40sp"
-                android:layout_height="40sp"
-                android:layout_alignParentEnd="true"
-                android:layout_marginEnd="64sp"
-                android:layout_marginTop="10sp"
-                android:background="@android:color/transparent"
-                android:src="@drawable/ic_show_password" />
-        </RelativeLayout>
 
         <!-- CREATE ACCOUNT BUTTON -->
         <Button
@@ -210,9 +163,11 @@
             android:background="@drawable/button_background"
             android:fontFamily="@font/quicksand_bold"
             android:text="CREATE ACCOUNT"
-            android:layout_below="@id/confirm_password"
+            android:layout_below="@id/password_input"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="30sp" />
+
+        </RelativeLayout>
 
         <!-- SIGN IN -->
         <TextView

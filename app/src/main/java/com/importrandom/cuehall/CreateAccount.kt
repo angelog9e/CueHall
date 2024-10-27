@@ -47,9 +47,7 @@ class CreateAccount : AppCompatActivity() {
         }
 
         val showPasswordButton1 = findViewById<ImageButton>(R.id.show_password_button1)
-        val showPasswordButton2 = findViewById<ImageButton>(R.id.show_password_button2)
         val passwordInput1 = findViewById<EditText>(R.id.password_input)
-        val passwordInput2 = findViewById<EditText>(R.id.confirm_password_input)
 
         fun togglePasswordVisibility(passwordInput: EditText, showPasswordButton: ImageButton) {
             var isPasswordVisible = false
@@ -71,7 +69,6 @@ class CreateAccount : AppCompatActivity() {
         }
 
         togglePasswordVisibility(passwordInput1, showPasswordButton1)
-        togglePasswordVisibility(passwordInput2, showPasswordButton2)
 
         // EDGE TO EDGE DISPLAY PADDING
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.create_account)) { v, insets ->
