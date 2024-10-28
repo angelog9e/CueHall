@@ -40,6 +40,12 @@ class AboutUs : DialogFragment() {
                 margin: 10;
                 padding: 10;
             }
+            p {
+                text-align: justify;
+                margin: 0 auto;
+                width: 90%;
+                line-height: 1.5;
+            }
         </style>
     </head>
     <body>

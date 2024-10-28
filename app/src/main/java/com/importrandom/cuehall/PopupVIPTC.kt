@@ -77,6 +77,7 @@ class PopupVIPTC : DialogFragment() {
                 background-color: transparent;
                 margin: 10;
                 padding: 18;
+                line-height: 1.5;
             }
         </style>
     </head>
