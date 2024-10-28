@@ -33,7 +33,7 @@ class EditProfile : AppCompatActivity() {
         }
 
         // BUTTONS
-        val backButton = findViewById<Button>(R.id.back_button)
+        val backButton = findViewById<Button>(R.id.bckButton)
         val saveButton = findViewById<Button>(R.id.save_btn)
 
         backButton.setOnClickListener {

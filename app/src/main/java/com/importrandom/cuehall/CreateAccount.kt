@@ -33,7 +33,7 @@ class CreateAccount : AppCompatActivity() {
         }
 
         // BUTTONS
-        val backButton = findViewById<Button>(R.id.back_button)
+        val backButton = findViewById<Button>(R.id.bckButton)
         val signInButton = findViewById<Button>(R.id.sign_in_btn)
 
         backButton.setOnClickListener {

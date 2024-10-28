@@ -55,7 +55,7 @@ class StandardTablesForm : AppCompatActivity() {
         proceedButton.isEnabled = false
         (proceedButton.background as TransitionDrawable).reverseTransition(0) // Start in disabled state
 
-        findViewById<Button>(R.id.back_button).setOnClickListener {
+        findViewById<Button>(R.id.bckButton).setOnClickListener {
             startActivity(Intent(this, MainInterface::class.java))
         }
 

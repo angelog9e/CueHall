@@ -30,7 +30,7 @@ class AccountSettings : AppCompatActivity() {
 
        // BUTTONS
         val logOutButton = findViewById<Button>(R.id.logout_button)
-        val backButton = findViewById<Button>(R.id.back_button)
+        val backButton = findViewById<Button>(R.id.bckButton)
         val accountButton = findViewById<Button>(R.id.account_button)
 
         // EDIT PROFILE BUTTON

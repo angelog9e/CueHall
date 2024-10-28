@@ -30,7 +30,7 @@
 
         <!-- BACK BUTTON -->
         <Button
-            android:id="@+id/back_button"
+            android:id="@+id/bckButton"
             android:layout_width="60sp"
             android:layout_height="60sp"
             android:layout_alignParentStart="true"

@@ -31,7 +31,7 @@ class RecoverPassword : AppCompatActivity() {
         // BUTTONS
 
         // BACK BUTTON
-        val backButton = findViewById<Button>(R.id.back_button)
+        val backButton = findViewById<Button>(R.id.bckButton)
         backButton.setOnClickListener {
             val intent = Intent(this, LogIn::class.java)
             startActivity(intent) // Closes the current activity and goes back to the previous one

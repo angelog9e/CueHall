@@ -50,7 +50,7 @@ dependencies {
     implementation(libs.converter.gson)
     implementation(libs.androidx.activity.v172)
     implementation(libs.androidx.activity.ktx)
-    implementation("com.github.VishnuSivadasVS:Advanced-HttpURLConnection:1.2")
+
 
 }
 
