@@ -40,6 +40,17 @@ class LogIn : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.log_in)
 
+        // EDGE TO EDGE DISPLAY
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
+            window.setDecorFitsSystemWindows(false)
+            val insetsController = window.insetsController
+            insetsController?.apply {
+                hide(WindowInsets.Type.statusBars() or WindowInsets.Type.navigationBars())
+                systemBarsBehavior =
+                    WindowInsetsController.BEHAVIOR_SHOW_TRANSIENT_BARS_BY_SWIPE
+            }
+        }
+
         // BUTTONS
         val signUpButton = findViewById<Button>(R.id.btnSignup)
         val forgotPasswordButton = findViewById<Button>(R.id.btnForgotPassword)
@@ -171,17 +182,6 @@ class LogIn : AppCompatActivity() {
                     }
                 }
             })
-
-            // EDGE TO EDGE DISPLAY
-            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
-                window.setDecorFitsSystemWindows(false)
-                val insetsController = window.insetsController
-                insetsController?.apply {
-                    hide(WindowInsets.Type.statusBars() or WindowInsets.Type.navigationBars())
-                    systemBarsBehavior =
-                        WindowInsetsController.BEHAVIOR_SHOW_TRANSIENT_BARS_BY_SWIPE
-                }
-            }
 
             // EDGE TO EDGE DISPLAY PADDING
             ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.log_in)) { v, insets ->

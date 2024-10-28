@@ -43,6 +43,17 @@ class CreateAccount : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.create_account)
 
+        // EDGE TO EDGE DISPLAY
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
+            window.setDecorFitsSystemWindows(false)
+            val insetsController = window.insetsController
+            insetsController?.apply {
+                hide(WindowInsets.Type.statusBars() or WindowInsets.Type.navigationBars())
+                systemBarsBehavior =
+                    WindowInsetsController.BEHAVIOR_SHOW_TRANSIENT_BARS_BY_SWIPE
+            }
+        }
+
         // BUTTONS
         val backButton = findViewById<Button>(R.id.bckButton)
         val signInButton = findViewById<Button>(R.id.sign_in_btn)
@@ -76,7 +87,6 @@ class CreateAccount : AppCompatActivity() {
             val username = editTextUsername.text.toString().trim()
             val email = editTextEmail.text.toString().trim() // Get email
             val password = editTextPassword.text.toString().trim()
-
 
         //Validate Email
             if (isValidEmail(email)) {
@@ -177,17 +187,6 @@ class CreateAccount : AppCompatActivity() {
                         runOnUiThread {
                             Toast.makeText(
                                 this@CreateAccount, "Registration failed: Invalid response format", Toast.LENGTH_SHORT).show()
-                        }
-
-                        // EDGE TO EDGE DISPLAY
-                        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
-                            window.setDecorFitsSystemWindows(false)
-                            val insetsController = window.insetsController
-                            insetsController?.apply {
-                                hide(WindowInsets.Type.statusBars() or WindowInsets.Type.navigationBars())
-                                systemBarsBehavior =
-                                    WindowInsetsController.BEHAVIOR_SHOW_TRANSIENT_BARS_BY_SWIPE
-                            }
                         }
 
                         // EDGE TO EDGE DISPLAY PADDING
