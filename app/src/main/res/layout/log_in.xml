@@ -80,7 +80,7 @@
         android:id="@+id/password_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@id/password_input"
+        android:layout_above="@id/createPassword"
         android:layout_marginStart="50sp"
         android:fontFamily="@font/quicksand_bold"
         android:text="PASSWORD"
@@ -89,7 +89,7 @@
 
     <!-- PASSWORD FIELD -->
     <RelativeLayout
-        android:id="@+id/password_input"
+        android:id="@+id/createPassword"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/usernameLogin"
@@ -126,7 +126,7 @@
         android:id="@+id/btnLogin"
         android:layout_width="154sp"
         android:layout_height="40sp"
-        android:layout_below="@id/password_input"
+        android:layout_below="@id/createPassword"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="32sp"
         android:text="LOGIN"

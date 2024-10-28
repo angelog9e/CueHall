@@ -46,7 +46,6 @@ class LogIn : AppCompatActivity() {
         val forgotPasswordButton = findViewById<Button>(R.id.btnForgotPassword)
         val backButton = findViewById<Button>(R.id.bckButton)
 
-
         // SIGNUP BUTTON
         signUpButton.setOnClickListener {
             val intent = Intent(this@LogIn, CreateAccount::class.java)
@@ -93,7 +92,6 @@ class LogIn : AppCompatActivity() {
             }
         }
     }
-
 
     private fun togglePasswordVisibility() {
         val passwordTransformationMethod = when (isPasswordVisible) {
