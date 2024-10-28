@@ -54,6 +54,18 @@ class CreateAccount : AppCompatActivity() {
             }
         }
 
+        // EDGE TO EDGE DISPLAY PADDING
+        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.create_account)) { v, insets ->
+            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
+            v.setPadding(
+                systemBars.left,
+                systemBars.top,
+                systemBars.right,
+                systemBars.bottom
+            )
+            insets
+        }
+
         // BUTTONS
         val backButton = findViewById<Button>(R.id.bckButton)
         val signInButton = findViewById<Button>(R.id.sign_in_btn)
@@ -151,57 +163,45 @@ class CreateAccount : AppCompatActivity() {
                     Toast.makeText(this@CreateAccount, "Registration failed: ${e.message}", Toast.LENGTH_SHORT).show()
                 }
             }
-                override fun onResponse(call: Call, response: Response) {
-                    if (!response.isSuccessful) {
-                        runOnUiThread {
-                            Toast.makeText(
-                                this@CreateAccount, "Registration failed: Unexpected response", Toast.LENGTH_SHORT).show()
-                        }
-                        return
+
+            override fun onResponse(call: Call, response: Response) {
+                if (!response.isSuccessful) {
+                    runOnUiThread {
+                        Toast.makeText(this@CreateAccount, "Registration failed: Unexpected response", Toast.LENGTH_SHORT).show()
                     }
+                    return
+                }
 
-                    val responseData = response.body()?.string()
-                    if (responseData == null) {
-                        runOnUiThread {
-                            Toast.makeText(
-                                this@CreateAccount, "Registration failed: Empty response", Toast.LENGTH_SHORT).show()
-                        }
-                        return
+                val responseData = response.body()?.string()
+                if (responseData == null) {
+                    runOnUiThread {
+                        Toast.makeText(this@CreateAccount, "Registration failed: Empty response", Toast.LENGTH_SHORT).show()
                     }
+                    return
+                }
 
-                    try {
-                        val jsonObject = JSONObject(responseData)
-                        val success = jsonObject.getBoolean("success")
+                try {
+                    val jsonObject = JSONObject(responseData)
+                    val success = jsonObject.getBoolean("success")
 
-                        runOnUiThread {
-                            if (success) {
-                                Toast.makeText(this@CreateAccount, "Registration successful!", Toast.LENGTH_SHORT).show()
-                                // Handle successful registration (e.g., navigate to login)
-                            } else {
-                                val message =
-                                    jsonObject.getString("message") // Handle specific error messages
-                                Toast.makeText(this@CreateAccount, message, Toast.LENGTH_SHORT).show()
-                            }
+                    runOnUiThread {
+                        if (success) { Toast.makeText(this@CreateAccount, "Registration successful!", Toast.LENGTH_SHORT).show()
+                            // Handle successful registration (e.g., navigate to login)
+                        } else {
+                            val message =
+                                jsonObject.getString("message") // Handle specific error messages
+                            Toast.makeText(this@CreateAccount, message, Toast.LENGTH_SHORT).show()
                         }
-                    } catch (e: Exception) {
-                        runOnUiThread {
-                            Toast.makeText(
-                                this@CreateAccount, "Registration failed: Invalid response format", Toast.LENGTH_SHORT).show()
-                        }
-
-                        // EDGE TO EDGE DISPLAY PADDING
-                        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.create_account)) { v, insets ->
-                            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
-                            v.setPadding(
-                                systemBars.left,
-                                systemBars.top,
-                                systemBars.right,
-                                systemBars.bottom
-                            )
-                            insets
-                        }
+                    }
+                } catch (e: Exception) {
+                    runOnUiThread {
+                        Toast.makeText(this@CreateAccount, "Registration failed: Invalid response format", Toast.LENGTH_SHORT).show()
                     }
                 }
-            })
-        }
+            }
+        })
     }
+}
+
+
+

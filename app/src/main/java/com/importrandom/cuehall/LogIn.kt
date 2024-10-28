@@ -51,6 +51,18 @@ class LogIn : AppCompatActivity() {
             }
         }
 
+        // EDGE TO EDGE DISPLAY PADDING
+        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.log_in)) { v, insets ->
+            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
+            v.setPadding(
+                systemBars.left,
+                systemBars.top,
+                systemBars.right,
+                systemBars.bottom
+            )
+            insets
+        }
+
         // BUTTONS
         val signUpButton = findViewById<Button>(R.id.btnSignup)
         val forgotPasswordButton = findViewById<Button>(R.id.btnForgotPassword)
@@ -182,17 +194,5 @@ class LogIn : AppCompatActivity() {
                     }
                 }
             })
-
-            // EDGE TO EDGE DISPLAY PADDING
-            ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.log_in)) { v, insets ->
-                val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
-                v.setPadding(
-                    systemBars.left,
-                    systemBars.top,
-                    systemBars.right,
-                    systemBars.bottom
-                )
-                insets
-            }
         }
     }
