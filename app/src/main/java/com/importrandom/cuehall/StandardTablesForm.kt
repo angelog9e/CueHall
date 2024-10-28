@@ -1,5 +1,6 @@
 package com.importrandom.cuehall
 
+import android.annotation.SuppressLint
 import android.app.AlertDialog
 import android.app.DatePickerDialog
 import android.app.TimePickerDialog
@@ -95,6 +96,7 @@ class StandardTablesForm : AppCompatActivity() {
         }, calendar[Calendar.HOUR_OF_DAY], calendar[Calendar.MINUTE], false).show()
     }
 
+    @SuppressLint("DefaultLocale")
     private fun formatTime(hour: Int, minute: Int): String {
         val period = if (hour >= 12) "PM" else "AM"
         val hourIn12 = if (hour == 0 || hour == 12) 12 else hour % 12
