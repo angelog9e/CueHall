@@ -88,7 +88,7 @@
             android:layout_marginTop="10sp"
             android:layout_marginStart="50sp"
             android:fontFamily="@font/quicksand_bold"
-            android:text="EMAIL"
+            android:text="EMAIL ADDRESS"
             android:textColor="#01ab7a"
             android:textSize="12sp" />
 
