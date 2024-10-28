@@ -41,6 +41,30 @@ class LogIn : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.log_in)
 
+        // BUTTONS
+        val signUpButton = findViewById<Button>(R.id.btnSignup)
+        val forgotPasswordButton = findViewById<Button>(R.id.btnForgotPassword)
+        val backButton = findViewById<Button>(R.id.bckButton)
+
+
+        // SIGNUP BUTTON
+        signUpButton.setOnClickListener {
+            val intent = Intent(this@LogIn, CreateAccount::class.java)
+            startActivity(intent)
+        }
+
+        // FORGOT PASS BUTTON
+        forgotPasswordButton.setOnClickListener {
+            val intent = Intent(this@LogIn, RecoverPassword::class.java)
+            startActivity(intent)
+        }
+
+        // BACK BUTTON
+        backButton.setOnClickListener {
+            val intent = Intent(this@LogIn, StartScreen::class.java)
+            startActivity(intent)
+        }
+
         // Initialize views
         editTextUsername = findViewById(R.id.usernameLogin)
         editTextPassword = findViewById(R.id.passwordLogin)
@@ -169,30 +193,6 @@ class LogIn : AppCompatActivity() {
                     systemBarsBehavior =
                         WindowInsetsController.BEHAVIOR_SHOW_TRANSIENT_BARS_BY_SWIPE
                 }
-            }
-
-            // BUTTONS
-            val signUpButton = findViewById<Button>(R.id.btnSignup)
-            val forgotPasswordButton = findViewById<Button>(R.id.btnForgotPassword)
-            val backButton = findViewById<Button>(R.id.bckButton)
-
-
-            // SIGNUP BUTTON
-            signUpButton.setOnClickListener {
-                val intent = Intent(this@LogIn, CreateAccount::class.java)
-                startActivity(intent)
-            }
-
-            // FORGOT PASS BUTTON
-            forgotPasswordButton.setOnClickListener {
-                val intent = Intent(this@LogIn, RecoverPassword::class.java)
-                startActivity(intent)
-            }
-
-            // BACK BUTTON
-            backButton.setOnClickListener {
-                val intent = Intent(this@LogIn, StartScreen::class.java)
-                startActivity(intent)
             }
 
             // EDGE TO EDGE DISPLAY PADDING
