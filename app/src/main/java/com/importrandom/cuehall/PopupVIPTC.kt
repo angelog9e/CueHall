@@ -19,7 +19,8 @@ class PopupVIPTC : DialogFragment() {
 
     private var roomNumber: Int = 0
     private var selectedDate: String = ""
-    private var selectedTime: String = ""
+    private var selectedTimeIn: String = ""
+    private var selectedTimeOut: String = ""
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -35,7 +36,8 @@ class PopupVIPTC : DialogFragment() {
         // Retrieve the passed room number, date, and time from the arguments
         roomNumber = arguments?.getInt("room_number") ?: 0
         selectedDate = arguments?.getString("selected_date") ?: ""
-        selectedTime = arguments?.getString("selected_time") ?: ""
+        selectedTimeIn = arguments?.getString("selected_time_in_vip") ?: ""
+        selectedTimeOut = arguments?.getString("selected_time_out_vip") ?: ""
 
         val proceedButton = view.findViewById<Button>(R.id.proceed_button)
         proceedButton.background = ContextCompat.getDrawable(requireContext(), R.drawable.button_background_transition)
@@ -55,7 +57,7 @@ class PopupVIPTC : DialogFragment() {
 
         proceedButton.setOnClickListener {
             // Pass the room number, date, and time to the next popup (Popup_vip)
-            val popup = PopupVIP.newInstance(roomNumber, selectedDate, selectedTime)
+            val popup = PopupVIP.newInstance(roomNumber, selectedDate, selectedTimeIn, selectedTimeOut)
             popup.show(parentFragmentManager, "popup_vip")
             dismiss()  // Close this dialog after showing the next popup
         }
@@ -106,11 +108,12 @@ class PopupVIPTC : DialogFragment() {
     }
 
     companion object {
-        fun newInstance(roomNumber: Int, selectedDate: String, selectedTime: String): PopupVIPTC {
+        fun newInstance(roomNumber: Int, selectedDate: String, selectedTimeIn: String, selectedTimeOut: String): PopupVIPTC {
             val args = Bundle()
             args.putInt("room_number", roomNumber)
             args.putString("selected_date", selectedDate)
-            args.putString("selected_time", selectedTime)
+            args.putString("selected_time_in_vip", selectedTimeIn)
+            args.putString("selected_time_out_vip", selectedTimeOut)
             val fragment = PopupVIPTC()
             fragment.arguments = args
             return fragment

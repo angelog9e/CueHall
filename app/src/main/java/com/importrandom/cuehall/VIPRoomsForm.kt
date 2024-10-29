@@ -16,14 +16,19 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import java.util.Calendar
 import android.graphics.drawable.TransitionDrawable
+import android.icu.text.SimpleDateFormat
+import java.util.Locale
 
+@Suppress("DEPRECATION")
 class VIPRoomsForm : AppCompatActivity() {
 
-    private lateinit var timeButton: Button
+    private lateinit var timeInButton: Button
+    private lateinit var timeOutButton: Button
     private lateinit var dateButton: Button
     private lateinit var proceedButton: Button
     private var selectedDate = ""
-    private var selectedTime = ""
+    private var selectedTimeIn = ""
+    private var selectedTimeOut = ""
 
     override fun onCreate(savedInstanceState: Bundle?) {
         enableEdgeToEdge()
@@ -47,11 +52,19 @@ class VIPRoomsForm : AppCompatActivity() {
     }
 
     private fun initializeButtons() {
-        timeButton = findViewById(R.id.time_btn)
+        timeInButton = findViewById(R.id.timeInVIP_btn)
+        timeInButton.setOnClickListener {
+            showTimePicker(timeInButton)
+        }
+        timeOutButton = findViewById(R.id.timeOutVIP_btn)
+        timeOutButton.setOnClickListener {
+            showTimePicker(timeOutButton)
+        }
         dateButton = findViewById(R.id.date_button)
         proceedButton = findViewById(R.id.proceed_button)
 
-        proceedButton.background = ContextCompat.getDrawable(this, R.drawable.button_background_transition2)
+        proceedButton.background =
+            ContextCompat.getDrawable(this, R.drawable.button_background_transition2)
         proceedButton.isEnabled = false
         (proceedButton.background as TransitionDrawable).reverseTransition(0) // Start in disabled state
 
@@ -59,11 +72,12 @@ class VIPRoomsForm : AppCompatActivity() {
             startActivity(Intent(this, VIPRooms::class.java))
         }
 
-        timeButton.setOnClickListener { openTimeRangePicker() }
         dateButton.setOnClickListener { openDatePicker() }
         proceedButton.setOnClickListener {
-            if (selectedDate.isNotEmpty() && selectedTime.isNotEmpty()) {
-                PopupVIPTC.newInstance(getRoomNumber(), selectedDate, selectedTime)
+            if (selectedDate.isNotEmpty() && selectedTimeIn.isNotEmpty() && selectedTimeOut.isNotEmpty()) {
+                PopupVIPTC.newInstance(
+                    getRoomNumber(), selectedDate, selectedTimeIn, selectedTimeOut
+                )
                     .show(supportFragmentManager, "popup_tc_vip")
             } else {
                 showSelectionPrompt()
@@ -73,33 +87,51 @@ class VIPRoomsForm : AppCompatActivity() {
 
     private fun openDatePicker() {
         val calendar = Calendar.getInstance()
-        DatePickerDialog(this, R.style.DialogTheme, { _, year, month, day ->
-            selectedDate = "${month + 1}/$day/$year"
-            dateButton.text = selectedDate
-            updateProceedButtonState()
-        }, calendar[Calendar.YEAR], calendar[Calendar.MONTH], calendar[Calendar.DAY_OF_MONTH]).apply {
+        DatePickerDialog(
+            this,
+            R.style.DialogTheme,
+            { _, year, month, day ->
+                selectedDate = "${month + 1}/$day/$year"
+                dateButton.text = selectedDate
+                updateProceedButtonState()
+            },
+            calendar[Calendar.YEAR],
+            calendar[Calendar.MONTH],
+            calendar[Calendar.DAY_OF_MONTH]
+        ).apply {
             datePicker.minDate = calendar.timeInMillis
         }.show()
     }
 
-    private fun openTimeRangePicker() {
+    private fun showTimePicker(button: Button) {
         val calendar = Calendar.getInstance()
-        TimePickerDialog(this, R.style.DialogTheme, { _, startHour, startMinute ->
-            val startFormatted = formatTime(startHour, startMinute)
-            TimePickerDialog(this, R.style.DialogTheme, { _, endHour, endMinute ->
-                val endFormatted = formatTime(endHour, endMinute)
-                selectedTime = "$startFormatted - $endFormatted"
-                timeButton.text = selectedTime
+        val timePickerDialog = TimePickerDialog(
+            this, R.style.DialogTheme,
+            { _, hourOfDay, minute ->
+                val formattedTime = formatTime(hourOfDay, minute)
+                button.text = formattedTime
+
+                // Update selected time based on button (assuming different buttons for in/out)
+                if (button.id == R.id.timeInVIP_btn) {  // Assuming timeIn_btn is the button for time in
+                    selectedTimeIn = formattedTime
+                } else if (button.id == R.id.timeOutVIP_btn) {  // Assuming timeOut_btn is the button for time out
+                    selectedTimeOut = formattedTime
+                }
+
+                // Call updateProceedButtonState after any selection update
                 updateProceedButtonState()
-            }, calendar[Calendar.HOUR_OF_DAY], calendar[Calendar.MINUTE], false).show()
-        }, calendar[Calendar.HOUR_OF_DAY], calendar[Calendar.MINUTE], false).show()
+            },
+            calendar[Calendar.HOUR_OF_DAY],
+            calendar[Calendar.MINUTE],
+            false
+        )
+        timePickerDialog.show()
     }
 
-    @SuppressLint("DefaultLocale")
+    @SuppressLint("SimpleDateFormat")
     private fun formatTime(hour: Int, minute: Int): String {
-        val period = if (hour >= 12) "PM" else "AM"
-        val hourIn12 = if (hour == 0 || hour == 12) 12 else hour % 12
-        return String.format("%d:%02d %s", hourIn12, minute, period)
+        val sdf = SimpleDateFormat("h:mm a", Locale.getDefault()) // Use "h" for 12-hour format
+        return sdf.format(java.util.Date(0, 0, 0, hour, minute, 0))
     }
 
     private fun showSelectionPrompt() {
@@ -111,8 +143,7 @@ class VIPRoomsForm : AppCompatActivity() {
     }
 
     private fun updateProceedButtonState() {
-        val isEnabled = selectedDate.isNotEmpty() && selectedTime.isNotEmpty()
-
+        val isEnabled = selectedDate.isNotEmpty() && selectedTimeIn.isNotEmpty() && selectedTimeOut.isNotEmpty()
         val transitionDrawable = proceedButton.background as TransitionDrawable
         if (isEnabled) {
             proceedButton.isEnabled = true

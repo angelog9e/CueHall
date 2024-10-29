@@ -23,15 +23,18 @@ class PopupVIP : DialogFragment() {
 
         val roomNumber = arguments?.getInt("room_number") ?: 0
         val selectedDate = arguments?.getString("selected_date") ?: ""
-        val selectedTime = arguments?.getString("selected_time") ?: ""
+        val selectedTimeIn = arguments?.getString("selected_time_in_vip") ?: ""
+        val selectedTimeOut = arguments?.getString("selected_time_out_vip") ?: "" // Example time out
 
         val roomNoTextView: TextView = view.findViewById(R.id.room_no)
-        val dateTextView: TextView = view.findViewById(R.id.date_view) // Assuming you have a TextView for date
-        val timeTextView: TextView = view.findViewById(R.id.time_view) // Assuming you have a TextView for time
+        val dateTextView: TextView = view.findViewById(R.id.date_view_vip) // Assuming you have a TextView for date
+        val timeInTextView: TextView = view.findViewById(R.id.timeIn_view_vip) // Assuming you have a TextView for time
+        val timeOutTextView: TextView = view.findViewById(R.id.timeOut_view_vip) // Assuming you have a TextView for time out
 
         roomNoTextView.text = "VIP ROOM # $roomNumber"
         dateTextView.text = "$selectedDate"
-        timeTextView.text = "$selectedTime"
+        timeInTextView.text = "$selectedTimeIn"
+        timeOutTextView.text = "$selectedTimeOut" // Example time out
 
         return view
     }
@@ -43,11 +46,12 @@ class PopupVIP : DialogFragment() {
     }
 
     companion object {
-        fun newInstance(roomNumber: Int, selectedDate: String, selectedTime: String): PopupVIP {
+        fun newInstance(roomNumber: Int, selectedDate: String, selectedTimeIn: String, selectedTimeOut: String): PopupVIP {
             val args = Bundle()
             args.putInt("room_number", roomNumber)
             args.putString("selected_date", selectedDate) // Add the selectedDate argument
-            args.putString("selected_time", selectedTime) // Add the selectedTime argument
+            args.putString("selected_time_in_vip", selectedTimeIn) // Add the selectedTime argument
+            args.putString("selected_time_out_vip", selectedTimeOut) // Add the selectedTime argument
             val fragment = PopupVIP()
             fragment.arguments = args
             return fragment
