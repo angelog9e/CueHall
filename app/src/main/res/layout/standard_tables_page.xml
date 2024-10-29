@@ -68,20 +68,6 @@
             android:gravity="center"
             android:text="TABLE # " />
 
-        <!-- TIME BUTTON -->
-        <Button
-            android:id="@+id/time_btn"
-            android:layout_width="260sp"
-            android:layout_height="50sp"
-            android:layout_centerHorizontal="true"
-            android:layout_below="@id/date_button"
-            android:background="@drawable/bg_black_sun2"
-            android:textColor="#fff4f0"
-            android:fontFamily="@font/quicksand_bold"
-            android:textSize="20sp"
-            android:text="TIME"
-            android:layout_marginTop="22sp" />
-
         <!-- DATE BUTTON -->
         <Button
             android:id="@+id/date_button"
@@ -96,6 +82,34 @@
             android:text="DATE"
             android:layout_marginTop="22sp" />
 
+        <!-- TIME IN BUTTON -->
+        <Button
+            android:id="@+id/timeIn_btn"
+            android:layout_width="260sp"
+            android:layout_height="50sp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/date_button"
+            android:background="@drawable/bg_black_sun2"
+            android:textColor="#fff4f0"
+            android:fontFamily="@font/quicksand_bold"
+            android:textSize="20sp"
+            android:text="TIME IN"
+            android:layout_marginTop="22sp" />
+
+        <!-- TIME OUT BUTTON -->
+        <Button
+            android:id="@+id/timeOut_btn"
+            android:layout_width="260sp"
+            android:layout_height="50sp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/timeIn_btn"
+            android:background="@drawable/bg_black_sun2"
+            android:textColor="#fff4f0"
+            android:fontFamily="@font/quicksand_bold"
+            android:textSize="20sp"
+            android:text="TIME OUT"
+            android:layout_marginTop="22sp" />
+
         <!-- PROCEED BUTTON -->
         <Button
             android:id="@+id/proceed_button"
@@ -106,7 +120,7 @@
             android:textColor="#fff4f0"
             android:fontFamily="@font/quicksand_bold"
             android:textSize="16sp"
-            android:layout_below="@id/time_btn"
+            android:layout_below="@id/timeOut_btn"
             android:text="PROCEED"
             android:layout_marginTop="40sp" />
 
