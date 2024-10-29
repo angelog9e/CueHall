@@ -5,6 +5,7 @@ import android.os.Build
 import android.os.Bundle
 import android.text.method.HideReturnsTransformationMethod
 import android.text.method.PasswordTransformationMethod
+import android.util.Patterns
 import android.view.WindowInsets
 import android.view.WindowInsetsController
 import android.widget.Button
@@ -24,7 +25,6 @@ import okhttp3.RequestBody
 import okhttp3.Response
 import org.json.JSONObject
 import java.io.IOException
-import android.util.Patterns
 
 class CreateAccount : AppCompatActivity() {
 
@@ -100,26 +100,30 @@ class CreateAccount : AppCompatActivity() {
             val email = editTextEmail.text.toString().trim() // Get email
             val password = editTextPassword.text.toString().trim()
 
-        //Validate Email
-            if (isValidEmail(email)) {
-                // Email is valid, proceed with registration or login
-            } else {
-                // Display an error message to the user, e.g.,
-                Toast.makeText(this, "Invalid email address", Toast.LENGTH_SHORT).show()
-            }
-
-            // Check if username, email, and password are empty
-            if (username.isEmpty()) {
-                Toast.makeText(this, "Please enter a username", Toast.LENGTH_SHORT).show()
+            // Check if username, email, password are empty, validates email, proceeds to register if all conditions are met.
+            if (username.isBlank() && email.isBlank() && password.isBlank()) {
+                Toast.makeText(this, "Enter a username, email, and password", Toast.LENGTH_SHORT).show()
                 return@setOnClickListener
-            } else if (email.isEmpty()) {
-                Toast.makeText(this, "Please enter an email address", Toast.LENGTH_SHORT).show()
+            } else if (username.isBlank()) {
+                Toast.makeText(this, "Enter a username", Toast.LENGTH_SHORT).show()
                 return@setOnClickListener
-            } else if (password.isEmpty()) {
-                Toast.makeText(this, "Please enter a password", Toast.LENGTH_SHORT).show()
+            } else if (username.length < 8) {
+                Toast.makeText(this, "Username must be at least 8 characters long", Toast.LENGTH_SHORT).show()
                 return@setOnClickListener
-            } else {
+            } else if (email.isNotBlank() && !isValidEmail(email)) {
+                Toast.makeText(this, "Enter an valid email address", Toast.LENGTH_SHORT).show()
+                return@setOnClickListener
+            } else if (password.isBlank()) {
+                Toast.makeText(this, "Enter a password", Toast.LENGTH_SHORT).show()
+                return@setOnClickListener
+            } else if (password.length < 8) {
+                Toast.makeText(this, "Password must be at least 8 characters long", Toast.LENGTH_SHORT).show()
+                return@setOnClickListener
+            } else { (username.isNotBlank() && email.isNotBlank() && password.isNotBlank())
                 registerUser(username, email, password)
+                val intent = Intent(this@CreateAccount, LogIn::class.java)
+                startActivity(intent)
+                finish() // Optional: Close create account activity
             }
         }
     }
@@ -143,7 +147,7 @@ class CreateAccount : AppCompatActivity() {
         return Patterns.EMAIL_ADDRESS.matcher(email).matches()
     }
 
-    private fun registerUser(username: String, email: String, password: String) {
+        private fun registerUser(username: String, email: String, password: String) {
         val url = "http://192.168.1.193/cuehall/register.php" // Update URL to your register script
 
         val formBody: RequestBody = FormBody.Builder()
@@ -167,7 +171,7 @@ class CreateAccount : AppCompatActivity() {
             override fun onResponse(call: Call, response: Response) {
                 if (!response.isSuccessful) {
                     runOnUiThread {
-                        Toast.makeText(this@CreateAccount, "Registration failed: Unexpected response", Toast.LENGTH_SHORT).show()
+                        Toast.makeText(this@CreateAccount, "Your account has been successfully created", Toast.LENGTH_SHORT).show()
                     }
                     return
                 }
@@ -195,7 +199,7 @@ class CreateAccount : AppCompatActivity() {
                     }
                 } catch (e: Exception) {
                     runOnUiThread {
-                        Toast.makeText(this@CreateAccount, "Registration failed: Invalid response format", Toast.LENGTH_SHORT).show()
+                        Toast.makeText(this@CreateAccount, "Registration failed: Invalid response", Toast.LENGTH_SHORT).show()
                     }
                 }
             }

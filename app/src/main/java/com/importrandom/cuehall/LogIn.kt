@@ -105,15 +105,15 @@ class LogIn : AppCompatActivity() {
             val password = editTextPassword.text.toString().trim()
 
             if (username.isEmpty() && password.isEmpty()) {
-                Toast.makeText(this, "Please enter your username and password", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "Enter your username and password", Toast.LENGTH_SHORT).show()
                 editTextUsername.requestFocus()
                 return@setOnClickListener
             } else if (username.isEmpty()) {
-                Toast.makeText(this, "Please enter a username", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "Enter your username", Toast.LENGTH_SHORT).show()
                 editTextUsername.requestFocus()
                 return@setOnClickListener
             } else if (password.isEmpty()) {
-                Toast.makeText(this, "Please enter a password", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "Enter your password", Toast.LENGTH_SHORT).show()
                 editTextPassword.requestFocus()
                 return@setOnClickListener
             } else {
@@ -160,7 +160,7 @@ class LogIn : AppCompatActivity() {
                 override fun onResponse(call: Call, response: Response) {
                     if (!response.isSuccessful) {
                         runOnUiThread {
-                            Toast.makeText(this@LogIn, "Login failed: Unexpected response", Toast.LENGTH_SHORT).show()
+                            Toast.makeText(this@LogIn, "Login succesful!", Toast.LENGTH_SHORT).show()
                         }
                         return
                     }
@@ -184,12 +184,12 @@ class LogIn : AppCompatActivity() {
                                 finish() // Optional: Close login activity
                             } else {
                                 Toast.makeText(
-                                    this@LogIn, "Login failed: Invalid credentials", Toast.LENGTH_SHORT).show()
+                                    this@LogIn, "Login failed: Invalid username or password", Toast.LENGTH_SHORT).show()
                             }
                         }
                     } catch (e: Exception) {
                         runOnUiThread {
-                            Toast.makeText(this@LogIn, "Login failed: Invalid response format", Toast.LENGTH_SHORT).show()
+                            Toast.makeText(this@LogIn, "Login failed: Invalid response", Toast.LENGTH_SHORT).show()
                         }
                     }
                 }
