@@ -57,6 +57,7 @@
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
         android:layout_alignParentBottom="true"
+        android:fontFamily="@font/quicksand_bold"
         android:text="© 2024 CUEHALL. All rights reserved."
         android:layout_marginBottom="30sp"
         android:textColor="@color/white"

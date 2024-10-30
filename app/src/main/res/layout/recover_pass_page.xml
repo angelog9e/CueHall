@@ -104,8 +104,8 @@
             android:layout_centerInParent="true"
             android:fontFamily="@font/quicksand_bold"
             android:textColor="#fff4f0"
-            android:layout_marginBottom="21.5sp"
-            android:textSize="11sp"
+            android:layout_marginBottom="30sp"
+            android:textSize="10sp"
             android:text="© 2024 CUEHALL. All rights reserved." />
 
     </RelativeLayout>

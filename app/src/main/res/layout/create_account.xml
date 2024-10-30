@@ -19,12 +19,12 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="60sp"
+            android:layout_marginTop="52sp"
             android:fontFamily="@font/quicksand_bold"
             android:text="CUEHALL"
             android:letterSpacing="0.1"
             android:textColor="@color/white"
-            android:textSize="34sp" />
+            android:textSize="30sp" />
 
         <!-- BACK BUTTON -->
         <Button
@@ -44,7 +44,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="280sp"
+            android:layout_marginTop="300sp"
             android:fontFamily="@font/quicksand_bold"
             android:text="CREATE ACCOUNT"
             android:textColor="#fff4f0"
@@ -181,7 +181,7 @@
             android:text="ALREADY HAVE AN ACCOUNT?"
             android:textColor="#fff4f0"
             android:textSize="10sp"
-            android:layout_marginBottom="22sp" />
+            android:layout_marginBottom="30sp" />
 
         <Button
             android:id="@+id/sign_in_btn"
@@ -191,7 +191,7 @@
             android:layout_alignParentEnd="true"
             android:layout_centerHorizontal="true"
             android:layout_marginEnd="88sp"
-            android:layout_marginBottom="22sp"
+            android:layout_marginBottom="30sp"
             android:text="SIGN IN"
             android:textColor="#01AB7A"
             android:textSize="10sp"
