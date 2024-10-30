@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="wrap_content"
-    android:layout_height="550sp"
+    android:layout_height="650sp"
     android:orientation="vertical"
     android:layout_gravity="center"
     android:background="#00000000">
@@ -9,7 +9,7 @@
     <RelativeLayout
         android:id="@+id/popup_container"
         android:layout_width="400sp"
-        android:layout_height="550sp"
+        android:layout_height="650sp"
         android:background="@drawable/bg_knight_black"
         android:layout_gravity="center"
         android:paddingTop="14sp"
@@ -64,6 +64,22 @@
             android:gravity="center"
             android:text="TABLE # " />
 
+        <!-- NAME VIEW-->
+        <TextView
+            android:id="@+id/name_view"
+            android:layout_width="240sp"
+            android:layout_height="50sp"
+            android:layout_centerHorizontal="true"
+            android:textAlignment="center"
+            android:layout_below="@id/table_no"
+            android:layout_marginTop="18sp"
+            android:background="@drawable/bg_black_sun2"
+            android:textColor="#fff4f0"
+            android:fontFamily="@font/quicksand_bold"
+            android:textSize="18sp"
+            android:gravity="center"
+            android:text="" />
+
         <!-- DATE VIEW -->
         <TextView
             android:id="@+id/date_view"
@@ -71,7 +87,7 @@
             android:layout_height="50sp"
             android:layout_centerHorizontal="true"
             android:textAlignment="center"
-            android:layout_below="@id/table_no"
+            android:layout_below="@id/name_view"
             android:layout_marginTop="18sp"
             android:background="@drawable/bg_black_sun2"
             android:textColor="#fff4f0"
@@ -116,7 +132,7 @@
         <Button
             android:id="@+id/proceed_button"
             android:layout_width="154sp"
-            android:layout_height="wrap_content"
+            android:layout_height="38sp"
             android:layout_centerHorizontal="true"
             android:background="@drawable/button_background"
             android:textColor="#fff4f0"

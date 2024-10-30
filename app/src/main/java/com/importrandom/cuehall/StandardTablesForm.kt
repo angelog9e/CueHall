@@ -9,9 +9,12 @@ import android.graphics.drawable.TransitionDrawable
 import android.icu.text.SimpleDateFormat
 import android.os.Build
 import android.os.Bundle
+import android.text.Editable
+import android.text.TextWatcher
 import android.view.WindowInsets
 import android.view.WindowInsetsController
 import android.widget.Button
+import android.widget.EditText
 import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -23,10 +26,12 @@ import java.util.Locale
 @Suppress("DEPRECATION")
 class StandardTablesForm : AppCompatActivity() {
 
+    private lateinit var nameEditText: EditText
     private lateinit var timeInButton: Button
     private lateinit var timeOutButton: Button
     private lateinit var dateButton: Button
     private lateinit var proceedButton: Button
+    private var inputName = ""
     private var selectedDate = ""
     private var selectedTimeIn = ""
     private var selectedTimeOut = ""
@@ -40,6 +45,17 @@ class StandardTablesForm : AppCompatActivity() {
         initializeButtons()
         displayTableNumber(intent.getIntExtra("TABLE_NUMBER", -1))
         updateProceedButtonState()
+
+        nameEditText.addTextChangedListener(object : TextWatcher {
+            override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {}
+
+            override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {}
+
+            override fun afterTextChanged(s: Editable?) {
+                inputName = s.toString() // Update inputName with the current text
+                updateProceedButtonState()
+            }
+        })
     }
 
     private fun setupEdgeToEdgeDisplay() {
@@ -53,6 +69,7 @@ class StandardTablesForm : AppCompatActivity() {
     }
 
     private fun initializeButtons() {
+        nameEditText = findViewById(R.id.name_button) // Assuming you added an EditText with this ID in your layout
         timeInButton = findViewById(R.id.timeIn_btn)
         timeInButton.setOnClickListener {
             showTimePicker(timeInButton)
@@ -74,9 +91,10 @@ class StandardTablesForm : AppCompatActivity() {
 
         dateButton.setOnClickListener { openDatePicker() }
         proceedButton.setOnClickListener {
-            if (selectedDate.isNotEmpty() && selectedTimeIn.isNotEmpty() && selectedTimeOut.isNotEmpty()) {
+                inputName = nameEditText.text.toString()
+            if (inputName.isNotEmpty() && selectedDate.isNotEmpty() && selectedTimeIn.isNotEmpty() && selectedTimeOut.isNotEmpty()) {
                 PopupStandardTC.newInstance(
-                    getTableNumber(), selectedDate, selectedTimeIn, selectedTimeOut
+                    getTableNumber(), inputName, selectedDate, selectedTimeIn, selectedTimeOut
                 )
                     .show(supportFragmentManager, "popup_tc_standard")
             } else {
@@ -128,7 +146,7 @@ class StandardTablesForm : AppCompatActivity() {
     }
 
     private fun updateProceedButtonState() {
-        val isEnabled = selectedDate.isNotEmpty() && selectedTimeIn.isNotEmpty() && selectedTimeOut.isNotEmpty()
+        val isEnabled = inputName.isNotEmpty() && selectedDate.isNotEmpty() && selectedTimeIn.isNotEmpty() && selectedTimeOut.isNotEmpty()
         val transitionDrawable = proceedButton.background as TransitionDrawable
         if (isEnabled) {
             proceedButton.isEnabled = true

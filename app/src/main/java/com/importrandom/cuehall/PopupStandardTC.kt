@@ -19,6 +19,7 @@ import androidx.fragment.app.DialogFragment
 class PopupStandardTC: DialogFragment() {
 
     private var tableNumber: Int = 0
+    private var inputName: String = ""
     private var selectedDate: String = ""
     private var selectedTimeIn: String = ""
     private var selectedTimeOut: String = ""
@@ -36,6 +37,7 @@ class PopupStandardTC: DialogFragment() {
 
         // Retrieve the passed table number, date, and time from the arguments
         tableNumber = arguments?.getInt("table_number") ?: 0
+        inputName = arguments?.getString("input_name") ?: ""
         selectedDate = arguments?.getString("selected_date") ?: ""
         selectedTimeIn = arguments?.getString("selected_time_in") ?: ""
         selectedTimeOut = arguments?.getString("selected_time_out") ?: ""
@@ -58,7 +60,7 @@ class PopupStandardTC: DialogFragment() {
 
         proceedButton.setOnClickListener {
             // Pass the table number, date, and time to the next popup (Popup_standard)
-            val popup = PopupStandard.newInstance(tableNumber, selectedDate, selectedTimeIn, selectedTimeOut)
+            val popup = PopupStandard.newInstance(tableNumber, inputName, selectedDate, selectedTimeIn, selectedTimeOut)
             popup.show(parentFragmentManager, "popup_standard")
             dismiss()  // Close this dialog after showing the next popup
         }
@@ -97,10 +99,7 @@ class PopupStandardTC: DialogFragment() {
     </body>
     </html>
 """.trimIndent()
-
-
         webView.loadDataWithBaseURL(null, text, "text/html", "utf-8", null)
-
         return view
     }
 
@@ -113,12 +112,14 @@ class PopupStandardTC: DialogFragment() {
     companion object {
         fun newInstance(
             tableNumber: Int,
+            inputName: String,
             selectedDate: String,
             selectedTimeIn: String,
-            selectedTimeOut: String
+            selectedTimeOut: String,
         ): PopupStandardTC {
             val args = Bundle()
             args.putInt("table_number", tableNumber)
+            args.putString("input_name", inputName)
             args.putString("selected_date", selectedDate)
             args.putString("selected_time_in", selectedTimeIn)
             args.putString("selected_time_out", selectedTimeOut)

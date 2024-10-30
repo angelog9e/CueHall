@@ -80,7 +80,7 @@
         <Button
             android:id="@+id/proceed_button"
             android:layout_width="154sp"
-            android:layout_height="48sp"
+            android:layout_height="38sp"
             android:layout_centerHorizontal="true"
             android:background="@drawable/button_background"
             android:textColor="#fff4f0"

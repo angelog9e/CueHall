@@ -78,7 +78,8 @@
             android:layout_marginTop="22sp"
             android:background="@drawable/bg_black_sun2"
             android:fontFamily="@font/quicksand_bold"
-            android:text="NAME"
+            android:hint="NAME"
+            android:textColorHint="#fff4f0"
             android:textAlignment="center"
             android:textColor="#fff4f0"
             android:textSize="20sp" />
