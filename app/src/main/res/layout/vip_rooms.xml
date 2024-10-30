@@ -25,15 +25,15 @@
             android:fontFamily="@font/quicksand_bold"
             android:text="CUEHALL"
             android:letterSpacing="0.1"
-            android:layout_marginTop="50sp"
+            android:layout_marginTop="52sp"
             android:textColor="@color/white"
-            android:textSize="34sp" />
+            android:textSize="30sp" />
 
         <!-- ACCOUNT BUTTON -->
         <Button
             android:id="@+id/account_button"
-            android:layout_width="50sp"
-            android:layout_height="50sp"
+            android:layout_width="45sp"
+            android:layout_height="45sp"
             android:layout_alignParentEnd="true"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="50sp"
@@ -44,7 +44,7 @@
         <RelativeLayout
             android:id="@+id/footer"
             android:layout_width="match_parent"
-            android:layout_height="80sp"
+            android:layout_height="75sp"
             android:layout_alignParentBottom="true"
             android:background="@drawable/footer_bg">
 
@@ -76,12 +76,12 @@
                 android:layout_marginStart="60sp"
                 android:fontFamily="@font/quicksand_bold"
                 android:gravity="center"
-                android:textSize="12sp"
+                android:textSize="10sp"
                 android:textColor="#fff4f0"
                 android:background="@drawable/rounded_button_bg"
                 android:drawableTop="@drawable/ic_table"
                 android:paddingTop="8sp"
-                android:paddingBottom="2sp"
+                android:paddingBottom="8sp"
                 />
 
             <Button
@@ -94,23 +94,23 @@
                 android:layout_marginEnd="60sp"
                 android:fontFamily="@font/quicksand_bold"
                 android:gravity="center"
-                android:textSize="12sp"
+                android:textSize="10sp"
                 android:textColor="#fff4f0"
                 android:background="@drawable/rounded_button_bg"
                 android:drawableTop="@drawable/ic_bookings"
                 android:paddingTop="8sp"
-                android:paddingBottom="2sp" />
+                android:paddingBottom="8sp" />
 
         </RelativeLayout>
 
         <!-- Image Preview -->
         <LinearLayout
             android:id="@+id/image_preview1"
-            android:layout_width="404sp"
+            android:layout_width="390sp"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
             android:layout_below="@+id/text_title"
-            android:layout_marginTop="10sp"
+            android:layout_marginTop="15sp"
             android:orientation="vertical">
 
             <ImageView
@@ -118,7 +118,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="160sp"
                 android:background="@drawable/vip"
-                android:scaleType="centerCrop" />
+                android:scaleType="fitCenter" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -135,7 +135,7 @@
                     android:text="VIP Billiard Rooms"
                     android:textColor="#fff4f0"
                     android:fontFamily="@font/quicksand_bold"
-                    android:textSize="14sp"
+                    android:textSize="13sp"
                     android:layout_marginStart="8sp"
                     android:gravity="start|center_vertical" />
 
@@ -146,7 +146,7 @@
                     android:text="500/hr"
                     android:textColor="#fff4f0"
                     android:fontFamily="@font/quicksand_bold"
-                    android:textSize="14sp"
+                    android:textSize="12sp"
                     android:layout_marginEnd="8sp"
                     android:gravity="end|center_vertical" />
 
@@ -155,11 +155,11 @@
             <!-- ICONS -->
             <LinearLayout
                 android:id="@+id/icons_preview1"
-                android:layout_width="404sp"
+                android:layout_width="390sp"
                 android:layout_height="wrap_content"
                 android:background="@drawable/bg_black_sun2"
                 android:layout_below="@id/image_preview1"
-                android:layout_marginTop="8sp"
+                android:layout_marginTop="10sp"
                 android:layout_centerHorizontal="true"
                 android:padding="4sp"
                 android:orientation="horizontal">
@@ -220,7 +220,7 @@
                         android:id="@+id/text2"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="AIRCONDITION"
+                        android:text="AIRCON"
                         android:textColor="#fff4f0"
                         android:fontFamily="@font/quicksand_bold"
                         android:textSize="8sp"
@@ -301,7 +301,7 @@
                         android:id="@+id/text5"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="24/hrs"
+                        android:text="OPEN"
                         android:textColor="#fff4f0"
                         android:fontFamily="@font/quicksand_bold"
                         android:textSize="8sp"
@@ -317,13 +317,13 @@
                 android:id="@+id/table_buttons"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="42sp"
-                android:paddingTop="12sp">
+                android:layout_marginTop="45sp"
+                android:paddingTop="20sp">
 
                 <Button
                     android:id="@+id/room1_btn"
-                    android:layout_width="168sp"
-                    android:layout_height="144sp"
+                    android:layout_width="160sp"
+                    android:layout_height="140sp"
                     android:background="@drawable/vip_button_bg"
                     android:layout_marginBottom="10sp"
                     android:layout_alignParentStart="true"
@@ -332,12 +332,12 @@
                     android:fontFamily="@font/quicksand_bold"
                     android:textSize="34sp"
                     android:paddingBottom="68sp"
-                    android:layout_marginStart="4sp" />
+                    android:layout_marginStart="13sp" />
 
                 <Button
                     android:id="@+id/room2_btn"
-                    android:layout_width="168sp"
-                    android:layout_height="144sp"
+                    android:layout_width="160sp"
+                    android:layout_height="140sp"
                     android:background="@drawable/vip_button_bg"
                     android:layout_marginBottom="10sp"
                     android:layout_alignParentStart="true"
@@ -347,12 +347,12 @@
                     android:fontFamily="@font/quicksand_bold"
                     android:textSize="34sp"
                     android:paddingBottom="68sp"
-                    android:layout_marginStart="4sp" />
+                    android:layout_marginStart="13sp" />
 
                 <Button
                     android:id="@+id/room3_btn"
-                    android:layout_width="168sp"
-                    android:layout_height="144sp"
+                    android:layout_width="160sp"
+                    android:layout_height="140sp"
                     android:background="@drawable/vip_button_bg"
                     android:layout_marginBottom="10sp"
                     android:layout_below="@+id/room2_btn"
@@ -361,12 +361,12 @@
                     android:fontFamily="@font/quicksand_bold"
                     android:textSize="34sp"
                     android:paddingBottom="68sp"
-                    android:layout_marginStart="4sp" />
+                    android:layout_marginStart="13sp" />
 
                 <Button
                     android:id="@+id/room4_btn"
-                    android:layout_width="168sp"
-                    android:layout_height="144sp"
+                    android:layout_width="160sp"
+                    android:layout_height="140sp"
                     android:background="@drawable/vip_button_bg"
                     android:layout_marginBottom="10sp"
                     android:layout_alignParentEnd="true"
@@ -375,12 +375,12 @@
                     android:fontFamily="@font/quicksand_bold"
                     android:textSize="34sp"
                     android:paddingBottom="68sp"
-                    android:layout_marginEnd="4sp" />
+                    android:layout_marginEnd="13sp" />
 
                 <Button
                     android:id="@+id/room5_btn"
-                    android:layout_width="168sp"
-                    android:layout_height="144sp"
+                    android:layout_width="160sp"
+                    android:layout_height="140sp"
                     android:background="@drawable/vip_button_bg"
                     android:layout_marginBottom="10sp"
                     android:layout_below="@+id/room4_btn"
@@ -390,12 +390,12 @@
                     android:fontFamily="@font/quicksand_bold"
                     android:textSize="35sp"
                     android:paddingBottom="68sp"
-                    android:layout_marginEnd="4sp" />
+                    android:layout_marginEnd="13sp" />
 
                 <Button
                     android:id="@+id/room6_btn"
-                    android:layout_width="168sp"
-                    android:layout_height="144sp"
+                    android:layout_width="160sp"
+                    android:layout_height="140sp"
                     android:background="@drawable/vip_button_bg"
                     android:layout_marginBottom="10sp"
                     android:layout_below="@+id/room5_btn"
@@ -405,7 +405,7 @@
                     android:fontFamily="@font/quicksand_bold"
                     android:textSize="34sp"
                     android:paddingBottom="68sp"
-                    android:layout_marginEnd="4sp" />
+                    android:layout_marginEnd="13sp" />
 
             </RelativeLayout>
 
@@ -414,34 +414,34 @@
         <!-- MIDDLE BUTTONS -->
         <RelativeLayout
             android:id="@+id/buttons"
-            android:layout_width="404sp"
+            android:layout_width="375sp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="376sp"
+            android:layout_marginTop="384sp"
             android:layout_centerHorizontal="true">
 
             <Button
                 android:id="@+id/vip_btn"
-                android:layout_width="168sp"
+                android:layout_width="160sp"
                 android:layout_height="40sp"
                 android:layout_alignParentEnd="true"
                 android:text="VIP ROOMS"
                 android:textColor="#fff4f0"
-                android:textSize="14sp"
+                android:textSize="13sp"
                 android:fontFamily="@font/quicksand_bold"
                 android:background="@drawable/button_background"
-                android:layout_marginEnd="4sp" />
+                android:layout_marginEnd="5sp" />
 
             <Button
                 android:id="@+id/standard_table_btn"
-                android:layout_width="170sp"
+                android:layout_width="160sp"
                 android:layout_height="40sp"
                 android:layout_alignParentStart="true"
                 android:text="STANDARD TABLES"
                 android:textColor="#fff4f0"
-                android:textSize="14sp"
+                android:textSize="13sp"
                 android:fontFamily="@font/quicksand_bold"
                 android:background="@drawable/button_background"
-                android:layout_marginStart="4sp" />
+                android:layout_marginStart="5sp" />
 
         </RelativeLayout>
 
