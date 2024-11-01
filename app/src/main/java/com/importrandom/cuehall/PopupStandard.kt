@@ -40,14 +40,10 @@ class PopupStandard : DialogFragment() {
         val selectedTimeOut = arguments?.getString("selected_time_out") ?: ""
 
         val tableNoTextView: TextView = view.findViewById(R.id.table_no)
-        val nameTextView: TextView =
-            view.findViewById(R.id.name_view) // Assuming you have a TextView for name
-        val dateTextView: TextView =
-            view.findViewById(R.id.date_view) // Assuming you have a TextView for date
-        val timeInTextView: TextView =
-            view.findViewById(R.id.timeIn_view) // Assuming you have a TextView for time
-        val timeOutTextView: TextView =
-            view.findViewById(R.id.timeOut_view) // Assuming you have a TextView for time out
+        val nameTextView: TextView = view.findViewById(R.id.name_view) // Assuming you have a TextView for name
+        val dateTextView: TextView = view.findViewById(R.id.date_view) // Assuming you have a TextView for date
+        val timeInTextView: TextView = view.findViewById(R.id.timeIn_view) // Assuming you have a TextView for time
+        val timeOutTextView: TextView = view.findViewById(R.id.timeOut_view) // Assuming you have a TextView for time out
         val proceedButton: Button = view.findViewById(R.id.proceed_button)
 
         val client = OkHttpClient()
