@@ -17,15 +17,20 @@ import androidx.core.content.ContextCompat
 import java.util.Calendar
 import android.graphics.drawable.TransitionDrawable
 import android.icu.text.SimpleDateFormat
+import android.text.Editable
+import android.text.TextWatcher
+import android.widget.EditText
 import java.util.Locale
 
 @Suppress("DEPRECATION")
 class VIPRoomsForm : AppCompatActivity() {
 
+    private lateinit var nameEditText: EditText
     private lateinit var timeInButton: Button
     private lateinit var timeOutButton: Button
     private lateinit var dateButton: Button
     private lateinit var proceedButton: Button
+    private var inputName = ""
     private var selectedDate = ""
     private var selectedTimeIn = ""
     private var selectedTimeOut = ""
@@ -39,6 +44,17 @@ class VIPRoomsForm : AppCompatActivity() {
         initializeButtons()
         displayRoomNumber(intent.getIntExtra("ROOM_NUMBER", -1))
         updateProceedButtonState()
+
+        nameEditText.addTextChangedListener(object : TextWatcher {
+            override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {}
+
+            override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {}
+
+            override fun afterTextChanged(s: Editable?) {
+                inputName = s.toString() // Update inputName with the current text
+                updateProceedButtonState()
+            }
+        })
     }
 
     private fun setupEdgeToEdgeDisplay() {
@@ -52,6 +68,7 @@ class VIPRoomsForm : AppCompatActivity() {
     }
 
     private fun initializeButtons() {
+        nameEditText = findViewById(R.id.name_button)
         timeInButton = findViewById(R.id.timeInVIP_btn)
         timeInButton.setOnClickListener {
             showTimePicker(timeInButton)
@@ -74,9 +91,10 @@ class VIPRoomsForm : AppCompatActivity() {
 
         dateButton.setOnClickListener { openDatePicker() }
         proceedButton.setOnClickListener {
-            if (selectedDate.isNotEmpty() && selectedTimeIn.isNotEmpty() && selectedTimeOut.isNotEmpty()) {
+                inputName = nameEditText.text.toString()
+            if (inputName.isNotEmpty() && selectedDate.isNotEmpty() && selectedTimeIn.isNotEmpty() && selectedTimeOut.isNotEmpty()) {
                 PopupVIPTC.newInstance(
-                    getRoomNumber(), selectedDate, selectedTimeIn, selectedTimeOut
+                    getRoomNumber(), inputName, selectedDate, selectedTimeIn, selectedTimeOut
                 )
                     .show(supportFragmentManager, "popup_tc_vip")
             } else {
@@ -143,7 +161,7 @@ class VIPRoomsForm : AppCompatActivity() {
     }
 
     private fun updateProceedButtonState() {
-        val isEnabled = selectedDate.isNotEmpty() && selectedTimeIn.isNotEmpty() && selectedTimeOut.isNotEmpty()
+        val isEnabled = inputName.isNotEmpty() && selectedDate.isNotEmpty() && selectedTimeIn.isNotEmpty() && selectedTimeOut.isNotEmpty()
         val transitionDrawable = proceedButton.background as TransitionDrawable
         if (isEnabled) {
             proceedButton.isEnabled = true
@@ -156,7 +174,7 @@ class VIPRoomsForm : AppCompatActivity() {
 
 
     private fun displayRoomNumber(roomNumber: Int) {
-        findViewById<TextView>(R.id.room_no)?.text = if (roomNumber != -1) "VIP ROOM# $roomNumber" else ""
+        findViewById<TextView>(R.id.room_no)?.text = if (roomNumber != -1) "ROOM# $roomNumber" else ""
     }
 
     private fun getRoomNumber(): Int = intent.getIntExtra("ROOM_NUMBER", -1)
