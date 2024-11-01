@@ -2,7 +2,7 @@
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="wrap_content"
-    android:layout_height="600sp"
+    android:layout_height="700sp"
     android:orientation="vertical"
     android:layout_gravity="center"
     android:background="#00000000"
@@ -80,7 +80,7 @@
         <Button
             android:id="@+id/proceed_button"
             android:layout_width="154sp"
-            android:layout_height="48sp"
+            android:layout_height="38sp"
             android:layout_centerHorizontal="true"
             android:background="@drawable/button_background"
             android:textColor="#fff4f0"
