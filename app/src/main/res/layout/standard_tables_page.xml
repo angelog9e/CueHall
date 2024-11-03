@@ -31,11 +31,11 @@
         <!-- BACK BUTTON -->
         <Button
             android:id="@+id/bckButton"
-            android:layout_width="60sp"
-            android:layout_height="60sp"
+            android:layout_width="45sp"
+            android:layout_height="45sp"
             android:layout_alignParentStart="true"
-            android:layout_marginTop="60sp"
-            android:layout_marginStart="15sp"
+            android:layout_marginTop="48sp"
+            android:layout_marginStart="40sp"
             android:background="@android:color/transparent"
             android:backgroundTint="@android:color/transparent"
             android:drawableTop="@drawable/back_button" />
