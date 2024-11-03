@@ -108,7 +108,7 @@
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
                 android:layout_below="@+id/text_title"
-                android:layout_marginTop="15sp"
+                android:layout_marginTop="8sp"
                 android:orientation="vertical">
 
                 <ImageView
@@ -359,7 +359,7 @@
             android:id="@+id/buttons"
             android:layout_width="375sp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="384sp"
+            android:layout_marginTop="377sp"
             android:layout_centerHorizontal="true">
 
             <Button
