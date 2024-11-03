@@ -55,7 +55,7 @@
         <!-- BUTTONS -->
         <Button
             android:id="@+id/account_button"
-            android:textSize="20sp"
+            android:textSize="18sp"
             android:textColor="#fff4f0"
             android:background="@drawable/bg_black_sun2"
             android:fontFamily="@font/quicksand_bold"
@@ -72,7 +72,7 @@
 
         <Button
             android:id="@+id/notification_button"
-            android:textSize="20sp"
+            android:textSize="18sp"
             android:textColor="#fff4f0"
             android:background="@drawable/bg_black_sun2"
             android:fontFamily="@font/quicksand_bold"
@@ -88,7 +88,7 @@
 
         <Button
             android:id="@+id/help_button"
-            android:textSize="20sp"
+            android:textSize="18sp"
             android:textColor="#fff4f0"
             android:background="@drawable/bg_black_sun2"
             android:fontFamily="@font/quicksand_bold"
@@ -104,7 +104,7 @@
 
         <Button
             android:id="@+id/about_us_button"
-            android:textSize="20sp"
+            android:textSize="18sp"
             android:textColor="#fff4f0"
             android:background="@drawable/bg_black_sun2"
             android:fontFamily="@font/quicksand_bold"
@@ -122,11 +122,11 @@
         <Button
             android:id="@+id/logout_button"
             android:layout_width="154sp"
-            android:layout_height="38sp"
+            android:layout_height="40sp"
             android:layout_centerHorizontal="true"
             android:layout_below="@id/about_us_button"
             android:text="LOGOUT"
-            android:textSize="14sp"
+            android:textSize="12sp"
             android:textColor="#fff4f0"
             android:fontFamily="@font/quicksand_bold"
             android:background="@drawable/button_background"

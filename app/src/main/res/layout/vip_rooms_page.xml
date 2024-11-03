@@ -68,7 +68,7 @@
             android:text="ROOM# "
             android:textAlignment="center"
             android:textColor="#fff4f0"
-            android:textSize="20sp" />
+            android:textSize="18sp" />
 
         <!-- NAME BUTTON -->
         <EditText
@@ -84,7 +84,7 @@
             android:textColorHint="#fff4f0"
             android:textAlignment="center"
             android:textColor="#fff4f0"
-            android:textSize="20sp" />
+            android:textSize="18sp" />
 
         <!-- DATE BUTTON -->
         <Button
@@ -98,7 +98,7 @@
             android:fontFamily="@font/quicksand_bold"
             android:text="DATE"
             android:textColor="#fff4f0"
-            android:textSize="20sp" />
+            android:textSize="18sp" />
 
         <!-- TIME IN BUTTON -->
         <Button
@@ -112,7 +112,7 @@
             android:fontFamily="@font/quicksand_bold"
             android:text="TIME IN"
             android:textColor="#fff4f0"
-            android:textSize="20sp" />
+            android:textSize="18sp" />
 
         <!-- TIME OUT BUTTON -->
         <Button
@@ -126,13 +126,13 @@
             android:fontFamily="@font/quicksand_bold"
             android:text="TIME OUT"
             android:textColor="#fff4f0"
-            android:textSize="20sp" />
+            android:textSize="18sp" />
 
         <!-- PROCEED BUTTON -->
         <Button
             android:id="@+id/proceed_button"
             android:layout_width="154sp"
-            android:layout_height="38sp"
+            android:layout_height="40sp"
             android:layout_below="@id/timeOutVIP_btn"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="40sp"
@@ -140,7 +140,7 @@
             android:fontFamily="@font/quicksand_bold"
             android:text="PROCEED"
             android:textColor="#fff4f0"
-            android:textSize="16sp" />
+            android:textSize="12sp" />
 
         <!-- CREDITS -->
         <TextView

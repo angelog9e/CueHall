@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="wrap_content"
-    android:layout_height="650sp"
+    android:layout_height="640sp"
     android:orientation="vertical"
     android:layout_gravity="center"
     android:background="#00000000">
@@ -9,7 +9,7 @@
     <RelativeLayout
         android:id="@+id/popup_container"
         android:layout_width="400sp"
-        android:layout_height="650sp"
+        android:layout_height="640sp"
         android:background="@drawable/bg_knight_black"
         android:layout_gravity="center"
         android:paddingTop="14sp"
@@ -19,10 +19,9 @@
 
         <ImageView
             android:id="@+id/app_logo"
-            android:layout_width="100sp"
-            android:layout_height="100sp"
+            android:layout_width="80sp"
+            android:layout_height="80sp"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="10sp"
             android:background="@drawable/app_logo"/>
 
         <TextView
@@ -51,7 +50,7 @@
             android:fontFamily="@font/quicksand_bold"
             android:textSize="18sp"
             android:gravity="center"
-            android:text="VIP ROOM # " />
+            android:text="ROOM # " />
 
         <!-- NAME VIEW-->
         <TextView
@@ -121,12 +120,12 @@
         <Button
             android:id="@+id/proceed2_button"
             android:layout_width="154sp"
-            android:layout_height="38sp"
+            android:layout_height="40sp"
             android:layout_centerHorizontal="true"
             android:background="@drawable/button_background"
             android:textColor="#fff4f0"
             android:fontFamily="@font/quicksand_bold"
-            android:textSize="16sp"
+            android:textSize="12sp"
             android:layout_below="@id/timeOut_view_vip"
             android:text="PROCEED"
             android:layout_marginTop="40sp" />

@@ -175,8 +175,8 @@
         <Button
             android:id="@+id/save_btn"
             android:layout_width="154sp"
-            android:layout_height="38sp"
-            android:textSize="16sp"
+            android:layout_height="40sp"
+            android:textSize="12sp"
             android:textColor="#fff4f0"
             android:background="@drawable/button_background"
             android:fontFamily="@font/quicksand_bold"
@@ -184,9 +184,10 @@
             android:drawableStart="@drawable/ic_save"
             android:layout_below="@id/new_password"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="30sp"
+            android:layout_marginTop="40sp"
+            android:drawablePadding="8sp"
             android:paddingStart="22sp"
-            android:paddingEnd="26sp"/>
+            android:paddingEnd="24sp"/>
 
         <!-- CREDITS -->
         <TextView
@@ -194,8 +195,9 @@
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
             android:layout_alignParentBottom="true"
+            android:fontFamily="@font/quicksand_bold"
             android:text="© 2024 CUEHALL. All rights reserved."
-            android:layout_marginBottom="30dp"
+            android:layout_marginBottom="30sp"
             android:textColor="@color/white"
             android:textSize="10sp" />
 

@@ -64,7 +64,7 @@
             android:background="@drawable/bg_black_sun2"
             android:textColor="#fff4f0"
             android:fontFamily="@font/quicksand_bold"
-            android:textSize="20sp"
+            android:textSize="18sp"
             android:gravity="center"
             android:text="TABLE # " />
 
@@ -82,7 +82,7 @@
             android:textColorHint="#fff4f0"
             android:textAlignment="center"
             android:textColor="#fff4f0"
-            android:textSize="20sp" />
+            android:textSize="18sp" />
 
         <!-- DATE BUTTON -->
         <Button
@@ -93,7 +93,7 @@
             android:background="@drawable/bg_black_sun2"
             android:textColor="#fff4f0"
             android:fontFamily="@font/quicksand_bold"
-            android:textSize="20sp"
+            android:textSize="18sp"
             android:layout_below="@id/name_button"
             android:text="DATE"
             android:layout_marginTop="22sp" />
@@ -108,7 +108,7 @@
             android:background="@drawable/bg_black_sun2"
             android:textColor="#fff4f0"
             android:fontFamily="@font/quicksand_bold"
-            android:textSize="20sp"
+            android:textSize="18sp"
             android:text="TIME IN"
             android:layout_marginTop="22sp" />
 
@@ -122,7 +122,7 @@
             android:background="@drawable/bg_black_sun2"
             android:textColor="#fff4f0"
             android:fontFamily="@font/quicksand_bold"
-            android:textSize="20sp"
+            android:textSize="18sp"
             android:text="TIME OUT"
             android:layout_marginTop="22sp" />
 
@@ -130,12 +130,12 @@
         <Button
             android:id="@+id/proceed_button"
             android:layout_width="154sp"
-            android:layout_height="38sp"
+            android:layout_height="40sp"
             android:layout_centerHorizontal="true"
             android:background="@drawable/button_background"
             android:textColor="#fff4f0"
             android:fontFamily="@font/quicksand_bold"
-            android:textSize="16sp"
+            android:textSize="12sp"
             android:layout_below="@id/timeOut_btn"
             android:text="PROCEED"
             android:layout_marginTop="40sp" />
