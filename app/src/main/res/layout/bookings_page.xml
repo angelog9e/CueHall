@@ -1,4 +1,5 @@
-<RelativeLayout
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -7,137 +8,126 @@
     android:layout_height="match_parent"
     tools:context=".Bookings">
 
-    <RelativeLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/bookings"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="#151515">
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#151515"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <!-- TITLE TEXT -->
         <TextView
             android:id="@+id/text_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
-            android:layout_alignParentTop="true"
-            android:fontFamily="@font/quicksand_bold"
-            android:text="CUEHALL"
-            android:letterSpacing="0.1"
             android:layout_marginTop="52sp"
+            android:fontFamily="@font/quicksand_bold"
+            android:letterSpacing="0.1"
+            android:text="CUEHALL"
             android:textColor="@color/white"
-            android:textSize="30sp" />
+            android:textSize="30sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
+            android:id="@+id/textView2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/text_title"
             android:layout_marginTop="30sp"
-            android:text="BOOKINGS"
             android:fontFamily="@font/quicksand_bold"
-            android:textSize="22sp"
+            android:text="BOOKINGS"
             android:textColor="#fff4f0"
-            android:layout_centerHorizontal="true" />
+            android:textSize="22sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/text_title" />
 
         <!-- ACCOUNT BUTTON -->
         <Button
             android:id="@+id/account_button"
             android:layout_width="45sp"
             android:layout_height="45sp"
-            android:layout_alignParentEnd="true"
-            android:layout_centerHorizontal="true"
             android:layout_marginTop="50sp"
             android:layout_marginEnd="22sp"
-            android:background="@drawable/acc_button" />
+            android:background="@drawable/acc_button"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <!-- BOOKINGS -->
-        <RelativeLayout
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/bookings_container"
             android:layout_width="380sp"
-            android:layout_height="728sp"
-            android:layout_centerHorizontal="true"
-            android:layout_below="@id/text_title"
+            android:layout_height="680sp"
             android:layout_marginTop="80sp"
-            android:background="@drawable/bg_black_sun">
+            android:background="@drawable/bg_black_sun"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/text_title">
 
-            <TextView
-                android:id="@+id/bookings_container1"
-                android:layout_width="340sp"
-                android:layout_height="200sp"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="20sp"
-                android:background="@drawable/standard_bg"
-                android:fontFamily="@font/quicksand_medium"
-                android:textSize="14sp" />
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/bookingsRecyclerView"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
-            <TextView
-                android:id="@+id/bookings_container2"
-                android:layout_width="340sp"
-                android:layout_height="200sp"
-                android:layout_centerHorizontal="true"
-                android:layout_below="@id/bookings_container1"
-                android:layout_marginTop="20sp"
-                android:background="@drawable/standard_bg"
-                android:fontFamily="@font/quicksand_medium"
-                android:textSize="14sp" />
-
-            <TextView
-                android:id="@+id/bookings_container3"
-                android:layout_width="340sp"
-                android:layout_height="200sp"
-                android:layout_centerHorizontal="true"
-                android:layout_below="@id/bookings_container2"
-                android:layout_marginTop="20sp"
-                android:layout_marginBottom="20sp"
-                android:background="@drawable/standard_bg"
-                android:fontFamily="@font/quicksand_medium"
-                android:textSize="14sp" />
-
-        </RelativeLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
         <!-- FOOTER -->
-        <RelativeLayout
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/footer"
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
             android:layout_height="75sp"
-            android:layout_alignParentBottom="true"
-            android:background="@drawable/footer_bg">
+            android:background="@drawable/footer_bg"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
 
             <!-- BUTTONS -->
             <Button
                 android:id="@+id/tables_button"
                 android:layout_width="120sp"
                 android:layout_height="80sp"
-                android:text="TABLES"
-                android:layout_alignParentStart="true"
                 android:layout_marginStart="60sp"
-                android:fontFamily="@font/quicksand_bold"
-                android:gravity="center"
-                android:textSize="10sp"
-                android:textColor="#fff4f0"
                 android:background="@drawable/rounded_button_bg"
                 android:drawableTop="@drawable/ic_table"
+                android:fontFamily="@font/quicksand_bold"
+                android:gravity="center"
                 android:paddingTop="8sp"
-                android:paddingBottom="8sp" />
+                android:paddingBottom="8sp"
+                android:text="TABLES"
+                android:textColor="#fff4f0"
+                android:textSize="10sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
             <Button
                 android:id="@+id/bookings_button"
                 android:layout_width="120sp"
                 android:layout_height="80sp"
-                android:text="BOOKINGS"
-                android:layout_alignParentBottom="true"
-                android:layout_alignParentEnd="true"
                 android:layout_marginEnd="60sp"
-                android:fontFamily="@font/quicksand_bold"
-                android:gravity="center"
-                android:textSize="10sp"
-                android:textColor="#fff4f0"
                 android:background="@drawable/rounded_button_bg"
                 android:drawableTop="@drawable/ic_bookings"
+                android:fontFamily="@font/quicksand_bold"
+                android:gravity="center"
                 android:paddingTop="8sp"
-                android:paddingBottom="8sp" />
+                android:paddingBottom="8sp"
+                android:text="BOOKINGS"
+                android:textColor="#fff4f0"
+                android:textSize="10sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
-        </RelativeLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
-    </RelativeLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
-</RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
