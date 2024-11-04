@@ -83,7 +83,7 @@
             android:layout_centerHorizontal="true"
             android:layout_marginBottom="20sp"
             android:layout_below="@id/account_button"
-            android:text="HELP &amp; SUPPORT"
+            android:text="CONTACT US"
             android:drawableStart="@drawable/ic_headphones"
             android:paddingStart="38sp"
             android:paddingEnd="40sp"/>

@@ -22,6 +22,11 @@ class AboutUs : DialogFragment() {
         dialog?.window?.requestFeature(Window.FEATURE_NO_TITLE)
         dialog?.window?.setBackgroundDrawable(ColorDrawable(android.graphics.Color.TRANSPARENT))
 
+        dialog?.window?.decorView?.systemUiVisibility = (
+                View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
+                        or View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY
+                )
+
         val webView: WebView = view.findViewById(R.id.justified_text)
         webView.setBackgroundColor(android.graphics.Color.TRANSPARENT)
         webView.webViewClient = WebViewClient()
@@ -69,6 +74,11 @@ Join us at CueHall, where every shot counts and every gathering is a celebration
         super.onStart()
 
         dialog?.window?.setLayout(300.dpToPx3(requireContext()), 480.dpToPx3(requireContext()))
+
+        dialog?.window?.decorView?.systemUiVisibility = (
+                View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
+                        or View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY
+                )
     }
 }
 
