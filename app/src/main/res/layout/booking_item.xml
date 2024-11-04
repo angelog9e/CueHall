@@ -4,7 +4,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_margin="8dp"
+    android:layout_margin="16dp"
     android:backgroundTint="@color/june"
     app:cardCornerRadius="16dp">
 
@@ -12,49 +12,70 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:padding="16dp">
+        android:padding="15dp">
 
         <TextView
             android:id="@+id/bookingIdTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Booking ID: " />
+            android:fontFamily="@font/quicksand_bold"
+            android:text="Booking ID: "
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/bookingTypeTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/quicksand_bold"
+            android:text="Type: "
+            android:textColor="@color/white"
+            android:textSize="14sp" />
 
         <TextView
             android:id="@+id/bookingNumberTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Number: " />
+            android:fontFamily="@font/quicksand_bold"
+            android:text="Number: "
+            android:textColor="@color/white"
+            android:textSize="14sp" />
 
         <TextView
             android:id="@+id/bookingNameTextView"
+            android:textSize="14sp"
+            android:fontFamily="@font/quicksand_bold"
+            android:textColor="@color/white"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Name: " />
 
         <TextView
             android:id="@+id/bookingDateTextView"
+            android:textSize="14sp"
+            android:fontFamily="@font/quicksand_bold"
+            android:textColor="@color/white"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Date: " />
 
         <TextView
             android:id="@+id/bookingTimeInTextView"
+            android:textSize="14sp"
+            android:fontFamily="@font/quicksand_bold"
+            android:textColor="@color/white"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Time In: " />
 
         <TextView
             android:id="@+id/bookingTimeOutTextView"
+            android:textSize="14sp"
+            android:fontFamily="@font/quicksand_bold"
+            android:textColor="@color/white"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Time Out: " />
-
-        <TextView
-            android:id="@+id/bookingTypeTextView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Type: " />
 
     </LinearLayout>
 

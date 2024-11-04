@@ -2,6 +2,7 @@ package com.importrandom.cuehall
 
 import android.annotation.SuppressLint
 import android.content.Context
+import android.content.Intent
 import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -78,6 +79,10 @@ class PopupStandard : DialogFragment() {
                 }
 
                 override fun onResponse(call: Call, response: Response) {
+                    if (response.isSuccessful) {
+                        val intent = Intent(context, Bookings::class.java)
+                        context?.startActivity(intent)
+                    }
                     val responseBody =
                         response.body()?.string() // Read the response body into a variable
                     // Handle request success
